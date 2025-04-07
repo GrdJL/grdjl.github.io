@@ -137,7 +137,7 @@ nav {
     position: relative;
   }
 
-    #header, #content { padding: 0px 32px 0 32px;   }
+    #header, #content { padding: 0 32px 0 32px;   }
 
   /* nav */
   .nav-icon {
