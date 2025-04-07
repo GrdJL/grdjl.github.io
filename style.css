@@ -14,12 +14,12 @@ body {
     color:#333;
     background:gainsboro;
 }
-
+footer { padding:40px 20px; }
 /*
 #header, #footer { background:Gainsboro; }
 #header, #content { padding:20px; }
 #content { background:WhiteSmoke; }
-#footer { padding:40px 20px; }
+
 
 h1, h2 { line-height:1.2em; }
 ul { margin:10px 15px; }
