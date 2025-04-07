@@ -15,7 +15,7 @@ body {
     background:gainsboro;
 }
 
-#page {margin:0 auto; padding:0 ; }
+/*
 #header, #footer { background:Gainsboro; }
 #header, #content { padding:20px; }
 #content { background:WhiteSmoke; }
@@ -24,7 +24,7 @@ body {
 h1, h2 { line-height:1.2em; }
 ul { margin:10px 15px; }
 p { margin:10px 0; }
-
+*/
 
 /*-----------------------------------------------------
     NAVBAR
