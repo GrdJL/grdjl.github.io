@@ -21,7 +21,7 @@ body {
 }
 
 #header, #footer { background:Gainsboro; }
-#header, #content { padding: 0 32px 0 32px;   }
+#header, #content { padding: 67px 32px 0 32px;   }
 #content { background:WhiteSmoke; }
 #footer { padding:20px 20px;}
 h1, h2 { line-height:1.2em; }
@@ -113,11 +113,31 @@ nav {
   display: none;
 }
 
+/******************************************************
+    BOTTOM FOOTER
+*******************************************************/
+
+#page {
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+#content {
+    flex-grow:1;
+}
+
+/******************************************************
+    reactive
+*******************************************************/
+
 @media (max-width: 960px) {
   nav {
     padding: 15px 20px;
     position: relative;
   }
+
+    #header, #content { padding: 0px 32px 0 32px;   }
 
   /* nav */
   .nav-icon {
@@ -226,19 +246,4 @@ nav {
   .nav-icon span {
     font-size: 20px;
   }
-}
-
-
-/******************************************************
-    BOTTOM FOOTER
-*******************************************************/
-
-#page {
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-}
-
-#content {
-    flex-grow:1;
 }
