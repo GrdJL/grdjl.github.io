@@ -154,12 +154,11 @@ nav {
 @media (max-width: 960px) {
 
   #content {
-    padding: 0 32px 0 32px;
-}
+    padding: 68px 32px 0 32px;
+    }
 
     nav {
         padding: 15px 20px;
-        /*position: fixed;*/
     }
 
     /* nav */
