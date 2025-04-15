@@ -262,7 +262,9 @@ nav {
 
 @media (max-width: 500px) {
 
-
+  #content {
+    padding: 56px 32px 0 32px;
+    }
 
     .nav-icon img {
         width: 26px;
