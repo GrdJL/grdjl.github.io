@@ -41,9 +41,9 @@ h2 {
 }
 ul {
     margin: 10px 15px;
-    }
+    list-style-type: none;
+}
 li {
-    text-decoration: solid;
     margin: 10px 15px;
 }
 p {
