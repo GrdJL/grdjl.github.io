@@ -1,65 +1,168 @@
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Longfort Consulting - Clinical trial advisor</title>
-		<link rel="stylesheet" href="style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,500;8..144,700;8..144,900&display=swap"
-			rel="stylesheet" />
-	</head>
-	<body id="page">
-			<nav>
-				<a href="#" class="nav-icon" aria-label="homepage" aria-current="page">
-					<img src="ressources/logo.svg" alt="chat icon" />
-					<span>Longfort Consulting</span>
-				</a>
-				<div class="main-navlinks">
-					<button type="button" class="hamburger" aria-label="Toggle Navigation" aria-expanded="false">
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
-					<div class="navlinks-container">
-						<a href="#" aria-current="page">Home</a>
-						<a href="#">Services</a>
-						<a href="#">Pricing</a>
-						<a href="#">Community</a>
-						<a href="#">Contact</a>
-					</div>
-				</div>
-				<!--
-				<div class="nav-authentication">
-					<a href="#" class="user-toggler" aria-label="Sign in page">
-						<img src="ressources/user.svg" alt="user icon" />
-					</a>
-					<div class="sign-btns">
-						<button type="button">Sign In</button>
-						<button type="button">Sign Up</button>
-					</div>
-				</div>
-				-->
-			</nav>
-			<div id="content">
-				<ul>
-					<li><a class="initiale">g</a>lobal</li>
-					<li><a class="initiale">r</a>egulatory</li>
-					<li><a class="initiale">e</a>thics</li>
-					<li><a class="initiale">a</a>pprovals</li>
-					<li><a class="initiale">t</a>imely solutions</li>
-				</ul>
-			</div>
-		<div id="footer">
-			<div class="footer-container">
-						<a href="#">Services</a>
-						<a href="#">Pricing</a>
-						<a href="#">Community</a>
-						<a href="#">Contact</a>
-					</div>
-			</div>
-		<script src="script.js"></script>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Longfort Consulting | Clinical trial advisor</title>
+        <!-- linking font awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Header / Navbar -->
+        <header>
+            <nav class="navbar section-content">
+                <a href="#" class="nav-logo">
+                    <h2 class="logo-text">
+                        <img class="logo" src="ressources/logo.png" alt="chat icon" /> Longfort Consulting
+                    </h2>
+                    <!-- https://emojipedia.org/microsoft -->
+                </a>
+                <ul class="nav-menu">
+                    <button id="menu-close-button" class="fas fa-times"></button>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <button id="menu-open-button" class="fas fa-bars"></button>
+            </nav>
+        </header>
+        <main class="main">
+            <!-- Hero section -->
+            <section id="home" class="hero-section">
+                <div class="section-content">
+                    <div class="hero-details">
+                        <p class="title"></p>
+                        <div style="text-align: left">
+                            <p class="text">☑️Project Management & strategic planning</p>
+                            <p class="text">☑️regulatory submissions & international compliance</p>
+                            <p class="text">☑️Timeline optimization & risks management</p>
+                            <p class="text">☑️Communication & leadership</p>
+                            <p class="text">☑️Flexibility & adaptability to multicultural environment</p>
+                        </div>
+                        <p class="description">
+                            <b>Submitting Your Application:</b> Interested candidates must submit their resume and a
+                            tailored cover letter through our online application portal to be considered for the role.
+                        </p>
+                        <p class="description">
+                            <b>Initial Screening:</b> Our HR team will review applications to assess qualifications and
+                            experience. Qualified candidates will be contacted for a screening interview to discuss
+                            their background further.
+                        </p>
+                        <p class="description">
+                            <b>Technical</b> and <b>Skills Assessment:</b> Depending on the role, candidates may undergo
+                            technical assessments, case studies, or practical demonstrations of their portfolio
+                            management skills.
+                        </p>
+                        <p class="description">
+                            <b>Final Interview:</b> Shortlisted candidates will have a final interview with the hiring
+                            manager to evaluate their fit for the role, company culture, and discuss career aspirations.
+                        </p>
+                        <p class="description">
+                            <b>Offer</b> and <b>Onboarding:</b> Successful candidates will receive a formal job offer
+                            detailing compensation and benefits. Our onboarding process ensures a smooth transition into
+                            the team and familiarization with company policies and practices.
+                        </p>
+                        <h1 class="subtitle">
+                            <u>G</u>lobal <u>R</u>egulatory <u>E</u>thics <u>A</u>pprovals <u>T</u>imely solutions<br />
+                        </h1>
+                        <div class="buttons">
+                            <a
+                                href="mailto:sabrina.guittard@longfortconsulting.com?subject=Request for information"
+                                class="button"
+                                >Contact Us</a
+                            >
+                            <a href="/ressources/facture_9079687955_2025-03-12.pdf" class="button reverse" download
+                                >Resume</a
+                            >
+                        </div>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img src="ressources/image2.webp" alt="hero" class="hero-image" />
+                    </div>
+                </div>
+            </section>
+            <!-- About section -->
+            <section id="about" class="about-section">
+                <div class="section-content">
+                    <div class="about-image-wrapper">
+                        <img src="ressources/image.jpg" alt="about" class="about-image" />
+                    </div>
+                    <div class="about-details">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="text">
+                            20 years experienced on clinical trials in oncology, children rare diseases. At Coffee House
+                            in Berndorf, Germany, we pride ourselves on being a go-to destination for coffee lovers and
+                            conversation seekers alike. Wei re dedicated to providing anexceptional coffee experience in
+                            a cozy and inviting atmosphere, where guests can relax, unwind, and enjoy their time in
+                            comfort.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="services" class="about-section">
+                <div class="section-content">
+                    <div class="hero-details">
+                        <h2 class="section-title">Offers</h2>
+                        <p class="text">
+                            20 years experienced on clinical trials in oncology, children rare diseases. At Coffee House
+                            in Berndorf, Germany, we pride ourselves on being a go-to destination for coffee lovers and
+                            conversation seekers alike.
+                        </p>
+                        <p class="description">
+                            Wei re dedicated to providing anexceptional coffee experience in a cozy and inviting
+                            atmosphere, where guests can relax, unwind, and enjoy their time in comfort.
+                        </p>
+                    </div>
+                    <div class="about-image-wrapper">
+                        <img src="ressources/image.jpg" alt="about" class="about-image" />
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="about-hero">
+                <div id="contact_substitute" class="section-content">
+                    <div class="hero-details">
+                        <h2 class="section-title">Contact</h2>
+                        <p class="text">
+                            20 years experienced on clinical trials in oncology, children rare diseases. At Coffee House
+                            in Berndorf, Germany, we pride ourselves on being a go-to destination for coffee lovers and
+                            conversation seekers alike.
+                        </p>
+                        <p class="description">
+                            Wei re dedicated to providing anexceptional coffee experience in a cozy and inviting
+                            atmosphere, where guests can relax, unwind, and enjoy their time in comfort.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="social-link-list">
+                        <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://web.whatsapp.com/send?phone=+33652502498" class="social-link"><i class="fa-brands fa-whatsapp"></i> +33 680012884</a>
+                        <a href="#" class="social-link"><i class="fa-solid fa-envelope"></i> sabrina.guittard1@gmail.com</a>
+                        <a class="social-link">2 pl. Octave Sage<br />31100 Toulouse, France</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
 </html>
+
+<!-- 
+        /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
+        *                     à 
+        *                   32'15"                            */
+
+-->
