@@ -247,6 +247,11 @@ header .navbar {
     align-items: center;
 }
 
+.about-hero .social-link-list a {
+    color: var(--darker-color);
+    font-size: var(--font-size-xs);
+}
+
 .about-hero .social-link-list .social-link {
     color: var(--secondary-color);
     font-size: var(--font-size-s);
