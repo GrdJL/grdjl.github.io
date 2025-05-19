@@ -10,6 +10,8 @@
 }
 
 :root {
+    color-scheme: light only;
+    
     /* Colors */
     --white-color: #3d7489;
     --darker-color: #3b3737;
