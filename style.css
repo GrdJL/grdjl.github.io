@@ -16,8 +16,9 @@
     --dark-color: #131224;
     --primary-color: #ffffff;
     --secondary-color: #1b89aa;
-    --light-pink-color: #f4d5da --medium-gray-color: #ccc;
-    --highlighted-color: #81226f;
+    --light-pink-color: #f4d5da
+    --medium-gray-color: #ccc;
+    --highlighted-color: #34342d;
     --footer-color: rgb(205, 205, 205);
 
     /* Font size */
@@ -227,39 +228,46 @@ header .navbar {
 }
 
 .about-section .about-details {
-    max-width: 50%;
+    max-width: 85%;
 }
 
 .about-section .about-details .text {
     line-height: 30px;
-    margin: 50px 0 30px;
+    margin: 17px 0 30px;
     text-align: center;
     font-size: var(--font-size-m);
 }
 
-.about-hero .social-link-list {
-    background: var(--footer-color);
-    margin-top: 12px;
-    padding: 6px 0px 14px 0px;
+.about-section .social-link-list {
+    margin-top: 25px;
+    padding: 6px 0 14px 0;
     display: flex;
-    gap: 25px;
+    flex-direction:column;
+    gap: 6px;
     justify-content: center;
     align-items: center;
 }
 
-.about-hero .social-link-list a {
-    color: var(--darker-color);
-    font-size: var(--font-size-xs);
-}
-
-.about-hero .social-link-list .social-link {
-    color: var(--secondary-color);
+.about-section .social-link-list .social-link {
     font-size: var(--font-size-s);
+    color: var(--secondary-color);
     transition: 0.2s ease;
 }
 
-.about-hero .social-link-list .social-link:hover {
+.about-section .social-link-list .social-link:hover {
     color: var(--highlighted-color);
+}
+
+/* Footer section styling */
+.footer-section .footer {
+    background: var(--footer-color);
+    color: var(--darker-color);
+    font-size: var(--font-size-xs);
+    padding: 6px 0 14px 0;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Responsive media query code for max width 920px */
