@@ -275,6 +275,7 @@ header .navbar {
 /* Responsive media query code for max width 920px */
 @media screen and (max-width: 1060px) {
     :root {
+        color-scheme: light only;
         --font-size-m: 1rem;
         --font-size-1: 1.3rem;
         --font-size-xl: 1.5rem;
