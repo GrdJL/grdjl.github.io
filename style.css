@@ -249,7 +249,7 @@ header .navbar {
 }
 
 .about-section .social-link-list .social-link {
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-xs);
     color: var(--secondary-color);
     transition: 0.2s ease;
 }
@@ -265,7 +265,7 @@ header .navbar {
     font-size: var(--font-size-xs);
     padding: 6px 0 14px 0;
     display: flex;
-    gap: 12px;
+    gap: 25px;
     justify-content: center;
     align-items: center;
 }
