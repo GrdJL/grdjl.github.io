@@ -217,8 +217,8 @@ header .navbar {
 }
 
 .about-section .about-image-wrapper .about-image {
-    width: 380px;
-    height: 380px;
+    width: 340px;
+    height: 340px;
     object-fit: cover;
     border-radius: var(--border-radius-circle);
 }
@@ -353,10 +353,8 @@ header .navbar {
 
     .about-section .section-content {
         flex-direction: column-reverse;
-        /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
-        *                     à 
-        *                   32'15"                            */
     }
+    
     .logo {
         margin-bottom: -6px;
         width: 28px;
@@ -366,4 +364,7 @@ header .navbar {
     .about-hero .social-link-list .social-link {
         font-size: var(--font-size-xs);
     }
+        /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
+        *                     à 
+        *                   32'15"                            */
 }
