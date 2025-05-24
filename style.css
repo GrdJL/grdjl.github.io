@@ -273,7 +273,7 @@ header .navbar {
 }
 
 /* Responsive media query code for max width 920px */
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 920px) {
     :root {
         --font-size-m: 1rem;
         --font-size-1: 1.3rem;
