@@ -251,7 +251,7 @@ header .navbar {
 }
 
 .about-section .social-link-list .social-link {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-s);
     color: var(--secondary-color);
     transition: 0.2s ease;
 }
@@ -364,7 +364,7 @@ header .navbar {
     }
 
     .about-hero .social-link-list .social-link {
-        font-size: var(--font-size-xs);
+        font-size: var(--font-size-s);
     }
         /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
         *                     à 
