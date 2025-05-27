@@ -1,8 +1,4 @@
-# My wife's website
-
-<!-- LINKS_PLACEHOLDER -->
-
-<p align="center"><img src="https://www.longfort-consulting.com" alt="Website url" target="_blank"/></p>
+# My wife's website (https://www.longfort-consulting.com)
 
 <!-- TABLE_CONTENT_PLACEHOLDER -->
 
