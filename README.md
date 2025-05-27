@@ -1,13 +1,4 @@
-<a href="" target="_blank" title="Go to  website">
-<img width="196px" alt="Longfort Consulting website" src="https://github.com/GrdJL/grdjl.github.io/blob/main/ressources/Logo_source.webp">
-</a>
-
-# Longfort Consulting website
-
-
-
-</div>
-
+# My wife's website
 
 <!-- LINKS_PLACEHOLDER -->
 
