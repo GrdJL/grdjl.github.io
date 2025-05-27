@@ -230,7 +230,7 @@ header .navbar {
 }
 
 .about-section .about-details {
-    max-width: 85%;
+    max-width: 100%;
 }
 
 .about-section .about-details .text {
@@ -361,10 +361,6 @@ header .navbar {
         margin-bottom: -6px;
         width: 28px;
         height: 28px;
-    }
-
-    .about-hero .social-link-list .social-link {
-        font-size: var(--font-size-s);
     }
         /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
         *                     à 
