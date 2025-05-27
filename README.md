@@ -2,7 +2,7 @@
 
 <!-- LINKS_PLACEHOLDER -->
 
-<p align="center"><img src="www.longfort-consulting.com" alt="Website url"/></p>
+<p align="center"><img src="https://www.longfort-consulting.com" alt="Website url" target="_blank"/></p>
 
 <!-- TABLE_CONTENT_PLACEHOLDER -->
 
