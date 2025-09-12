@@ -55,6 +55,16 @@ a {
     text-decoration: none;
 }
 
+a:visited {
+    color: --dark-color;
+    text-decoration: none;
+}
+
+a:link {
+    color: --dark-color;
+    text-decoration: none;
+}
+
 button {
     cursor: pointer;
     border: none;
