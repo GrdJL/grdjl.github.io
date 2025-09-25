@@ -265,9 +265,9 @@ header .navbar {
     background: var(--footer-color);
     color: var(--darker-color);
     font-size: var(--font-size-xs);
-    padding: 6px 6px 14px 6px;
+    padding: 6px 0 14px 0;
     display: flex;
-    gap: 25px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -366,4 +366,5 @@ header .navbar {
         *                     à 
         *                   32'15"                            */
 }
+
 
