@@ -260,6 +260,34 @@ header .navbar {
     color: var(--highlighted-color);
 }
 
+.about-section .about-details .buttons {
+    display: flex;
+    gap: 23px;
+    padding: 0 20px 0;
+}
+
+.about-section .about-details .button {
+    padding: 10px 26px;
+    border: 2px solid transparent;
+    color: var(--primary-color);
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+    font-weight: var(--font-weight-medium);
+    transition: 0.2s ease;
+}
+
+.about-section .about-details .button:hover,
+.about-section .about-details .reverse {
+    color: var(--white-color);
+    border-color: var(--white-color);
+    background: transparent;
+}
+.about-section .about-details .reverse:hover {
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+    background: var(--secondary-color);
+}
+
 /* Footer section styling */
 .footer-section .footer {
     background: var(--footer-color);
@@ -344,10 +372,6 @@ header .navbar {
         max-width: 100%;
     }
 
-    .hero-section .hero-details .buttons {
-        justify-content: center;
-    }
-
     .hero-section .hero-image-wrapper {
         max-width: 270px;
         margin-right: 0;
@@ -355,6 +379,10 @@ header .navbar {
 
     .about-section .section-content {
         flex-direction: column-reverse;
+    }
+    
+    .about-section .about-details .buttons {
+        justify-content: center;
     }
     
     .logo {
