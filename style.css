@@ -300,6 +300,69 @@ header .navbar {
     justify-content: center;
     align-items: center;
 }
+/* Formulaire stylisé */
+.styled-form {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 2rem;
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.styled-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.styled-form label {
+    font-size: 1rem;
+    color: #3b3737;
+    font-weight: 500;
+}
+
+.styled-form input[type="text"],
+.styled-form input[type="email"],
+.styled-form textarea {
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    background: #faf9f6;
+    color: #333;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+
+.styled-form input[type="text"]:focus,
+.styled-form input[type="email"]:focus,
+.styled-form textarea:focus {
+    border-color: #6e8adf;
+    outline: none;
+}
+
+.styled-form .button,
+.styled-form button[type="submit"] {
+    background: #6e8adf;
+    color: #fff;
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(110,138,223,0.08);
+    transition: background 0.2s;
+}
+
+.styled-form .button:hover,
+.styled-form button[type="submit"]:hover {
+    background: #3b3737;
+}
 
 /* Responsive media query code for max width 920px */
 @media screen and (max-width: 920px) {
@@ -415,11 +478,17 @@ header .navbar {
     background-color: var(--secondary-color);
     color: var(--primary-color) !important; /* Inversion de la couleur au survol */
     }
+
+    .styled-form {
+        padding: 1rem;
+        max-width: 100%;
+    }
     
         /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
         *                     à 
         *                   32'15"                            */
 }
+
 
 
 
