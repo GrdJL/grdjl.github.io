@@ -392,63 +392,31 @@ header .navbar {
     }
     
     .navbar :where(#menu-close-button, #menu-open-button) {
-        position: relative; /* Indispensable pour que le z-index fonctionne */
-        z-index: 1; /* Place le bouton (et l'icône) au-dessus du disque */
-        padding: 8px;
-        transition: transform 0.2s ease-in-out;
+        /* Assurez-vous que le bouton a un padding pour que le disque soit visible */
+        padding: 8px; /* Ajustez cette valeur si nécessaire */
+        border-radius: var(--border-radius-circle); /* Rend le fond circulaire */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transition douce pour le fond et la couleur */
     }
 
-    .navbar :where(#menu-close-button, #menu-open-button)::before {
-        content: ""; /* Obligatoire pour créer l'élément */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0); /* Cache le disque initialement */
-        height: 100%;
-        width: 100%;
-        background-color: var(--secondary-color);
-        border-radius: var(--border-radius-circle);
-        z-index: -1; /* Place le disque derrière l'icône */
-        opacity: 0.7; /* Rend le disque semi-transparent */
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease;
-    }
-
-    .navbar :where(#menu-close-button, #menu-open-button):hover::before {
-        transform: translate(-50%, -50%) scale(1); /* Affiche le disque au survol */
+    .navbar :where(#menu-close-button, #menu-open-button):hover {
+        background-color: var(--secondary-color); /* Couleur du disque */
+        color: var(--primary-color); /*Couleur de l'icône par-dessus le disque */
+        z-index: 0;
+        opacity: 0.7; /* Rend le disque "fade" (semi-transparent) */
     }
     
-/*    .navbar :where(#menu-close-button, #menu-open-button) {
-*        /* Assurez-vous que le bouton a un padding pour que le disque soit visible */
-*        padding: 8px; /* Ajustez cette valeur si nécessaire */
-*        border-radius: var(--border-radius-circle); /* Rend le fond circulaire */
-*        transition: background-color 0.3s ease, color 0.3s ease; /* Transition douce pour le fond et la couleur */
-*    }
-*
-*    .navbar :where(#menu-close-button, #menu-open-button):hover {
-*        background-color: var(--secondary-color); /* Couleur du disque */
-*        color: var(--primary-color); /*Couleur de l'icône par-dessus le disque */
-*        z-index: -1;
-*        opacity: 0.7; /* Rend le disque "fade" (semi-transparent) */
-*    }
-*    
-*    .navbar :where(#menu-close-button, #menu-open-button):hover {
-*        background-color: var(--secondary-color);
-*        z-index: -1;
-*        opacity: 0.7;
-*        color: var(--dark-color); // Ou la couleur originale de l'icône
-*    }
-*/    
-    /* Styling for Menu Buttons on hover
-    *.navbar :where(#menu-close-button, #menu-open-button):hover {
-    *    color: var(--secondary-color); /* Change la couleur du texte */
-    *    transform: scale(1.1); /* Agrandit légèrement le bouton */
-    *    transition: transform 0.2s ease-in-out; /* Ajoute une transition douce */
-    }*/
+    .navbar :where(#menu-close-button, #menu-open-button):hover {
+        background-color: var(--secondary-color);
+        z-index: -1;
+        opacity: 0.7;
+        color: var(--dark-color); // Ou la couleur originale de l'icône
+    }
     
         /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
         *                     à 
         *                   32'15"                            */
 }
+
 
 
 
