@@ -400,7 +400,7 @@ header .navbar {
 
     .navbar :where(#menu-close-button, #menu-open-button):hover {
         background-color: var(--secondary-color); /* Couleur du disque */
-        color: #121212 /* var(--primary-color); Couleur de l'icône par-dessus le disque */
+        color: #121212; /* var(--primary-color); Couleur de l'icône par-dessus le disque */
         opacity: 0.&; /* Rend le disque "fade" (semi-transparent) */
     }
     
@@ -415,6 +415,7 @@ header .navbar {
         *                     à 
         *                   32'15"                            */
 }
+
 
 
 
