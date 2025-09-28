@@ -390,9 +390,18 @@ header .navbar {
         width: 28px;
         height: 28px;
     }
+    
+    /* Styling for Menu Buttons on hover */
+    .navbar :where(#menu-close-button, #menu-open-button):hover {
+        color: var(--secondary-color); /* Change la couleur du texte */
+        transform: scale(1.1); /* Agrandit légèrement le bouton */
+        transition: transform 0.2s ease-in-out; /* Ajoute une transition douce */
+    }
+    
         /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
         *                     à 
         *                   32'15"                            */
 }
+
 
 
