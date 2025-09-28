@@ -332,7 +332,7 @@ header .navbar {
     }
 
     .navbar #menu-open-button {
-        color: var(--white-color);
+        color: var(--secondary-color);
     }
 
     .navbar .nav-menu {
@@ -401,21 +401,20 @@ header .navbar {
     .navbar :where(#menu-close-button, #menu-open-button):hover {
         background-color: var(--secondary-color); /* Couleur du disque */
         color: var(--primary-color); /*Couleur de l'icône par-dessus le disque */
-        z-index: 0;
         opacity: 0.7; /* Rend le disque "fade" (semi-transparent) */
     }
     
     .navbar :where(#menu-close-button, #menu-open-button):hover {
         background-color: var(--secondary-color);
-        z-index: -1;
         opacity: 0.7;
-        color: var(--dark-color); // Ou la couleur originale de l'icône
+        color: var(--primary-color);
     }
     
         /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
         *                     à 
         *                   32'15"                            */
 }
+
 
 
 
