@@ -238,6 +238,7 @@ header .navbar {
     margin: 17px 0 30px;
     text-align: center;
     font-size: var(--font-size-m);
+    text-decoration: none;
 }
 
 .about-section .social-link-list {
@@ -419,6 +420,7 @@ header .navbar {
         *                     à 
         *                   32'15"                            */
 }
+
 
 
 
