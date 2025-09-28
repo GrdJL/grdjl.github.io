@@ -390,30 +390,31 @@ header .navbar {
         width: 28px;
         height: 28px;
     }
+    .navbar #menu-open-button i {
+    color: ...; /* Une règle qui pourrait être plus spécifique */
+    }
     
-    .navbar :where(#menu-close-button, #menu-open-button) {
-        /* Assurez-vous que le bouton a un padding pour que le disque soit visible */
-        padding: 8px; /* Ajustez cette valeur si nécessaire */
-        border-radius: var(--border-radius-circle); /* Rend le fond circulaire */
-        transition: background-color 0.3s ease, color 0.3s ease; /* Transition douce pour le fond et la couleur */
+   .navbar :where(#menu-close-button, #menu-open-button) {
+    /* Style par défaut du bouton, y compris la couleur de l'icône */
+    color: var(--white-color); /* Couleur par défaut de l'icône */
+    display: block;
+    font-size: var(--font-size-l);
+    padding: 8px;
+    border-radius: var(--border-radius-circle);
+    transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .navbar :where(#menu-close-button, #menu-open-button):hover {
-        background-color: var(--secondary-color); /* Couleur du disque */
-        color: var(--primary-color); /*Couleur de l'icône par-dessus le disque */
-        opacity: 0.7; /* Rend le disque "fade" (semi-transparent) */
-    }
-    
-    .navbar :where(#menu-close-button, #menu-open-button):hover {
-        background-color: var(--secondary-color);
-        opacity: 0.7;
-        color: var(--primary-color);
+    /* Styles au survol */
+    background-color: var(--secondary-color);
+    color: var(--primary-color) !important; /* Inversion de la couleur au survol */
     }
     
         /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
         *                     à 
         *                   32'15"                            */
 }
+
 
 
 
