@@ -333,7 +333,7 @@ header .navbar {
     border-radius: 8px;
     padding: 0.8rem 1rem;
     font-size: 1rem;
-    background: #feeff9;
+    background: #faf9f6;
     color: #333;
     transition: border-color 0.2s;
     resize: vertical;
@@ -489,6 +489,7 @@ header .navbar {
         *                     à 
         *                   32'15"                            */
 }
+
 
 
 
