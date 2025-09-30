@@ -20,7 +20,8 @@
     --secondary-color: #1b89aa;
     --light-pink-color: #f4d5da
     --medium-gray-color: #ccc;
-    --highlighted-color: #34342d;
+    --highlighted-color: #b09b35;
+    /* --highlighted-color: #34342d; */
     --footer-color: rgb(205, 205, 205);
 
     /* Font size */
@@ -494,6 +495,7 @@ header .navbar {
         *                     à 
         *                   32'15"                            */
 }
+
 
 
 
