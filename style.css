@@ -333,7 +333,7 @@ header .navbar {
     border-radius: 8px;
     padding: 0.8rem 1rem;
     font-size: 1rem;
-    background: var(--secondary-color);
+    background: #feeff9;
     color: #333;
     transition: border-color 0.2s;
     resize: vertical;
@@ -342,7 +342,7 @@ header .navbar {
 .styled-form input[type="text"]:focus,
 .styled-form input[type="email"]:focus,
 .styled-form textarea:focus {
-    border-color: #6e8adf;
+    border-color: var(--secondary-color);
     outline: none;
 }
 
@@ -489,6 +489,7 @@ header .navbar {
         *                     à 
         *                   32'15"                            */
 }
+
 
 
 
