@@ -48,7 +48,8 @@
 }
 
 b {
-    color: var(--secondary-color);
+    font-weight: var(--font-weight-bold);
+    color: var(--highlighted-color);
 }
 
 ul {
@@ -493,6 +494,7 @@ header .navbar {
         *                     à 
         *                   32'15"                            */
 }
+
 
 
 
