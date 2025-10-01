@@ -14,11 +14,12 @@
     
     /* Colors */
     --white-color: #3d7489;
+    --button-color:#e8e4da;
     --darker-color: #3b3737;
     --dark-color: #131224;
     --primary-color: #ffffff;
     --secondary-color: #1b89aa;
-    --light-pink-color: #f4d5da
+    --light-pink-color: #faf9f6;
     --medium-gray-color: #ccc;
     --highlighted-color: #d2a217;
     /* --highlighted-color: #34342d; */
@@ -186,23 +187,15 @@ header .navbar {
 .hero-section .hero-details .button {
     padding: 10px 26px;
     border: 2px solid transparent;
-    color: var(--primary-color);
-    border-radius: var(--border-radius-s);
-    background: var(--secondary-color);
+    color: var(--highlighted-color);
+    border-radius: var(--border-radius-m);
+    background: var(--button-color);
     font-weight: var(--font-weight-medium);
     transition: 0.2s ease;
 }
 
-.hero-section .hero-details .button:hover,
-.hero-section .hero-details .reverse {
-    color: var(--white-color);
-    border-color: var(--white-color);
-    background: transparent;
-}
-.hero-section .hero-details .reverse:hover {
-    color: var(--primary-color);
-    border-color: var(--secondary-color);
-    background: var(--secondary-color);
+.hero-section .hero-details .button:hover {
+   background: transparent;
 }
 
 .hero-section .hero-image-wrapper {
@@ -241,7 +234,6 @@ header .navbar {
 }
 
 .about-section .about-details .text {
-    line-height: 30px;
     margin: 17px 0 30px;
     text-align: center;
     font-size: var(--font-size-m);
@@ -277,23 +269,15 @@ header .navbar {
 .about-section .about-details .button {
     padding: 10px 26px;
     border: 2px solid transparent;
-    color: var(--primary-color);
-    border-radius: var(--border-radius-s);
-    background: var(--secondary-color);
+    color: var(--highlighted-color);
+    border-radius: var(--border-radius-m);
+    background: var(--button-color);
     font-weight: var(--font-weight-medium);
     transition: 0.2s ease;
 }
 
-.about-section .about-details .button:hover,
-.about-section .about-details .reverse {
-    color: var(--white-color);
-    border-color: var(--white-color);
+.about-section .about-details .button:hover {
     background: transparent;
-}
-.about-section .about-details .reverse:hover {
-    color: var(--primary-color);
-    border-color: var(--secondary-color);
-    background: var(--secondary-color);
 }
 
 /* Footer section styling */
@@ -495,29 +479,3 @@ header .navbar {
         /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
         *                     à 
         *                   32'15"                            */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
