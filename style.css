@@ -301,6 +301,7 @@ header .navbar {
     background: var(--footer-color);
     color: var(--darker-color);
     font-size: var(--font-size-xs);
+    text-decoration: none;
     padding: 6px 0 14px 0;
     display: flex;
     gap: 10px;
