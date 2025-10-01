@@ -100,7 +100,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 5;
-    background: var(--primary-color);
+    background: var(--light-pink-color);
 }
 
 header .navbar {
@@ -148,7 +148,7 @@ header .navbar {
 
 .hero-section {
     min-height: 100vh;
-    background: var(--primary-color);
+    background: var(--light-pink-color);
 }
 
 .hero-section .section-content {
@@ -479,3 +479,4 @@ header .navbar {
         /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
         *                     à 
         *                   32'15"                            */
+
