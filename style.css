@@ -11,18 +11,18 @@
 
 :root {
     color-scheme: light;
-    
+
     /* Colors */
-    --white-color: #3d7489;
-    --button-color:#e8e4da;
+    --button-menu-color: #3d7489;
+    --button-menu-hover: #ffffff;
+    --button-icon-color: #172429;
+    --background-color: #faf9f6;
     --darker-color: #3b3737;
-    --dark-color: #131224;
-    --primary-color: #ffffff;
-    --secondary-color: #1b89aa;
-    --light-pink-color: #faf9f6;
-    --medium-gray-color: #ccc;
-    --highlighted-color: #d2a217;
-    /* --highlighted-color: #34342d; */
+    --text-color: #1b89aa;
+    --emphasis-text-color: #d5a10a;
+    /* --medium-gray-color: #ccc; */
+    /* --emphasis-text-color: #34342d; */
+    --button-section-color: #f1e8d0;
     --footer-color: rgb(205, 205, 205);
 
     /* Font size */
@@ -51,7 +51,7 @@
 
 b {
     font-weight: var(--font-weight-bold);
-    color: var(--highlighted-color);
+    color: var(--emphasis-text-color);
 }
 
 ul {
@@ -92,7 +92,7 @@ img {
     display: block;
     margin: 10px auto 0;
     border-radius: var(--border-radius-s);
-    background: var(--secondary-color);
+    background: var(--text-color);
 }
 
 /* Navbar Styling*/
@@ -100,7 +100,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 5;
-    background: var(--light-pink-color);
+    background: var(--background-color);
 }
 
 header .navbar {
@@ -111,7 +111,7 @@ header .navbar {
 }
 
 .navbar .nav-logo .logo-text {
-    color: var(--white-color);
+    color: var(--button-menu-color);
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-normal);
 }
@@ -129,15 +129,15 @@ header .navbar {
 
 .navbar .nav-menu .nav-link {
     padding: 10px 18px;
-    color: var(--white-color);
+    color: var(--button-menu-color);
     font-size: var(--font-size-m);
     border-radius: var(--border-radius-s);
     transition: 0.2s ease;
 }
 
 .navbar .nav-menu .nav-link:hover {
-    color: var(--primary-color);
-    background: var(--secondary-color);
+    color: var(--button-menu-hover);
+    background: var(--text-color);
 }
 
 .navbar :where(#menu-close-button, #menu-open-button) {
@@ -148,20 +148,20 @@ header .navbar {
 
 .hero-section {
     min-height: 100vh;
-    background: var(--light-pink-color);
+    background: var(--background-color);
 }
 
 .hero-section .section-content {
     display: flex;
     align-items: center;
     min-height: 100vh;
-    color: var(--white-color);
+    color: var(--button-menu-color);
     justify-content: space-between;
 }
 
 .hero-section .hero-details .title {
     font-size: var(--font-size-xxl);
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-family: "Cormorant+Garamond", sans-serif;
 }
 
@@ -187,15 +187,16 @@ header .navbar {
 .hero-section .hero-details .button {
     padding: 10px 26px;
     border: 2px solid transparent;
-    color: var(--highlighted-color);
+    color: var(--emphasis-text-color);
     border-radius: var(--border-radius-m);
-    background: var(--button-color);
+    background: var(--button-section-color);
     font-weight: var(--font-weight-medium);
     transition: 0.2s ease;
 }
 
 .hero-section .hero-details .button:hover {
-   background: transparent;
+    background: var(--footer-color);
+    color: var(--text-color);
 }
 
 .hero-section .hero-image-wrapper {
@@ -207,7 +208,11 @@ header .navbar {
 /* About section styling */
 .about-section {
     padding: 120px 0;
-    background: var(--light-pink-color);
+    background: var(--background-color);
+}
+
+.blog-section {
+    background: var(--background-color);
 }
 
 .about-section .section-content {
@@ -244,7 +249,7 @@ header .navbar {
     margin-top: 25px;
     padding: 6px 0 14px 0;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     gap: 6px;
     justify-content: center;
     align-items: center;
@@ -252,12 +257,12 @@ header .navbar {
 
 .about-section .social-link-list .social-link {
     font-size: var(--font-size-s);
-    color: var(--secondary-color);
+    color: var(--text-color);
     transition: 0.2s ease;
 }
 
 .about-section .social-link-list .social-link:hover {
-    color: var(--highlighted-color);
+    color: var(--emphasis-text-color);
 }
 
 .about-section .about-details .buttons {
@@ -269,15 +274,16 @@ header .navbar {
 .about-section .about-details .button {
     padding: 10px 26px;
     border: 2px solid transparent;
-    color: var(--highlighted-color);
+    color: var(--emphasis-text-color);
     border-radius: var(--border-radius-m);
-    background: var(--button-color);
+    background: var(--button-section-color);
     font-weight: var(--font-weight-medium);
     transition: 0.2s ease;
 }
 
 .about-section .about-details .button:hover {
-    background: transparent;
+    background: var(--footer-color);
+    color: var(--text-color);
 }
 
 /* Footer section styling */
@@ -292,11 +298,12 @@ header .navbar {
     justify-content: center;
     align-items: center;
 }
+
 /* Formulaire stylisé */
 .styled-form {
     background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    border-radius: var(--border-radius-s) var(--border-radius-s) var(--border-radius-m) var(--border-radius-m);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     padding: 2rem;
     max-width: 420px;
     margin: 0 auto;
@@ -313,7 +320,7 @@ header .navbar {
 
 .styled-form label {
     font-size: 1rem;
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-weight: 500;
 }
 
@@ -333,7 +340,7 @@ header .navbar {
 .styled-form input[type="text"]:focus,
 .styled-form input[type="email"]:focus,
 .styled-form textarea:focus {
-    border-color: var(--secondary-color);
+    border-color: var(--text-color);
     outline: none;
 }
 
@@ -347,7 +354,7 @@ header .navbar {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(110,138,223,0.08);
+    box-shadow: 0 2px 8px rgba(110, 138, 223, 0.08);
     transition: background 0.2s;
 }
 
@@ -382,17 +389,19 @@ header .navbar {
     }
 
     .navbar #menu-close-button {
-    position: absolute;
-    right: 30px;
-    top: 30px;
-    padding: 8px;
-    border-radius: var(--border-radius-circle); /* Rend la bordure circulaire */
-    color: var(--dark-color); /* Rend l'icône noire et visible */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        padding: 8px;
+        border-radius: var(--border-radius-circle);
+        /* Rend la bordure circulaire */
+        color: var(--button-icon-color);
+        /* Rend l'icône noire et visible */
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
 
     .navbar #menu-open-button {
-        color: var(--secondary-color);
+        color: var(--text-color);
     }
 
     .navbar .nav-menu {
@@ -405,7 +414,7 @@ header .navbar {
         flex-direction: column;
         align-items: center;
         padding-top: 100px;
-        background: var(--white-color);
+        background: var(--button-menu-color);
         transition: left 0.2s ease;
     }
 
@@ -414,7 +423,7 @@ header .navbar {
     }
 
     .navbar .nav-menu .nav-link {
-        color: var(--dark-color);
+        color: var(--button-icon-color);
         display: block;
         margin-top: 17px;
         font-size: var(--font-size-1);
@@ -440,43 +449,45 @@ header .navbar {
     .about-section .section-content {
         flex-direction: column-reverse;
     }
-    
+
     .about-section .about-details .buttons {
         justify-content: center;
     }
-    
+
     .logo {
         margin-bottom: -6px;
         width: 28px;
         height: 28px;
     }
+
     .navbar #menu-open-button i {
-    color: ...; /* Une règle qui pourrait être plus spécifique */
+        color: ...;
+        /* Une règle qui pourrait être plus spécifique */
     }
-    
-   .navbar :where(#menu-close-button, #menu-open-button) {
-    /* Style par défaut du bouton, y compris la couleur de l'icône */
-    color: var(--white-color); /* Couleur par défaut de l'icône */
-    display: block;
-    font-size: var(--font-size-l);
-    padding: 8px;
-    border-radius: var(--border-radius-circle);
-    transition: background-color 0.3s ease, color 0.3s ease;
+
+    .navbar :where(#menu-close-button, #menu-open-button) {
+        /* Style par défaut du bouton, y compris la couleur de l'icône */
+        color: var(--button-menu-color);
+        /* Couleur par défaut de l'icône */
+        display: block;
+        font-size: var(--font-size-l);
+        padding: 8px;
+        border-radius: var(--border-radius-circle);
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .navbar :where(#menu-close-button, #menu-open-button):hover {
-    /* Styles au survol */
-    background-color: var(--secondary-color);
-    color: var(--primary-color) !important; /* Inversion de la couleur au survol */
+        /* Styles au survol */
+        background-color: var(--text-color);
+        color: var(--button-menu-hover) !important;
+        /* Inversion de la couleur au survol */
     }
 
     .styled-form {
         padding: 1rem;
         max-width: 100%;
     }
-    
-        /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
+
+    /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
         *                     à 
         *                   32'15"                            */
-
-
