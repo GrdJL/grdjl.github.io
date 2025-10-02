@@ -192,6 +192,7 @@ header .navbar {
     background: var(--button-section-color);
     font-weight: var(--font-weight-medium);
     transition: 0.2s ease;
+    justify-content: center;
 }
 
 .hero-section .hero-details .button:hover {
@@ -279,6 +280,7 @@ header .navbar {
     background: var(--button-section-color);
     font-weight: var(--font-weight-medium);
     transition: 0.2s ease;
+    justify-content: center;
 }
 
 .about-section .about-details .button:hover {
@@ -491,3 +493,4 @@ header .navbar {
     /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
         *                     à 
         *                   32'15"                            */
+
