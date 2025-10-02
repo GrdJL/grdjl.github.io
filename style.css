@@ -211,6 +211,11 @@ header .navbar {
     background: var(--background-color);
 }
 
+/* Center the content of the contact section */
+#contact .section-content {
+    justify-content: center;
+}
+
 .blog-section {
     background: var(--background-color);
 }
@@ -251,6 +256,16 @@ header .navbar {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section .social-link-list {
+    margin-top: 25px;
+    padding: 6px 0 14px 0;
+    display: flex;
+    flex-direction: row; /* Modifié */
+    gap: 16px; /* Modifié */
     justify-content: center;
     align-items: center;
 }
@@ -305,7 +320,7 @@ header .navbar {
     border-radius: var(--border-radius-s) var(--border-radius-s) var(--border-radius-m) var(--border-radius-m);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     padding: 2rem;
-    max-width: 420px;
+    max-width: 480px; /* Modifié de 420px à 720px */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -485,7 +500,7 @@ header .navbar {
 
     .styled-form {
         padding: 1rem;
-        max-width: 100%;
+        max-width: 380px;
     }
 
     /*   https://www.youtube.com/watch?v=MYFgtnKMDp4&t=521s 
