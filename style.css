@@ -101,6 +101,7 @@ header {
     width: 100%;
     z-index: 5;
     background: var(--background-color);
+    -webkit-transform: translate3d(0, 0, 0);
 }
 
 header .navbar {
@@ -505,3 +506,4 @@ header .navbar {
 
 
 }
+
