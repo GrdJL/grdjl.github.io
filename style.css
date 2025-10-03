@@ -214,7 +214,6 @@ header .navbar {
 /* Center the content of the contact section */
 #contact .section-content {
     justify-content: center;
-    padding: 10px 0;
 }
 
 .blog-section {
@@ -509,6 +508,7 @@ header .navbar {
         max-width: 380px;
 
     }
+
 
 
 
