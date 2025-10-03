@@ -49,11 +49,6 @@
     --site-max-width: 1100px;
 }
 
-.main section[id] {
-    /* Use a margin equal to or greater than the header's height */
-    scroll-margin-top: 100px; 
-}
-
 b {
     font-weight: var(--font-weight-bold);
     color: var(--emphasis-text-color);
@@ -510,5 +505,6 @@ header .navbar {
 
 
 }
+
 
 
