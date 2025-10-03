@@ -247,7 +247,7 @@ header .navbar {
     margin: 17px 0 30px;
     text-align: center;
     font-size: var(--font-size-m);
-    line-height: 1.8;
+    line-height: 26px;
 }
 
 .about-section .social-link-list {
