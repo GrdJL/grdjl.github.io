@@ -8,6 +8,7 @@
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth !important;
     outline: 1px solid red !important;
+    max-width: 100%;
 }
 
 :root {
@@ -106,7 +107,7 @@ img {
 /* Navbar Styling*/
 header {
     position: fixed;
-    max-width: 100%;
+    width: 100%;
     z-index: 5;
     background: var(--background-color);
 }
