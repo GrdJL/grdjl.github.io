@@ -10,18 +10,21 @@ Github placeholder for the Longfort Consulting website which aims to introduce t
 
 ## Features
 
-1. **Purpose**
+1. **About us**
 
 Purpose of the company
+
+2. **services**
+
+List of services
 
 2. **Contact**
 
 Contact information
 
-3. **Portfolio**
+3. **Blog**
 
-List of services
-
+Social networks posts
 
 
 ## Stack Tech
