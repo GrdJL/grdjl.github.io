@@ -117,6 +117,7 @@ header .navbar {
     padding: 10px 20px 10px 20px;
     align-items: center;
     justify-content: space-between;
+    max-width: var(--site-max-width);
 }
 
 .navbar .nav-logo .logo-text {
