@@ -138,9 +138,10 @@ header .navbar {
 
 .navbar .nav-menu {
     display: flex;
-    padding: 20px;
+    padding: 20px 0;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .navbar .nav-menu .nav-link {
@@ -409,10 +410,11 @@ header .navbar {
         background: rgba(0, 0, 0, 0.2);
     }
 
+
     .navbar :where(#menu-close-button, #menu-open-button) {
         display: block;
         font-size: var(--font-size-l);
-    }
+        }
 
     .navbar #menu-close-button {
         position: absolute;
@@ -441,8 +443,8 @@ header .navbar {
         height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        padding-top: 100px;
+        align-items: left;
+        padding: 100px 0 600px 0;
         background: var(--button-menu-color);
         transition: left 0.2s ease;
     }
