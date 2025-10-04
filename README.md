@@ -4,7 +4,7 @@
 
 ## About the Project
 
-Github placeholder for the Longfort Consulting website which aims to introduce my wife's portolio & the her contact information.
+Github placeholder for the Longfort Consulting website which aims to introduce my wife's portolio & her contact information.
 
 
 
