@@ -507,12 +507,3 @@ header .navbar {
         padding: 1rem;
         max-width: 380px;
     }
-
-    .styled-form textarea {
-    font-size: var(--font-size-xs);
-    }
-
-    .styled-form .button,
-    .styled-form button[type="submit"] {
-    font-size: var(--font-size-xs);
-    }
