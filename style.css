@@ -334,9 +334,9 @@ header .navbar {
 }
 
 .styled-form label {
-    font-size: 1rem;
+    font-size: var(--font-size-n);
     color: var(--text-color);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
 }
 
 .styled-form input[type="text"],
@@ -345,7 +345,7 @@ header .navbar {
     border: 1px solid #e3e3e3;
     border-radius: 8px;
     padding: 0.8rem 1rem;
-    font-size: 1rem;
+    font-size: var(--font-size-n);
     background: #faf9f6;
     color: #333;
     transition: border-color 0.2s;
@@ -366,8 +366,8 @@ header .navbar {
     padding: 0.8rem 1.4rem;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: var(--font-size-n);
+    font-weight: var(--font-weight-semibold);
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(110, 138, 223, 0.08);
     transition: background 0.2s;
@@ -506,10 +506,13 @@ header .navbar {
     .styled-form {
         padding: 1rem;
         max-width: 380px;
-
     }
 
+    .styled-form textarea {
+    font-size: var(--font-size-xs);
+    }
 
-
-
-
+    .styled-form .button,
+    .styled-form button[type="submit"] {
+    font-size: var(--font-size-xs);
+    }
