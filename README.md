@@ -4,7 +4,7 @@
 
 ## About the Project
 
-Github placeholder for the Longfort Consulting website which aims to introduce the freelance portolio & the contact information.
+Github placeholder for the Longfort Consulting website which aims to introduce my wife's portolio & the her contact information.
 
 
 
@@ -14,7 +14,7 @@ Github placeholder for the Longfort Consulting website which aims to introduce t
 
 Purpose of the company
 
-2. **services**
+2. **Services**
 
 List of services
 
@@ -53,4 +53,4 @@ This project was created by GrdJL. Connect with me on [GitHub](https://github.co
 <p align="right"><a href="#readme-top">(Back to top)</a></p>
 
 ---
- <div align="center">Built with ❤️ by GrdJL</a></div>
+ <div align="center">Built with ❤️ by JL</a></div>
