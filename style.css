@@ -512,7 +512,7 @@ header .navbar {
         max-width: 380px;
     }
     .footer-section .footer {
-        font-size: var(--font-size-xxs);
+        font-size: var(--font-size-xs);
     }
 }
 
