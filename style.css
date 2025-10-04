@@ -75,12 +75,14 @@ img {
 
 .section-content {
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px;
+    max-width: 100%;
 }
 
 .blog-content {
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px;
+    max-width: 100%;
 }
 
 .section-title {
