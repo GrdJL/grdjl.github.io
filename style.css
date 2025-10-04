@@ -75,14 +75,12 @@ img {
 
 .section-content {
     margin: 0 auto;
-    padding: 0 20px;
-    max-width: 100%;
+    padding: 0 20px;
 }
 
 .blog-content {
     margin: 0 auto;
     padding: 0 20px;
-    max-width: 100%;
 }
 
 .section-title {
@@ -228,6 +226,7 @@ header .navbar {
     gap: 50px;
     align-items: center;
     justify-content: space-between;
+    max-width: 100%;
 }
 
 .about-section .about-image-wrapper .about-image {
