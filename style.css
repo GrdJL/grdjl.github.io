@@ -216,10 +216,6 @@ header .navbar {
     justify-content: center;
 }
 
-.blog-section {
-    background: var(--background-color);
-}
-
 .about-section .section-content {
     display: flex;
     gap: 50px;
@@ -478,10 +474,11 @@ header .navbar {
         height: 28px;
     }
 
-    /* .navbar #menu-open-button i {
+    /*.navbar #menu-open-button i {
         color: ...;
-        Une règle qui pourrait être plus spécifique 
-    }*/
+        /* Une règle qui pourrait être plus spécifique
+    }
+    */
 
     .navbar :where(#menu-close-button, #menu-open-button) {
         /* Style par défaut du bouton, y compris la couleur de l'icône */
