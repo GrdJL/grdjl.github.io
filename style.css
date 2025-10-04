@@ -418,9 +418,8 @@ header .navbar {
 
     .navbar #menu-close-button {
         position: absolute;
-        right: 30px;
-        top: 30px;
-        padding: 8px;
+        right: 20px;
+        top: 15px;
         border-radius: var(--border-radius-circle);
         /* Rend la bordure circulaire */
         color: var(--button-icon-color);
@@ -443,8 +442,8 @@ header .navbar {
         height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: left;
-        padding: 100px 0 600px 0;
+        align-items: center;
+        padding: 200px 0 600px;
         background: var(--button-menu-color);
         transition: left 0.2s ease;
     }
@@ -456,7 +455,7 @@ header .navbar {
     .navbar .nav-menu .nav-link {
         color: var(--button-icon-color);
         display: block;
-        margin-top: 17px;
+        margin-top: -150px;
         font-size: var(--font-size-1);
     }
 
