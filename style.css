@@ -12,8 +12,8 @@ html, body {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth !important;
-    /*outline: 1px solid red !important;
-    box-shadow: inset 0 0 0 1px green !important;*/
+    outline: 1px solid red !important;
+    box-shadow: inset 0 0 0 1px green !important;
 }
 
 :root {
@@ -443,7 +443,7 @@ header .navbar {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 180px 0 600px;
+        padding: 60px 0 600px;
         background: var(--button-menu-color);
         transition: left 0.2s ease;
     }
@@ -455,7 +455,7 @@ header .navbar {
     .navbar .nav-menu .nav-link {
         color: var(--button-icon-color);
         display: block;
-        margin-top: -100px;
+        margin-top: 20px;
         font-size: var(--font-size-1);
     }
 
