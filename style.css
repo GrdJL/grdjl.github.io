@@ -106,14 +106,14 @@ img {
 /* Navbar Styling*/
 header {
     position: fixed;
-    width: 98%;
+    width: 100%;
     z-index: 5;
     background: var(--background-color);
 }
 
 header .navbar {
     display: flex;
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     align-items: center;
     justify-content: space-between;
 }
