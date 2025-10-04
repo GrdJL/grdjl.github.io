@@ -109,13 +109,11 @@ header {
     position: fixed;
     z-index: 5;
     background: var(--background-color);
-    width: 95%;
-    max-width: var(--site-max-width);
+    width: 100%;
 }
 
 header .navbar {
     display: flex;
-    padding: 10px 20px 10px 20px;
     align-items: center;
     justify-content: space-between;
 
