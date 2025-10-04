@@ -78,6 +78,12 @@ img {
     max-width: var(--site-max-width);
 }
 
+.blog-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Pas de max-width pour que le contenu prenne toute la place */
+}
+
 .section-title {
     text-align: center;
     padding: 0 0 24px;
@@ -504,3 +510,4 @@ header .navbar {
         padding: 1rem;
         max-width: 380px;
     }
+
