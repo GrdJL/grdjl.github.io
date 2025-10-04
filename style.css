@@ -109,11 +109,12 @@ header {
     width: 100%;
     z-index: 5;
     background: var(--background-color);
+    min-width: 100%;
 }
 
 header .navbar {
     display: flex;
-    padding: 20px 20px 10px 20px;
+    padding: 10px 20px 10px 20px;
     align-items: center;
     justify-content: space-between;
 }
@@ -132,7 +133,7 @@ header .navbar {
 
 .navbar .nav-menu {
     display: flex;
-    padding: 20px 20px 10px 20px;
+    padding: 20px 20px 20px 20px;
     align-items: center;
     justify-content: space-between;
 }
