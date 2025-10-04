@@ -214,7 +214,7 @@ header .navbar {
 
 /* About section styling */
 .about-section {
-    padding: 85px 0;
+    padding: 120px 0 0 0;
     background: var(--background-color);
 }
 
