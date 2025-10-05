@@ -389,6 +389,10 @@ header .navbar {
         --font-size-xxl: 1.8rem;
     }
 
+    #SciImg {
+        display: none;
+    }
+
     body.show-mobile-menu header::before {
         content: "";
         position: fixed;
