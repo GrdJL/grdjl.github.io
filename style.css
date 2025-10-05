@@ -12,8 +12,8 @@ html, body {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth !important;
-    outline: 1px solid red !important;
-    box-shadow: inset 0 0 0 1px green !important;
+    /*outline: 1px solid red !important;
+    box-shadow: inset 0 0 0 1px green !important;*/
 }
 
 :root {
@@ -391,6 +391,11 @@ header .navbar {
 
     #SciImg {
         display: none;
+    }
+
+    .about-section .about-image-wrapper .about-image {
+        width: 360px;
+        height: 360px;
     }
 
     body.show-mobile-menu header::before {
