@@ -273,7 +273,7 @@ header .navbar {
 }
 
 .about-section .social-link-list .social-link {
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-m);
     color: var(--text-color);
     transition: 0.2s ease;
 }
