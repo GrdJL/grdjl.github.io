@@ -393,6 +393,11 @@ header .navbar {
         display: none;
     }
 
+#blank {
+display: none;
+}
+
+
     .about-section .about-image-wrapper .about-image {
         width: 360px;
         height: 360px;
