@@ -1,4 +1,4 @@
-# My wife's website (https://www.longfort-consulting.com)
+# My wife's website (https://longfort-consulting.com)
 
 <!-- TABLE_CONTENT_PLACEHOLDER -->
 
