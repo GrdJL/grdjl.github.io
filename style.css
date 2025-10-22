@@ -17,13 +17,13 @@ html, body {
 }
 
 :root {
-    color-scheme: light !important;
+    /*color-scheme: light !important; */
 
     /* Colors */
     --button-menu-color: #3d7489;
     --button-menu-hover: #ffffff;
     --button-icon-color: #172429;
-    --background-color: #faf9f6;
+    --background-color: light-dark(#faf9f6, #faf9f6);
     --darker-color: #3b3737;
     --text-color: #1b89aa;
     --emphasis-text-color: #d5a10a;
