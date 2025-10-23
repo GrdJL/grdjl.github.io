@@ -396,7 +396,7 @@ div[popover] {
     border-radius: var(--border-radius-s) var(--border-radius-s) var(--border-radius-s) var(--border-radius-s);
     box-shadow: 0 2px 8px rgba(110, 138, 223, 0.08);
     max-width: 480px; /* Taille similaire au formulaire mais ajustée pour une pop-up */
-    z-index: 10; /* Assurer qu'il est au-dessus du reste */
+    z-index: 3; /* Assurer qu'il est au-dessus du reste */
 
     /* Texte et police */
     font-family: "Poppins", sans-serif;
@@ -432,7 +432,7 @@ div[popover]::backdrop {
     position: fixed;
     bottom: 45px;
     right: 15px;
-    z-index: 9;
+    z-index: 4;
     
     /* Le bouton est visible en permanence */
     opacity: 1; 
@@ -618,3 +618,4 @@ display: none;
         gap: 5px;
     }
 }
+
