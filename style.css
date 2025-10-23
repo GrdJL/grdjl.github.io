@@ -619,3 +619,59 @@ display: none;
     }
 }
 
+/* --- NEW: Slide Pop-up on Hover --- */
+    
+.slide-popup {
+    /* Hidden by default */
+    display: none; 
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+
+    /* Positioning */
+    position: absolute;
+    z-index: 10; /* Above other content */
+    
+    /* Positioned relative to the line (top-left corner) */
+    /* Moves it up by half its height and right slightly */
+    top: -150px; 
+    left: 40px;  
+
+    /* Dimensions & Style */
+    width: 480px; 
+    height: 299px; 
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    
+    /* IMPORTANT: Prevents the popup from capturing the mouse */
+    /* and breaking the :hover state on the link */
+    pointer-events: none; 
+}
+
+.slide-popup iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; 
+}
+
+/* Show the popup when hovering the link */
+/* We use the '+' selector to find the *next sibling* */
+.pdf-link:hover + .slide-popup {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive handling for the popup */
+@media screen and (max-width: 600px) {
+    .slide-popup {
+        /* On small screens, make it responsive and center it */
+        width: 90vw; /* 90% of viewport width */
+        /* Maintain 16:9 ratio (approx 299/480) */
+        height: 56.06vw; 
+        left: 5vw; /* 5% margin on each side */
+        top: -58vw; /* Position above, responsive */
+    }
+}
+/* --- End Slide Pop-up --- */
