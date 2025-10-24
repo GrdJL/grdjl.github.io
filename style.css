@@ -357,4 +357,269 @@ header .navbar {
 
 .styled-form .button,
 .styled-form button[type="submit"] {
-    background:
+    background: #6e8adf;
+    color: #fff;
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--font-size-n);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(110, 138, 223, 0.08);
+    transition: background 0.2s;
+}
+
+.styled-form .button:hover,
+.styled-form button[type="submit"]:hover {
+    background: #3b3737;
+}
+
+/* --- Fly Over / Hover Pop-up Styles --- */
+
+/* Conteneur pour cibler le hover sur l'ensemble texte + icône */
+.flyover-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style de base pour le fly-over content */
+.flyover-content {
+    /* Cache l'élément par défaut et le positionne */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    
+    /* Positionnement */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Style du bloc */
+    max-width: 300px;
+    max-height: 400px;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-s);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    
+    /* Texte et police (héritage des anciens styles popover) */
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+    font-size: var(--font-size-n);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Rendre le contenu visible au survol du conteneur */
+.flyover-container:hover .flyover-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.flyover-content embed {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* Suppression des styles d'anciens popover natif */
+div[popover], div[popover]::backdrop {
+    display: none;
+}
+
+
+/* Styling for the fixed 'Scroll to Top' link (HTML/CSS only) */
+.fixed-scroll-button {
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    color: var(--emphasis-text-color);
+    border-radius: var(--border-radius-m);
+    background: var(--button-section-color);
+    font-weight: var(--font-weight-medium);
+    transition: 0.2s ease;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    position: fixed;
+    bottom: 45px;
+    right: 15px;
+    z-index: 4;
+    
+    opacity: 1; 
+    visibility: visible;
+    text-align: center;
+    display: inline-block;
+}
+
+.fixed-scroll-button:hover {
+    background: var(--footer-color);
+    color: var(--text-color);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Style du lien PDF (dans la section des services) */
+.pdf-link {
+    color: var(--text-color);
+    font-size: var(--font-size-s);
+    margin-left: 5px;
+    transition: color 0.2s ease;
+    
+    text-decoration: none; 
+    
+    display: inline;
+}
+
+.pdf-link:hover {
+    color: var(--emphasis-text-color);
+}
+
+/* Responsive media query code for max width 920px */
+@media screen and (max-width: 920px) {
+    :root {
+        --font-size-m: 1rem;
+        --font-size-1: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+
+    #SciImg {
+        display: none;
+    }
+
+    #blank {
+        display: none;
+    }
+
+    .about-section .about-image-wrapper .about-image {
+        width: 360px;
+        height: 360px;
+    }
+
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+
+    .navbar :where(#menu-close-button, #menu-open-button) {
+        display: block;
+        font-size: var(--font-size-l);
+    }
+
+    .navbar #menu-close-button {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        border-radius: var(--border-radius-circle);
+        color: var(--button-icon-color);
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease,
+            border-color 0.3s ease;
+    }
+
+    .navbar #menu-open-button {
+        color: var(--text-color);
+    }
+
+    .navbar .nav-menu {
+        position: fixed;
+        left: -200px;
+        top: 0;
+        width: 200px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0 625px;
+        background: var(--button-menu-color);
+        transition: left 0.2s ease;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: var(--button-icon-color);
+        display: block;
+        margin-top: 0;
+        font-size: var(--font-size-1);
+    }
+
+    .hero-section .section-content {
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .hero-section .hero-details :is(.subtitle, .description) {
+        max-width: 100%;
+    }
+
+    .hero-section .hero-image-wrapper {
+        max-width: 270px;
+        margin-right: 0;
+    }
+
+    .about-section .section-content {
+        flex-direction: column-reverse;
+    }
+
+    .about-section .about-details .buttons {
+        justify-content: center;
+    }
+
+    .logo {
+        margin-bottom: -6px;
+        width: 28px;
+        height: 28px;
+    }
+
+    .navbar :where(#menu-close-button, #menu-open-button) {
+        color: var(--button-menu-color);
+        display: block;
+        font-size: var(--font-size-l);
+        padding: 8px;
+        border-radius: var(--border-radius-circle);
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
+    }
+
+    .navbar :where(#menu-close-button, #menu-open-button):hover {
+        background-color: var(--text-color);
+        color: var(--button-menu-hover) !important;
+    }
+
+    .styled-form {
+        padding: 1rem;
+        max-width: 380px;
+    }
+    .footer-section .footer {
+        font-size: var(--font-size-xxs);
+        padding: 6px 0 6px 0;
+        gap: 5px;
+    }
+    
+    /* Fly-over adjustment for mobile */
+    .flyover-content {
+        max-width: 90vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
