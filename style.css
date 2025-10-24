@@ -12,13 +12,9 @@ html, body {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth !important;
-    /*outline: 1px solid red !important;
-    box-shadow: inset 0 0 0 1px green !important;*/
 }
 
 :root {
-    /*color-scheme: light !important; */
-
     /* Colors */
     --button-menu-color: #3d7489;
     --button-menu-hover: #ffffff;
@@ -27,8 +23,6 @@ html, body {
     --darker-color: #3b3737;
     --text-color: #1b89aa;
     --emphasis-text-color: #d5a10a;
-    /* --medium-gray-color: #ccc; */
-    /* --emphasis-text-color: #34342d; */
     --button-section-color: #f1e8d0;
     --footer-color: rgb(205, 205, 205);
 
@@ -266,8 +260,8 @@ header .navbar {
     margin-top: 25px;
     padding: 6px 0 14px 0;
     display: flex;
-    flex-direction: row; /* Modifié */
-    gap: 40px; /* Modifié */
+    flex-direction: row;
+    gap: 40px;
     justify-content: center;
     align-items: center;
 }
@@ -322,7 +316,7 @@ header .navbar {
     border-radius: var(--border-radius-s) var(--border-radius-s) var(--border-radius-m) var(--border-radius-m);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     padding: 2rem;
-    max-width: 480px; /* Modifié de 420px à 720px */
+    max-width: 480px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -363,260 +357,4 @@ header .navbar {
 
 .styled-form .button,
 .styled-form button[type="submit"] {
-    background: #6e8adf;
-    color: #fff;
-    padding: 0.8rem 1.4rem;
-    border: none;
-    border-radius: 8px;
-    font-size: var(--font-size-n);
-    font-weight: var(--font-weight-semibold);
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(110, 138, 223, 0.08);
-    transition: background 0.2s;
-}
-
-.styled-form .button:hover,
-.styled-form button[type="submit"]:hover {
-    background: #3b3737;
-}
-
-div[popover] {
-    /* Style de base pour ressembler au formulaire */
-    position: fixed;
-    inset: 0;
-    /* Retrait des width/height fixes pour laisser le contenu/iframe dicter la taille */
-    /* width: clamp(136px, 80vw, 272px); */ 
-    /* height: clamp(192px, 80vh, 384px); */
-    margin: auto;
-    border: auto;
-    border-width: 1px;
-    border-color: var(--footer-color);
-    padding: 0.25em;
-    overflow: auto;
-    background-color: Canvas;
-    border-radius: var(--border-radius-s) var(--border-radius-s) var(--border-radius-s) var(--border-radius-s);
-    box-shadow: 0 2px 8px rgba(110, 138, 223, 0.08);
-    max-width: 480px; 
-    max-height: 80vh; /* Ajouté pour éviter que le popover ne remplisse l'écran verticalement */
-    z-index: 3; 
-
-    /* Texte et police */
-    font-family: "Poppins", sans-serif;
-    color: var(--text-color);
-    font-size: var(--font-size-n);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
-    text-align: center;
-}
-
-div[popover]::backdrop {
-    /* Fond assombri derrière la pop-up */
-    box-shadow: 0 2px 8px rgba(110, 138, 223, 0.08);
-    background-color: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(2px);
-}
-
-/* Styling for the fixed 'Scroll to Top' link (HTML/CSS only) */
-.fixed-scroll-button {
-    /* ... (Vos styles existants) ... */
-    padding: 10px 20px;
-    border: 2px solid transparent;
-    color: var(--emphasis-text-color);
-    border-radius: var(--border-radius-m);
-    background: var(--button-section-color);
-    font-weight: var(--font-weight-medium);
-    transition: 0.2s ease;
-
-    /* Ajout de l'ombre portée ici */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* x-offset y-offset blur spread color */
-
-    /* Positionnement fixe en bas à droite */
-    position: fixed;
-    bottom: 45px;
-    right: 15px;
-    z-index: 4;
-    
-    /* Le bouton est visible en permanence */
-    opacity: 1; 
-    visibility: visible;
-    text-align: center; /* Assure le centrage du texte si c'est un lien */
-    display: inline-block; /* Nécessaire pour appliquer padding/width/height au lien */
-}
-
-.fixed-scroll-button:hover {
-    /* Style au survol harmonisé */
-    background: var(--footer-color);
-    color: var(--text-color);
-    /* Optionnel: changer l'ombre au survol pour un petit effet */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Légèrement plus prononcé au survol */
-}
-
-/* Style du lien PDF (dans la section des services) */
-.pdf-link {
-    /* Style de base pour harmonisation */
-    color: var(--text-color); /* Utiliser la couleur principale de votre texte */
-    font-size: var(--font-size-s); /* Taille légèrement plus petite que le texte parent */
-    margin-left: 5px; /* Petit espacement entre le texte et l'icône */
-    transition: color 0.2s ease;
-    
-    /* Retirer le soulignement par défaut */
-    text-decoration: none; 
-    
-    /* Assure que l'icône est en ligne avec le texte */
-    display: inline;
-}
-
-.pdf-link:hover {
-    color: var(--emphasis-text-color); /* Couleur au survol (similaire aux liens sociaux) */
-}
-
-/* Responsive media query code for max width 920px */
-@media screen and (max-width: 920px) {
-    :root {
-        --font-size-m: 1rem;
-        --font-size-1: 1.3rem;
-        --font-size-xl: 1.5rem;
-        --font-size-xxl: 1.8rem;
-    }
-
-    #SciImg {
-        display: none;
-    }
-
-#blank {
-display: none;
-}
-
-
-    .about-section .about-image-wrapper .about-image {
-        width: 360px;
-        height: 360px;
-    }
-
-    body.show-mobile-menu header::before {
-        content: "";
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        backdrop-filter: blur(5px);
-        background: rgba(0, 0, 0, 0.2);
-    }
-
-
-    .navbar :where(#menu-close-button, #menu-open-button) {
-        display: block;
-        font-size: var(--font-size-l);
-        }
-
-    .navbar #menu-close-button {
-        position: absolute;
-        right: 20px;
-        top: 15px;
-        border-radius: var(--border-radius-circle);
-        /* Rend la bordure circulaire */
-        color: var(--button-icon-color);
-        /* Rend l'icône noire et visible */
-        transition:
-            background-color 0.3s ease,
-            color 0.3s ease,
-            border-color 0.3s ease;
-    }
-
-    .navbar #menu-open-button {
-        color: var(--text-color);
-    }
-
-    .navbar .nav-menu {
-        position: fixed;
-        left: -200px;
-        top: 0;
-        width: 200px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 50px 0 625px;
-        background: var(--button-menu-color);
-        transition: left 0.2s ease;
-    }
-
-    body.show-mobile-menu .navbar .nav-menu {
-        left: 0;
-    }
-
-    .navbar .nav-menu .nav-link {
-        color: var(--button-icon-color);
-        display: block;
-        margin-top: 0;
-        font-size: var(--font-size-1);
-    }
-
-    .hero-section .section-content {
-        gap: 50px;
-        text-align: center;
-        padding: 30px 20px 20px;
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-
-    .hero-section .hero-details :is(.subtitle, .description) {
-        max-width: 100%;
-    }
-
-    .hero-section .hero-image-wrapper {
-        max-width: 270px;
-        margin-right: 0;
-    }
-
-    .about-section .section-content {
-        flex-direction: column-reverse;
-    }
-
-    .about-section .about-details .buttons {
-        justify-content: center;
-    }
-
-    .logo {
-        margin-bottom: -6px;
-        width: 28px;
-        height: 28px;
-    }
-
-    /*.navbar #menu-open-button i {
-        color: ...;
-        /* Une règle qui pourrait être plus spécifique
-    }
-    */
-
-    .navbar :where(#menu-close-button, #menu-open-button) {
-        /* Style par défaut du bouton, y compris la couleur de l'icône */
-        color: var(--button-menu-color);
-        /* Couleur par défaut de l'icône */
-        display: block;
-        font-size: var(--font-size-l);
-        padding: 8px;
-        border-radius: var(--border-radius-circle);
-        transition:
-            background-color 0.3s ease,
-            color 0.3s ease;
-    }
-
-    .navbar :where(#menu-close-button, #menu-open-button):hover {
-        /* Styles au survol */
-        background-color: var(--text-color);
-        color: var(--button-menu-hover) !important;
-        /* Inversion de la couleur au survol */
-    }
-
-    .styled-form {
-        padding: 1rem;
-        max-width: 380px;
-    }
-    .footer-section .footer {
-        font-size: var(--font-size-xxs);
-        padding: 6px 0 6px 0;
-        gap: 5px;
-    }
-}
+    background:
