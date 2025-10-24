@@ -297,6 +297,20 @@ header .navbar {
     color: var(--text-color);
 }
 
+/* Styles for Service Subtitles */
+.service-heading-wrapper {
+    padding: 28px 0 8px 10px;
+}
+
+.service-heading {
+    font-size: 1.2rem;
+    color: var(--button-menu-color);
+    /* Les H4 sont en gras par défaut, ceci réinitialise à un poids normal */
+    font-weight: var(--font-weight-normal);
+    /* Réinitialise la marge par défaut des H4 */
+    margin: 0;
+}
+
 /* Footer section styling */
 .footer-section .footer {
     background: var(--footer-color);
@@ -623,6 +637,3 @@ div[popover], div[popover]::backdrop {
         transform: translateX(-50%);
     }
 }
-
-
-
