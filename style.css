@@ -384,8 +384,9 @@ div[popover] {
     /* Style de base pour ressembler au formulaire */
     position: fixed;
     inset: 0;
-    width: clamp(136px, 80vw, 272px);
-    height: clamp(192px, 80vh, 384px);
+    /* Retrait des width/height fixes pour laisser le contenu/iframe dicter la taille */
+    /* width: clamp(136px, 80vw, 272px); */ 
+    /* height: clamp(192px, 80vh, 384px); */
     margin: auto;
     border: auto;
     border-width: 1px;
@@ -395,8 +396,9 @@ div[popover] {
     background-color: Canvas;
     border-radius: var(--border-radius-s) var(--border-radius-s) var(--border-radius-s) var(--border-radius-s);
     box-shadow: 0 2px 8px rgba(110, 138, 223, 0.08);
-    max-width: 480px; /* Taille similaire au formulaire mais ajustée pour une pop-up */
-    z-index: 3; /* Assurer qu'il est au-dessus du reste */
+    max-width: 480px; 
+    max-height: 80vh; /* Ajouté pour éviter que le popover ne remplisse l'écran verticalement */
+    z-index: 3; 
 
     /* Texte et police */
     font-family: "Poppins", sans-serif;
@@ -618,62 +620,3 @@ display: none;
         gap: 5px;
     }
 }
-
-/* --- NEW: Slide Pop-up on Hover --- */
-    
-.slide-popup {
-    /* Hidden by default */
-    display: none; 
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-
-    /* Positioning */
-    position: absolute;
-    z-index: 10; /* Above other content */
-    
-    /* Positioned relative to the line (top-left corner) */
-    /* Moves it up by half its height and right slightly */
-    top: -150px; 
-    left: 40px;  
-
-    /* Dimensions & Style */
-    width: 480px; 
-    height: 299px; 
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    
-    /* IMPORTANT: Prevents the popup from capturing the mouse */
-    /* and breaking the :hover state on the link */
-    pointer-events: none; 
-}
-
-.slide-popup iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px; 
-}
-
-/* Show the popup when hovering the link */
-/* We use the '+' selector to find the *next sibling* */
-.pdf-link:hover + .slide-popup {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Responsive handling for the popup */
-@media screen and (max-width: 600px) {
-    .slide-popup {
-        /* On small screens, make it responsive and center it */
-        width: 90vw; /* 90% of viewport width */
-        /* Maintain 16:9 ratio (approx 299/480) */
-        height: 56.06vw; 
-        left: 5vw; /* 5% margin on each side */
-        top: -58vw; /* Position above, responsive */
-    }
-}
-/* --- End Slide Pop-up --- */
-
-
