@@ -384,8 +384,8 @@ div[popover] {
     /* Style de base pour ressembler au formulaire */
     position: fixed;
     inset: 0;
-    width: 50%; /*fit-content;*/
-    height: 50%;/*fit-content;*/
+    width: clamp(300px, 80vw, 900px);
+    height: clamp(300px, 80vh, 1200px);
     margin: auto;
     border: auto;
     border-width: 1px;
@@ -675,3 +675,4 @@ display: none;
     }
 }
 /* --- End Slide Pop-up --- */
+
