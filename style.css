@@ -396,9 +396,9 @@ header .navbar {
     transform: translateX(-50%);
     
     /* Style du bloc */
-    max-width: 322px;
+    max-width: 332px;
     max-height: 456px;
-    width: 322px;
+    width: 332px;
     height: 456px;
     padding: 10px;
     border: 1px solid var(--text-color);
@@ -623,5 +623,6 @@ div[popover], div[popover]::backdrop {
         transform: translateX(-50%);
     }
 }
+
 
 
