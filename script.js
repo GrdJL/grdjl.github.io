@@ -1,6 +1,7 @@
 const menuOpenButton = document.querySelector("#menu-open-button");
 const menuCloseButton = document.querySelector("#menu-close-button");
 const mobileMenu = document.querySelector(".nav-menu"); // 👈 SÉLECTIONNEUR CORRIGÉ
+const navLinks = document.querySelectorAll(".nav-link"); // 👈 NOUVEAU: Sélectionne tous les liens du menu
 
 // Écouteur pour ouvrir/fermer le menu via les boutons
 menuOpenButton.addEventListener("click", () => {
@@ -10,6 +11,15 @@ menuOpenButton.addEventListener("click", () => {
 
 // Le bouton de fermeture simule un clic sur le bouton d'ouverture
 menuCloseButton.addEventListener("click", () => menuOpenButton.click());
+
+// --- NOUVELLE LOGIQUE POUR FERMER LE MENU AU CLIC SUR UN LIEN ---
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        // Ferme le menu en retirant la classe, simulant le tiroir
+        document.body.classList.remove("show-mobile-menu");
+    });
+});
+// -----------------------------------------------------------------
 
 // --- Logique pour fermer le menu au clic externe ---
 document.addEventListener("click", (event) => {
