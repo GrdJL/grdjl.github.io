@@ -328,7 +328,7 @@ header .navbar {
 
 /* Ajoute la puce "□" (&#9634;) via CSS */
 .service-item .text::before {
-    content: '\25A2'; /* Équivalent CSS de &#9634; */
+    content: '\2937'; /* '\2726'; */
     margin-right: 8px; /* Espace entre la puce et le texte */
 }
 
@@ -524,7 +524,7 @@ div[popover], div[popover]::backdrop {
         --font-size-xxl: 1.8rem;
     }
 
-    #SciImg {
+    #glassTime {
         display: none;
     }
 
