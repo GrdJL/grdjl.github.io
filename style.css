@@ -301,9 +301,9 @@ header .navbar {
 .service-heading {
     font-size: 1.2rem;
     color: var(--button-menu-color);
-    /* Les H4 sont en gras par défaut, ceci réinitialise à un poids normal */
+    /* Les h3 sont en gras par défaut, ceci réinitialise à un poids normal */
     font-weight: var(--font-weight-normal);
-    /* Réinitialise la marge par défaut des H4 */
+    /* Réinitialise la marge par défaut des h3 */
     margin: 0;
     /* Styles fusionnés depuis .service-heading-wrapper */
     padding: 28px 0 8px 10px;
