@@ -298,10 +298,6 @@ header .navbar {
 }
 
 /* Styles for Service Subtitles */
-.service-heading-wrapper {
-    padding: 28px 0 8px 10px;
-}
-
 .service-heading {
     font-size: 1.2rem;
     color: var(--button-menu-color);
@@ -309,6 +305,8 @@ header .navbar {
     font-weight: var(--font-weight-normal);
     /* Réinitialise la marge par défaut des H4 */
     margin: 0;
+    /* Styles fusionnés depuis .service-heading-wrapper */
+    padding: 28px 0 8px 10px;
 }
 
 /* --- Styles pour la liste des services --- */
@@ -319,8 +317,6 @@ header .navbar {
 .service-item {
     padding: 0 0 0 10px;
 }
-
-/* --- STYLES AJOUTÉS POUR LA PUCE CSS --- */
 
 /* Annule les marges et l'alignement des paragraphes
    pour les liens de service qui réutilisent la classe ".text" */
@@ -334,7 +330,6 @@ header .navbar {
     content: '\25A2'; /* Équivalent CSS de &#9634; */
     margin-right: 8px; /* Espace entre la puce et le texte */
 }
-/* --- FIN DES STYLES AJOUTÉS --- */
 
 
 /* Footer section styling */
