@@ -311,6 +311,16 @@ header .navbar {
     margin: 0;
 }
 
+/* --- STYLES AJOUTÉS --- */
+.service-list {
+    margin-bottom: 0.5rem; 
+}
+
+.service-item {
+    padding: 0 0 0 10px;
+}
+/* --- FIN DES STYLES AJOUTÉS --- */
+
 /* Footer section styling */
 .footer-section .footer {
     background: var(--footer-color);
