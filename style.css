@@ -1,649 +1,223 @@
-/* Google font */
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    scroll-behavior: smooth !important;
-}
-
-:root {
-    /* Colors */
-    --button-menu-color: #3d7489;
-    --button-menu-hover: #ffffff;
-    --button-icon-color: #172429;
-    --background-color: light-dark(#faf9f6, #faf9f6);
-    --darker-color: #3b3737;
-    --text-color: #1b89aa;
-    --emphasis-text-color: #d5a10a;
-    --button-section-color: #f1e8d0;
-    --footer-color: rgb(205, 205, 205);
-
-    /* Font size */
-    --font-size-xxs: 0.5rem;
-    --font-size-xs: 0.7rem;
-    --font-size-s: 0.9rem;
-    --font-size-n: 1rem;
-    --font-size-m: 1.12rem;
-    --font-size-l: 1.5rem;
-    --font-size-xl: 2rem;
-    --font-size-xxl: 2.3rem;
-
-    /* Font weight */
-    --font-weight-normal: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-
-    /* Border radius */
-    --border-radius-s: 8px;
-    --border-radius-m: 30px;
-    --border-radius-circle: 50%;
-
-    /* Site max width */
-    --site-max-width: 1120px;
-}
-
-b {
-    font-weight: var(--font-weight-bold);
-    color: var(--emphasis-text-color);
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-    background: none;
-}
-
-img {
-    width: 100%;
-}
-
-.section-content {
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: var(--site-max-width);
-}
-
-.blog-content {
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: var(--site-max-width);
-}
-
-.section-title {
-    text-align: center;
-    padding: 0 0 24px;
-    text-transform: uppercase;
-    font-size: var(--font-size-xl);
-}
-
-.section-title::after {
-    content: "";
-    width: 80px;
-    height: 5px;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: var(--border-radius-s);
-    background: var(--text-color);
-}
-
-/* Navbar Styling*/
-header {
-    position: fixed;
-    z-index: 5;
-    background: var(--background-color);
-    width: 100%;
-}
-
-header .navbar {
-    display: flex;
-    padding: 20px 20px 10px 20px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar .nav-logo .logo-text {
-    color: var(--button-menu-color);
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-normal);
-}
-
-.logo {
-    margin-bottom: -3px;
-    width: 28px;
-    height: 28px;
-}
-
-.navbar .nav-menu {
-    display: flex;
-    padding: 20px 0;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.navbar .nav-menu .nav-link {
-    padding: 10px 18px;
-    color: var(--button-menu-color);
-    font-size: var(--font-size-m);
-    border-radius: var(--border-radius-s);
-    transition: 0.2s ease;
-}
-
-.navbar .nav-menu .nav-link:hover {
-    color: var(--button-menu-hover);
-    background: var(--text-color);
-}
-
-.navbar :where(#menu-close-button, #menu-open-button) {
-    display: none;
-}
-
-/* Hero Section styling */
-
-.hero-section {
-    min-height: 100vh;
-    background: var(--background-color);
-}
-
-.hero-section .section-content {
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    color: var(--button-menu-color);
-    justify-content: space-between;
-}
-
-.hero-section .hero-details .title {
-    font-size: var(--font-size-xxl);
-    color: var(--text-color);
-    font-family: "Cormorant+Garamond", sans-serif;
-}
-
-.hero-section .hero-details .subtitle {
-    margin: 8px 0 40px;
-    max-width: 70%;
-    font-size: var(--font-size-m);
-    font-weight: var(--font-size-m);
-}
-
-.hero-section .hero-details .description {
-    color: var(--darker-color);
-    max-width: 95%;
-    margin: 24px 0 40px;
-    font-size: var(--font-size-s);
-}
-
-.hero-section .hero-details .buttons {
-    display: flex;
-    gap: 23px;
-}
-
-.hero-section .hero-details .button {
-    padding: 10px 26px;
-    border: 2px solid transparent;
-    color: var(--emphasis-text-color);
-    border-radius: var(--border-radius-m);
-    background: var(--button-section-color);
-    font-weight: var(--font-weight-medium);
-    transition: 0.2s ease;
-}
-
-.hero-section .hero-details .button:hover {
-    background: var(--footer-color);
-    color: var(--text-color);
-}
-
-.hero-section .hero-image-wrapper {
-    max-width: 500px;
-    margin-top: 30px;
-    margin-right: 30px;
-}
-
-/* About section styling */
-.about-section {
-    padding: 96px 0 0 0;
-    background: var(--background-color);
-}
-
-/* Center the content of the contact section */
-#contact .section-content {
-    justify-content: center;
-}
-
-.about-section .section-content {
-    display: flex;
-    gap: 99px;
-    align-items: center;
-    justify-content: center;
-}
-
-.about-section .about-image-wrapper .about-image {
-    width: 440px;
-    height: 440px;
-    object-fit: cover;
-    border-radius: var(--border-radius-circle);
-}
-
-.about-section .about-details .section-title {
-    padding: 4px;
-}
-
-.about-section .about-details {
-    text-decoration: none;
-}
-
-.about-section .about-details .text {
-    margin: 17px 0 30px;
-    text-align: center;
-    font-size: var(--font-size-m);
-    line-height: 26px;
-}
-
-.about-section .social-link-list {
-    margin-top: 25px;
-    padding: 6px 0 14px 0;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-section .social-link-list .social-link {
-    font-size: var(--font-size-m);
-    color: var(--text-color);
-    transition: 0.2s ease;
-}
-
-.about-section .social-link-list .social-link:hover {
-    color: var(--emphasis-text-color);
-}
-
-.about-section .about-details .buttons {
-    display: flex;
-    gap: 23px;
-    padding: 0 20px 0;
-}
-
-.about-section .about-details .button {
-    padding: 10px 26px;
-    border: 2px solid transparent;
-    color: var(--emphasis-text-color);
-    border-radius: var(--border-radius-m);
-    background: var(--button-section-color);
-    font-weight: var(--font-weight-medium);
-    transition: 0.2s ease;
-}
-
-.about-section .about-details .button:hover {
-    background: var(--footer-color);
-    color: var(--text-color);
-}
-
-/* Styles for Service Subtitles */
-.service-heading-wrapper {
-    padding: 28px 0 8px 10px;
-}
-
-.service-heading {
-    font-size: 1.2rem;
-    color: var(--button-menu-color);
-    /* Les H4 sont en gras par défaut, ceci réinitialise à un poids normal */
-    font-weight: var(--font-weight-normal);
-    /* Réinitialise la marge par défaut des H4 */
-    margin: 0;
-}
-
-/* --- STYLES AJOUTÉS --- */
-.service-list {
-    margin-bottom: 0.5rem; 
-}
-
-.service-item {
-    padding: 0 0 0 10px;
-}
-/* --- FIN DES STYLES AJOUTÉS --- */
-
-/* Footer section styling */
-.footer-section .footer {
-    background: var(--footer-color);
-    color: var(--darker-color);
-    font-size: var(--font-size-xs);
-    text-decoration: none;
-    padding: 6px 0 14px 0;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Formulaire stylisé */
-.styled-form {
-    background: #fff;
-    border-radius: var(--border-radius-s) var(--border-radius-s) var(--border-radius-m) var(--border-radius-m);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-    padding: 2rem;
-    max-width: 480px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.styled-form .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.styled-form label {
-    font-size: var(--font-size-n);
-    color: var(--text-color);
-    font-weight: var(--font-weight-medium);
-}
-
-.styled-form input[type="text"],
-.styled-form input[type="email"],
-.styled-form textarea {
-    border: 1px solid #e3e3e3;
-    border-radius: 8px;
-    padding: 0.8rem 1rem;
-    font-size: var(--font-size-n);
-    background: #faf9f6;
-    color: #333;
-    transition: border-color 0.2s;
-    resize: vertical;
-}
-
-.styled-form input[type="text"]:focus,
-.styled-form input[type="email"]:focus,
-.styled-form textarea:focus {
-    border-color: var(--text-color);
-    outline: none;
-}
-
-.styled-form .button,
-.styled-form button[type="submit"] {
-    background: #6e8adf;
-    color: #fff;
-    padding: 0.8rem 1.4rem;
-    border: none;
-    border-radius: 8px;
-    font-size: var(--font-size-n);
-    font-weight: var(--font-weight-semibold);
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(110, 138, 223, 0.08);
-    transition: background 0.2s;
-}
-
-.styled-form .button:hover,
-.styled-form button[type="submit"]:hover {
-    background: #3b3737;
-}
-
-/* --- Fly Over / Hover Pop-up Styles --- */
-
-/* Conteneur pour cibler le hover sur l'ensemble texte + icône */
-.flyover-container {
-    position: relative;
-    display: inline-block;
-}
-
-/* Style de base pour le fly-over content */
-.flyover-content {
-    /* Cache l'élément par défaut et le positionne */
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    
-    /* Positionnement */
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    /* Style du bloc */
-    max-width: 332px;
-    max-height: 456px;
-    width: 332px;
-    height: 456px;
-    padding: 10px;
-    border: 1px solid var(--text-color);
-    background-color: var(--background-color);
-    border-radius: var(--border-radius-s);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    
-    /* Texte et police (héritage des anciens styles popover) */
-    font-family: "Poppins", sans-serif;
-    color: var(--text-color);
-    font-size: var(--font-size-n);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
-    text-align: center;
-}
-
-/* Rendre le contenu visible au survol du conteneur */
-.flyover-container:hover .flyover-content {
-    visibility: visible;
-    opacity: 1;
-}
-
-.flyover-content embed {
-    border: none;
-    width: 100%;
-    height: 100%;
-}
-
-/* Suppression des styles d'anciens popover natif */
-div[popover], div[popover]::backdrop {
-    display: none;
-}
-
-
-/* Styling for the fixed 'Scroll to Top' link (HTML/CSS only) */
-.fixed-scroll-button {
-    padding: 10px 20px;
-    border: 2px solid transparent;
-    color: var(--emphasis-text-color);
-    border-radius: var(--border-radius-m);
-    background: var(--button-section-color);
-    font-weight: var(--font-weight-medium);
-    transition: 0.2s ease;
-
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-
-    position: fixed;
-    bottom: 45px;
-    right: 15px;
-    z-index: 4;
-    
-    opacity: 1; 
-    visibility: visible;
-    text-align: center;
-    display: inline-block;
-}
-
-.fixed-scroll-button:hover {
-    background: var(--footer-color);
-    color: var(--text-color);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Style du lien PDF (dans la section des services) */
-.pdf-link {
-    color: var(--text-color);
-    font-size: var(--font-size-s);
-    margin-left: 5px;
-    transition: color 0.2s ease;
-    
-    text-decoration: none; 
-    
-    display: inline;
-}
-
-.pdf-link:hover {
-    color: var(--emphasis-text-color);
-}
-
-/* Responsive media query code for max width 920px */
-@media screen and (max-width: 920px) {
-    :root {
-        --font-size-m: 1rem;
-        --font-size-1: 1.3rem;
-        --font-size-xl: 1.5rem;
-        --font-size-xxl: 1.8rem;
-    }
-
-    #SciImg {
-        display: none;
-    }
-
-    #blank {
-        display: none;
-    }
-
-    .about-section .about-image-wrapper .about-image {
-        width: 360px;
-        height: 360px;
-    }
-
-    body.show-mobile-menu header::before {
-        content: "";
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        backdrop-filter: blur(5px);
-        background: rgba(0, 0, 0, 0.2);
-    }
-
-
-    .navbar :where(#menu-close-button, #menu-open-button) {
-        display: block;
-        font-size: var(--font-size-l);
-    }
-
-    .navbar #menu-close-button {
-        position: absolute;
-        right: 20px;
-        top: 15px;
-        border-radius: var(--border-radius-circle);
-        color: var(--button-icon-color);
-        transition:
-            background-color 0.3s ease,
-            color 0.3s ease,
-            border-color 0.3s ease;
-    }
-
-    .navbar #menu-open-button {
-        color: var(--text-color);
-    }
-
-    .navbar .nav-menu {
-        position: fixed;
-        left: -200px;
-        top: 0;
-        width: 200px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 50px 0 625px;
-        background: var(--button-menu-color);
-        transition: left 0.2s ease;
-    }
-
-    body.show-mobile-menu .navbar .nav-menu {
-        left: 0;
-    }
-
-    .navbar .nav-menu .nav-link {
-        color: var(--button-icon-color);
-        display: block;
-        margin-top: 0;
-        font-size: var(--font-size-1);
-    }
-
-    .hero-section .section-content {
-        gap: 50px;
-        text-align: center;
-        padding: 30px 20px 20px;
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-
-    .hero-section .hero-details :is(.subtitle, .description) {
-        max-width: 100%;
-    }
-
-    .hero-section .hero-image-wrapper {
-        max-width: 270px;
-        margin-right: 0;
-    }
-
-    .about-section .section-content {
-        flex-direction: column-reverse;
-    }
-
-    .about-section .about-details .buttons {
-        justify-content: center;
-    }
-
-    .logo {
-        margin-bottom: -6px;
-        width: 28px;
-        height: 28px;
-    }
-
-    .navbar :where(#menu-close-button, #menu-open-button) {
-        color: var(--button-menu-color);
-        display: block;
-        font-size: var(--font-size-l);
-        padding: 8px;
-        border-radius: var(--border-radius-circle);
-        transition:
-            background-color 0.3s ease,
-            color 0.3s ease;
-    }
-
-    .navbar :where(#menu-close-button, #menu-open-button):hover {
-        background-color: var(--text-color);
-        color: var(--button-menu-hover) !important;
-    }
-
-    .styled-form {
-        padding: 1rem;
-        max-width: 380px;
-    }
-    .footer-section .footer {
-        font-size: var(--font-size-xxs);
-        padding: 6px 0 6px 0;
-        gap: 5px;
-    }
-    
-    /* Fly-over adjustment for mobile */
-    .flyover-content {
-        max-width: 90vw;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="only light" />
+    <title>Longfort Consulting | Clinical Studies Consultant</title>
+    <meta name="description"
+        content="Longfort Consulting offers regulatory expertise to secure clinical trial approval in a timely and quality-controlled manner.
+    Benefit from our guidance in oncology, immunotherapy, rare diseases, pediatrics, and gene therapy to achieve successful trial outcomes.
+    Conduct robust clinical trials using bulletproof protocols and a tailored document set to obtain first-time approval from regulatory authorities." />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h1 class="logo-text">
+                    <img class="logo" src="ressources/logo.png" alt="Longfort Consulting logo" /> Longfort
+                    Consulting
+                </h1>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog</a>
+                </li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+    <main class="main">
+        <section id="blank" class="about-section">
+        </section>
+        <section id="about" class="about-section">
+            <div class="section-content">
+                <div class="about-image-wrapper">
+                    <img id="SciImg" src="ressources/image.webp"
+                        alt="Two scientists in a lab coat reviewing documents, with 'Clinical Trial' and related icons overlaid."
+                        class="about-image" />
+                </div>
+                <div class="about-details">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="text">
+                        Longfort Consulting offers regulatory expertise to secure clinical trial approval in a
+                        timely and quality-controlled manner.
+                    </p>
+                    <p class="text">
+                        Benefit from our guidance in oncology, immunotherapy, rare diseases, pediatrics, and
+                        gene therapy to reach successful trial outcomes.
+                    </p>
+                    <p class="text">
+                        Conduct robust <b>clinical trials</b> using <b>bulletproof</b> protocols and a tailored
+                        document set to obtain <b>first-time approval</b> from regulatory authorities.
+                    </p>
+                    <span class="buttons">
+                        <a href="#services" class="button">Learn more</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="about-section">
+            <div class="section-content">
+                <div class="about-details">
+                    <h2 class="section-title">Services</h2>
+                    <div>
+                        <div class="service-heading-wrapper">
+                            <h4 class="service-heading">Regulatory Strategy</h4>
+                        </div>
+                        <ul class="service-list">
+                            <li class="service-item">
+                                <a class="text">Worldwide Submissions</a>
+                            </li>
+                            <li class="service-item">
+                                <a class="text">Complex Trial Strategy</a>
+                            </li>
+                            <li class="service-item flyover-container">
+                                <a class="text">Readiness Audits</a>
+                                <a href="ressources/RegulatoryFlashAudit.pdf" target="_blank" class="pdf-link">
+                                    <i class="fa-solid fa-link"></i>
+                                </a>
+                                <div class="flyover-content">
+                                    <embed title="thumbnail" src="ressources/RegulatoryFlashAudit.pdf#toolbar=0" type="application/pdf" width="100%" height="100%" style="border: none;">
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="service-heading-wrapper">
+                            <h4 class="service-heading">
+                                Operational Coord. (Trial Start-up)
+                            </h4>
+                        </div>
+                        <ul class="service-list">
+                            <li class="service-item">
+                                <a class="text">Sites Identification and Selection</a>
+                            </li>
+                            <li class="service-item">
+                                <a class="text">ICF Adaptation</a>
+                            </li>
+                            <li class="service-item">
+                                <a class="text">CA and EC Submissions</a>
+                            </li>
+                            <li class="service-item">
+                                <a class="text">Contract and Budget Negotiations</a>
+                            </li>
+                            <li class="service-item">
+                                <a class="text">Sites Activation</a>
+                            </li>
+                        </ul>
+
+                        <div class="service-heading-wrapper">
+                            <h4 class="service-heading">Support</h4>
+                        </div>
+                        <ul class="service-list">
+                            <li class="service-item flyover-container">
+                                <a class="text">Start-up Project Support</a>
+                                <a href="ressources/StudyStartUpBoosterPortrait.pdf" target="_blank" class="pdf-link">
+                                    <i class="fa-solid fa-link"></i>
+                                </a>
+                                <div class="flyover-content">
+                                    <embed title="thumbnail" src="ressources/StudyStartUpBoosterPortrait.pdf#toolbar=0" type="application/pdf" width="100%" height="100%" style="border: none;">
+                                </div>
+                            </li>
+                            <li class="service-item">
+                                <a class="text">Clinical Operations Assessment</a>
+                            </li>
+                            <li class="service-item" style="padding-bottom: 28px;">
+                                <a class="text">Regulatory Team Training</a>
+                            </li>
+                        </ul>
+
+                        <span class="buttons">
+                            <a href="#contact" class="button">Leave a message</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="about-image-wrapper">
+                    <img src="ressources/timely.webp"
+                        alt="Glass beakers on a table in a sunny, outdoor setting, representing scientific research."
+                        class="about-image" />
+                </div>
+            </div>
+            <div class="about-details"></div>
+        </section>
+        <section id="contact" class="about-section">
+            <div class="section-content">
+                <div class="about-details">
+                    <h2 class="section-title">Contact</h2>
+                    <div>
+                        <p class="text">
+                            Have a question? Please fill out the form below, or feel free to contact me directly.
+                        </p>
+                        <form action="https://api.web3forms.com/submit" method="POST" class="styled-form">
+                            <input type="hidden" name="access_key" value="9aa4c03f-af54-404b-b9f9-ecf3e5fa28b5" />
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="Name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="Message" rows="5" required contenteditable="true">I am interested in your services and would like to schedule a call.</textarea>
+                            </div>
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none" />
+                            <button type="submit" class="button">Send</button>
+                        </form>
+                        <div class="social-link-list">
+                            <a href="mailto:sabrina.guittard@longfort-consulting.com" class="social-link"><i
+                                    class="fa-solid fa-envelope"></i> email</a>
+                            <a href="https://www.linkedin.com/in/sabrina-guittard-3106272b" target="_blank"
+                                class="social-link">Linked<i class="fa-brands fa-linkedin"></i></a>
+                            <a href="tel:+33652502498" class="social-link"><i class="fa fa-phone"></i>+33
+                                652502498</a>
+                        </div>
+                        <p class="text">Longfort Consulting - Toulouse, France</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="blog" class="about-section">
+            <div class="blog-content">
+                <div class="about-details">
+                    <h2 class="section-title">Blog</h2>
+                    <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div class="elfsight-app-37e8d025-f183-418a-832d-4a11719773ef" data-elfsight-app-lazy></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer-section">
+            <div>
+                <div class="footer">
+                    <a>© 2025 Longfort Consulting</a><a>|</a>
+                    <a style="color: #3b3737" href="LegalNotice_en.html">Legal notice</a><a>|</a>
+                    <a>&#127850;Cookie-free</a><a>|</a>
+                    <a>&#x1F33F;0.2g CO²/visit</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <a href="#about" class="button fixed-scroll-button" aria-label="Scroll to Top">&#8593;</a>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
