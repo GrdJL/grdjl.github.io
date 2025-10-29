@@ -648,6 +648,11 @@ div[popover], div[popover]::backdrop {
         padding: 1rem;
         max-width: 380px;
     }
+
+    .service-item .text::before {
+    top: -6px;
+    }
+    
     .footer-section .footer {
         font-size: var(--font-size-xxs);
         padding: 6px 0 6px 0;
@@ -661,4 +666,5 @@ div[popover], div[popover]::backdrop {
         transform: translateX(-50%);
     }
 }
+
 
