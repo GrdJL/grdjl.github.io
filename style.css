@@ -331,7 +331,7 @@ header .navbar {
     content: '\2937'; /* '\2726'; */
     margin-right: 8px; /* Espace entre la puce et le texte */
     position: relative;
-    top: -2px;
+    top: -1px;
 }
 
 
@@ -661,3 +661,4 @@ div[popover], div[popover]::backdrop {
         transform: translateX(-50%);
     }
 }
+
