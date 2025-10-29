@@ -330,6 +330,8 @@ header .navbar {
 .service-item .text::before {
     content: '\2937'; /* '\2726'; */
     margin-right: 8px; /* Espace entre la puce et le texte */
+    position: relative;
+    top: -2px;
 }
 
 
