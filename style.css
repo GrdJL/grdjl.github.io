@@ -331,7 +331,7 @@ header .navbar {
     content: '\2937'; /* '\2726'; */
     margin-right: 8px; /* Espace entre la puce et le texte */
     position: relative;
-    top: -1px;
+    top: -2px;
 }
 
 
@@ -650,7 +650,7 @@ div[popover], div[popover]::backdrop {
     }
 
     .service-item .text::before {
-    top: -4px;
+    top: -3px;
     }
     .footer-section .footer {
         font-size: var(--font-size-xxs);
@@ -665,6 +665,7 @@ div[popover], div[popover]::backdrop {
         transform: translateX(-50%);
     }
 }
+
 
 
 
