@@ -650,9 +650,8 @@ div[popover], div[popover]::backdrop {
     }
 
     .service-item .text::before {
-    top: -6px;
+    top: -4px;
     }
-    
     .footer-section .footer {
         font-size: var(--font-size-xxs);
         padding: 6px 0 6px 0;
@@ -666,5 +665,6 @@ div[popover], div[popover]::backdrop {
         transform: translateX(-50%);
     }
 }
+
 
 
