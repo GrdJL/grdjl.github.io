@@ -51,3 +51,91 @@ document.addEventListener("click", (event) => {
         }
     }
 });
+
+// --- LOGIQUE POUR LA GALERIE D'IMAGES DANS SECTION ABOUT ---
+
+// Liste des images disponibles (simulant le contenu de ressources/pictures)
+// Utilisation des images existantes dans 'ressources' pour l'exemple
+const imageSources = [
+    { src: "test1.jpg", alt: "Two scientists in a lab coat reviewing documents, with 'Clinical Trial' and related icons overlaid." },
+    { src: "test0.jpg", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "test2.jpg", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "test3.png", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "image.webp", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "pexels-etatics-inc-252430999-12512676.jpg", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "pexels-karola-g-4047073.jpg", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "pexels-karola-g-4047074.jpg", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "pexels-leeloothefirst-8383877.jpg", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "pexels-shvetsa-3683105.jpg", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "pexels-tara-winstead-7722680.jpg", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "pexels-tara-winstead-7723528.jpg", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "pexels-thirdman-5922066.jpg", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "Gemini_Generated_Image_by4fo4by4fo4by4f.png", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    { src: "Gemini_Generated_Image_e50nnae50nnae50n.png", alt: "Glass beakers on a table in a sunny, outdoor setting, representing scientific research." },
+    // Ajoutez ici les chemins de vos autres images (ex: "ressources/pictures/image3.jpg")
+    // { src: "ressources/pictures/image3.jpg", alt: "Description of image 3" }, 
+];
+
+const imageElement = document.querySelector(".image-to-cycle");
+const prevButton = document.querySelector(".prev-button");
+const nextButton = document.querySelector(".next-button");
+
+let currentImageIndex = 0;
+
+// Initialiser l'index avec l'image actuellement visible dans l'HTML
+if (imageElement) {
+    const initialSrc = imageElement.getAttribute('src');
+    const index = imageSources.findIndex(img => img.src === initialSrc);
+    if (index !== -1) {
+        currentImageIndex = index;
+    }
+}
+
+
+/**
+ * Met à jour la source et le texte alternatif de l'image.
+ * @param {number} index - Le nouvel index de l'image à afficher.
+ */
+function updateImage(index) {
+    if (imageElement && imageSources.length > 0) {
+        currentImageIndex = index;
+        const newImage = imageSources[currentImageIndex];
+        imageElement.src = newImage.src;
+        imageElement.alt = newImage.alt;
+    }
+}
+
+/**
+ * Affiche l'image précédente.
+ */
+function showPrevImage() {
+    let newIndex = currentImageIndex - 1;
+    // Boucle vers la dernière image si on dépasse le début
+    if (newIndex < 0) {
+        newIndex = imageSources.length - 1;
+    }
+    updateImage(newIndex);
+}
+
+/**
+ * Affiche l'image suivante.
+ */
+function showNextImage() {
+    let newIndex = currentImageIndex + 1;
+    // Boucle vers la première image si on dépasse la fin
+    if (newIndex >= imageSources.length) {
+        newIndex = 0;
+    }
+    updateImage(newIndex);
+}
+
+// Ajout des écouteurs d'événements aux boutons
+if (prevButton) {
+    prevButton.addEventListener("click", showPrevImage);
+}
+
+if (nextButton) {
+    nextButton.addEventListener("click", showNextImage);
+}
+
+// -----------------------------------------------------------------
