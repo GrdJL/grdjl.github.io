@@ -235,11 +235,54 @@ header .navbar {
     justify-content: center;
 }
 
+/* Nouveau style pour le conteneur d'image dans la galerie */
+.image-gallery-wrapper {
+    position: relative;
+    display: flex; /* Permet aux boutons d'être alignés */
+    justify-content: center;
+    align-items: center;
+}
+
 .about-section .about-image-wrapper .about-image {
     width: 440px;
     height: 440px;
     object-fit: cover;
     border-radius: var(--border-radius-circle);
+}
+
+/* Style des boutons de navigation d'image */
+.image-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--text-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: var(--font-size-l);
+    z-index: 2;
+    border-radius: var(--border-radius-circle);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.image-nav-button:hover {
+    background: var(--text-color);
+    color: var(--button-menu-hover);
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
 }
 
 .about-section .about-details .section-title {
@@ -330,8 +373,6 @@ header .navbar {
 .service-item .text::before {
     content: '\2937'; /* '\2726'; */
     margin-right: 8px; /* Espace entre la puce et le texte */
-    position: relative;
-    top: -2px;
 }
 
 
@@ -650,7 +691,8 @@ div[popover], div[popover]::backdrop {
     }
 
     .service-item .text::before {
-    top: -3px;
+        position: relative;
+        top: -2px;
     }
     .footer-section .footer {
         font-size: var(--font-size-xxs);
@@ -664,8 +706,19 @@ div[popover], div[popover]::backdrop {
         left: 50%;
         transform: translateX(-50%);
     }
+    
+    /* Ajustement des boutons de navigation pour mobile */
+    .image-nav-button {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-m);
+    }
+
+    .prev-button {
+        left: 20px;
+    }
+
+    .next-button {
+        right: 20px;
+    }
 }
-
-
-
-
