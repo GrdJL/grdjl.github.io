@@ -57,7 +57,7 @@ document.addEventListener("click", (event) => {
 // Liste des images disponibles (simulant le contenu de ressources/pictures)
 // Utilisation des images existantes dans 'ressources' pour l'exemple
 const imageSources = [
-    { src: "ressources/image.webp", alt: "Two scientists in a lab coat reviewing documents, with 'Clinical Trial' and related icons overlaid." },
+    { src: "ressources/image.webp", alt: "Two scientists in a lab coat reviewing documents, with Clinical Trial and related icons overlaid." },
     { src: "ressources/tmp/pexels-artempodrez-6823561.jpg", alt: "..." },
     { src: "ressources/tmp/pexels-cottonbro-7580248.jpg", alt: "..." },
     { src: "ressources/tmp/pexels-leeloothefirst-20140027.jpg", alt: "..." },
