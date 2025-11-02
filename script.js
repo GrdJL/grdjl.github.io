@@ -58,12 +58,11 @@ document.addEventListener("click", (event) => {
 // Utilisation des images existantes dans 'ressources' pour l'exemple
 const imageSources = [
     { src: "ressources/image.webp", alt: "Two scientists in a lab coat reviewing documents, with 'Clinical Trial' and related icons overlaid." },
-    { src: "ressources/tmp/test0.jpg", alt: "..." },
-    { src: "ressources/tmp/pexels-artempodrez-6823561.jpg", alt: "..." },
-    { src: "ressources/tmp/pexels-bri-schneiter-28802-346529.jpg", alt: "..." },
+    { src: "ressources/tmp/pexels-artempodrez-6823561.jpg, alt: "..." },
     { src: "ressources/tmp/pexels-cottonbro-7580248.jpg", alt: "..." },
     { src: "ressources/tmp/pexels-leeloothefirst-20140027.jpg", alt: "..." },
     { src: "ressources/tmp/pexels-maksgelatin-5994570.jpg", alt: "..." },
+    { src: "ressources/tmp/pexels-leeloothefirst-20140027.jpg", alt: "..." },
     { src: "ressources/tmp/pexels-mikhail-nilov-8851547.jpg", alt: "..." },
     { src: "ressources/tmp/pexels-n-voitkevich-8830633.jpg", alt: "..." },
     { src: "ressources/tmp/pexels-shvetsa-3683099.jpg", alt: "..." },
@@ -77,7 +76,6 @@ const imageSources = [
     { src: "ressources/tmp/pexels-thirdman-5922103.jpg", alt: "..." },
     { src: "ressources/tmp/pexels-thirdman-8940509.jpg", alt: "..." },
     { src: "ressources/tmp/pexels-thirdman-8940510.jpg", alt: "..." },
-    { src: "ressources/tmp/", alt: "..." },
     // Ajoutez ici les chemins de vos autres images (ex: "ressources/pictures/image3.jpg")
     // { src: "ressources/pictures/image3.jpg", alt: "Description of image 3" }, 
 ];
