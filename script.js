@@ -76,6 +76,13 @@ const imageSources = [
     { src: "ressources/tmp/pexels-thirdman-5922103.jpg", alt: "..." },
     { src: "ressources/tmp/pexels-thirdman-8940509.jpg", alt: "..." },
     { src: "ressources/tmp/pexels-thirdman-8940510.jpg", alt: "..." },
+	//{ src: "pexels-pavel-danilyuk-6340698.jpg", alt: "Two scientists in a lab." },
+	//{ src: "pexels-diva-plavalaguna-6146703.jpg", alt: "..." },
+	//{ src: "pexels-pavel-danilyuk-6340700.jpg", alt: "..." },
+	//{ src: "pexels-arturoaez225-9867278.jpg", alt: "..." },
+	//{ src: "pexels-thirdman-5961132.jpg", alt: "..." },
+	//{ src: "pexels-pavel-danilyuk-6340686.jpg", alt: "..." },
+	//{ src: "pexels-kampus-8829175.jpg", alt: "..." },
     // Ajoutez ici les chemins de vos autres images (ex: "ressources/pictures/image3.jpg")
     // { src: "ressources/pictures/image3.jpg", alt: "Description of image 3" }, 
 ];
@@ -83,6 +90,8 @@ const imageSources = [
 const imageElement = document.querySelector(".image-to-cycle");
 const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
+const imageGalleryWrapper = document.querySelector(".image-gallery-wrapper");
+// SÉLECTIONNEZ LE WATERMARK AUSSI (déjà défini en haut)
 
 let currentImageIndex = 0;
 
@@ -97,16 +106,58 @@ if (imageElement) {
 
 
 /**
- * Met à jour la source et le texte alternatif de l'image.
- * @param {number} index - Le nouvel index de l'image à afficher.
+ * Met à jour la source et le texte alternatif de l'image avec une transition de fondu.
+ * Déclenche le fondu en entrée uniquement après le chargement de la nouvelle image.
+ * @param {number} newIndex - Le nouvel index de l'image à afficher.
  */
-function updateImage(index) {
-    if (imageElement && imageSources.length > 0) {
-        currentImageIndex = index;
-        const newImage = imageSources[currentImageIndex];
-        imageElement.src = newImage.src;
-        imageElement.alt = newImage.alt;
-    }
+function updateImage(newIndex) {
+    if (!imageElement || imageSources.length === 0) return;
+    
+    // Si l'index ne change pas, on ne fait rien
+    if (newIndex === currentImageIndex) return;
+
+    // L'image à afficher
+    const newImage = imageSources[newIndex];
+
+    // 1. Déclenche le fondu en sortie (l'image devient transparente)
+    imageElement.style.opacity = '0';
+    // Le watermark ne change pas d'opacité.
+
+    // 2. Commence le préchargement de la nouvelle image en arrière-plan
+    const preloader = new Image();
+    preloader.src = newImage.src;
+    
+    // 3. Attends que l'ancienne image ait fini de disparaître ET que la nouvelle image soit chargée
+    setTimeout(() => {
+        // Si l'image n'est pas encore chargée, attend l'événement 'load'
+        if (!preloader.complete) {
+            preloader.onload = () => {
+                applyNewImage(newIndex, newImage);
+            };
+        } else {
+            // Sinon, l'image est déjà en cache ou chargée instantanément
+            applyNewImage(newIndex, newImage);
+        }
+    }, 500); // Durée de la transition CSS en millisecondes (pour la phase de fondu en sortie)
+}
+
+/**
+ * Applique la nouvelle image au DOM et lance le fondu en entrée.
+ * Cette fonction est appelée UNIQUEMENT après le chargement de l'image.
+ * @param {number} index - L'index de la nouvelle image.
+ * @param {object} imageObject - L'objet contenant la source et le texte alternatif de l'image.
+ */
+function applyNewImage(index, imageObject) {
+    // Met à jour l'index courant
+    currentImageIndex = index;
+
+    // Change la source et l'attribut alt de l'élément visible
+    imageElement.src = imageObject.src;
+    imageElement.alt = imageObject.alt;
+    
+    // Déclenche le fondu en entrée pour l'image
+    imageElement.style.opacity = '1';
+    // Le watermark ne change pas d'opacité.
 }
 
 /**
@@ -143,3 +194,46 @@ if (nextButton) {
 }
 
 // -----------------------------------------------------------------
+
+// --- LOGIQUE POUR LE DIAPORAMA AUTOMATIQUE (SLIDER AUTO) ---
+
+// Définir la durée (en millisecondes) entre les changements d'image
+const SLIDE_INTERVAL = 16000; // Changer d'image toutes les 4 secondes (4000 ms)
+let autoSlideTimer;
+
+/**
+ * Démarre le diaporama automatique en utilisant setInterval.
+ */
+function startAutoSlide() {
+    // S'assurer qu'un diaporama n'est pas déjà en cours avant d'en créer un nouveau
+    stopAutoSlide(); 
+    
+    // Si l'élément d'image existe et qu'il y a plus d'une image
+    if (imageElement && imageSources.length > 1) {
+        // Définit un intervalle qui appelle showNextImage après SLIDE_INTERVAL millisecondes
+        autoSlideTimer = setInterval(showNextImage, SLIDE_INTERVAL);
+    }
+}
+
+/**
+ * Arrête le diaporama automatique.
+ */
+function stopAutoSlide() {
+    clearInterval(autoSlideTimer);
+}
+
+// Logique pour PAUSER le diaporama au survol de la galerie (bonne UX)
+if (imageGalleryWrapper) {
+    // Écouteur pour arrêter le timer quand la souris est au-dessus
+    imageGalleryWrapper.addEventListener("mouseenter", stopAutoSlide);
+
+    // Écouteur pour redémarrer le timer quand la souris quitte
+    imageGalleryWrapper.addEventListener("mouseleave", startAutoSlide);
+}
+// -----------------------------------------------------------------
+
+
+// Démarre le diaporama lors du chargement de la page
+document.addEventListener("DOMContentLoaded", () => {
+    startAutoSlide();
+});
