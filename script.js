@@ -57,16 +57,38 @@ document.addEventListener("click", (event) => {
 // Liste des images disponibles (simulant le contenu de ressources/pictures)
 // Utilisation des images existantes dans 'ressources' pour l'exemple
 const imageSources = [
-    { src: "ressources/tmp/pexels-mikhail-nilov-8851547.jpg", alt: "Two scientists in a lab." },
-    { src: "ressources/image.webp", alt: "Two scientists in a lab." },
-    { src: "ressources/tmp/pexels-kampus-8829175.jpg", alt: "Two scientists in a lab." },
-    { src: "ressources/tmp/pexels-shvetsa-3683102.jpg", alt: "Two scientists in a lab." },
-    { src: "ressources/tmp/pexels-thirdman-5922066.jpg", alt: "Two scientists in a lab." },
-    { src: "ressources/tmp/pexels-cottonbro-7580248.jpg", alt: "Two scientists in a lab." },
-    { src: "ressources/tmp/pexels-artempodrez-6823561.jpg", alt: "Two scientists in a lab." },
-    { src: "ressources/tmp/pexels-thirdman-5961132.jpg", alt: "Two scientists in a lab." },
-    // Ajoutez ici les chemins de vos autres images (ex: "ressources/pictures/image3.jpg")
-    // { src: "ressources/pictures/image3.jpg", alt: "Description of image 3" }, 
+    {
+        src: "ressources/tmp/pexels-mikhail-nilov-8851547.jpg",
+        alt: "Two scientists working in a laboratory, conducting experiments and analyzing samples."
+    },
+    {
+        src: "ressources/image.webp",
+        alt: "A close-up shot of two scientists collaborating closely on research in a modern lab."
+    },
+    {
+        src: "ressources/tmp/pexels-kampus-8829175.jpg",
+        alt: "Scientist looking through a microscope in a research laboratory."
+    },
+    {
+        src: "ressources/tmp/pexels-shvetsa-3683102.jpg",
+        alt: "Researchers in protective gear working with chemical substances in a scientific laboratory."
+    },
+    {
+        src: "ressources/tmp/pexels-thirdman-5922066.jpg",
+        alt: "Young scientist holding a test tube and documenting results at a workstation."
+    },
+    {
+        src: "ressources/tmp/pexels-cottonbro-7580248.jpg",
+        alt: "Laboratory technician examining a biological sample under controlled lighting."
+    },
+    {
+        src: "ressources/tmp/pexels-artempodrez-6823561.jpg",
+        alt: "Team of scientists discussing their findings in a laboratory filled with research equipment."
+    },
+    {
+        src: "ressources/tmp/pexels-thirdman-5961132.jpg",
+        alt: "Researchers conducting chemical analysis and recording data in a science lab."
+    },
 ];
 
 const imageElement = document.querySelector(".image-to-cycle");
