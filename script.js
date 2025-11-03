@@ -62,7 +62,6 @@ const imageSources = [
     { src: "ressources/tmp/pexels-kampus-8829175.jpg", alt: "Two scientists in a lab." },
     { src: "ressources/tmp/pexels-shvetsa-3683102.jpg", alt: "Two scientists in a lab." },
     { src: "ressources/tmp/pexels-thirdman-5922066.jpg", alt: "Two scientists in a lab." },
-    { src: "ressources/tmp/pexels-maksgelatin-5994570.jpg", alt: "Two scientists in a lab." },
     { src: "ressources/tmp/pexels-cottonbro-7580248.jpg", alt: "Two scientists in a lab." },
     { src: "ressources/tmp/pexels-artempodrez-6823561.jpg", alt: "Two scientists in a lab." },
     { src: "ressources/tmp/pexels-thirdman-5961132.jpg", alt: "Two scientists in a lab." },
