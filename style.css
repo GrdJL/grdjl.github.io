@@ -797,8 +797,8 @@ pour éviter tout conflit avec vos variables :root existantes.
     position: absolute;
     
     /* --- MODIFICATIONS DE POSITION --- */
-    top: 75%;  /* Modifié : 50% (centre) + 25% (vers le bas) */
-    left: 75%; /* Modifié : 50% (centre) + 25% (vers la droite) */
+    top: 55%;  /* Modifié : 50% (centre) + 25% (vers le bas) */
+    left: 60%; /* Modifié : 50% (centre) + 25% (vers la droite) */
     /* --- FIN DES MODIFICATIONS --- */
 
     z-index: 10; /* Placé au-dessus des images (z-index: 1) et de l'overlay */
@@ -957,3 +957,4 @@ pour éviter tout conflit avec vos variables :root existantes.
     -webkit-transform: translateY(-50%) translateZ(0) rotateY(45deg);
     transform: translateY(-50%) translateZ(0) rotateY(45deg);
 }
+
