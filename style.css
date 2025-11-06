@@ -107,7 +107,7 @@ img {
 /* Navbar Styling*/
 header {
     position: fixed;
-    z-index: 5;
+    z-index: 11; /* Modifié (doit être > 10) */
     background: var(--background-color);
     width: 100%;
 }
@@ -296,7 +296,7 @@ header .navbar {
     padding: 10px;
     cursor: pointer;
     font-size: var(--font-size-l);
-    z-index: 2;
+    z-index: 2; /* Au-dessus de l'image (1) et de l'overlay (1), mais sous l'ADN (10) */
     border-radius: var(--border-radius-circle);
     width: 50px;
     height: 50px;
@@ -795,10 +795,16 @@ pour éviter tout conflit avec vos variables :root existantes.
     -webkit-perspective: 1200px;
     perspective: 1200px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    
+    /* --- MODIFICATIONS DE POSITION --- */
+    top: 75%;  /* Modifié : 50% (centre) + 25% (vers le bas) */
+    left: 75%; /* Modifié : 50% (centre) + 25% (vers la droite) */
+    /* --- FIN DES MODIFICATIONS --- */
+
     z-index: 10; /* Placé au-dessus des images (z-index: 1) et de l'overlay */
     pointer-events: none; /* Permet aux clics de passer au travers */
+    
+    /* La transformation 'translate' reste à -50% pour centrer l'animation sur son propre axe */
     -webkit-transform: translate(-50%, -50%) rotateX(-30deg) rotateY(15deg) rotateZ(15deg) scale(1);
     transform: translate(-50%, -50%) rotateX(-30deg) rotateY(15deg) rotateZ(15deg) scale(1);
 }
