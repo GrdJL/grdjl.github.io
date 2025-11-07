@@ -807,6 +807,9 @@ pour éviter tout conflit avec vos variables :root existantes.
     /* La transformation 'translate' reste à -50% pour centrer l'animation sur son propre axe */
     -webkit-transform: translate(-50%, -50%) rotateX(-30deg) rotateY(15deg) rotateZ(15deg) scale(1);
     transform: translate(-50%, -50%) rotateX(-30deg) rotateY(15deg) rotateZ(15deg) scale(1);
+    
+    /* AJOUT POUR LE FONDU */
+    transition: opacity 0.5s ease-out;
 }
 
 .dna-helix {
@@ -926,7 +929,7 @@ pour éviter tout conflit avec vos variables :root existantes.
     height: 7px;
     border-radius: 50%;
    /* box-shadow: 0 0 5px rgba(100, 149, 237, 0.7);*/
-    /*            0 4px 8px rgba(0, 0, 0, 0.6);*/
+    /* 0 4px 8px rgba(0, 0, 0, 0.6);*/
     background-color: var(--color-1, var(--color-a));
     -webkit-animation: billboard-before var(--dna-rotation-duration) linear infinite;
     animation: billboard-before var(--dna-rotation-duration) linear infinite;
