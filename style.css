@@ -243,18 +243,15 @@ header .navbar {
     align-items: center;
 }
 
-/* Conteneur de l'image pour la transition de fondu */
+/* Conteneur de l'image pour la transition en fondu enchaîné */
 .image-slider {
-    position: relative; /* IMPORTANT: Permet de positionner le watermark par-dessus */
+    position: relative; 
     overflow: hidden;
     border-radius: var(--border-radius-circle);
     width: 440px;
     height: 440px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Ajout du fond blanc pour l'effet de fondu au blanc */
-    background-color: var(--background-color); 
+    /* On enlève flex/center, car les images seront en position absolue */
+    /* On enlève le background-color pour éviter le fondu au blanc */
 }
 
 .about-section .about-image-wrapper .about-image {
@@ -262,8 +259,14 @@ header .navbar {
     height: 440px;
     object-fit: cover;
     border-radius: var(--border-radius-circle);
-    /* Transition pour l'opacité seulement */
-    transition: opacity 0.5s ease-out; 
+    
+    /* Positionnement absolu pour superposer les images */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Transition pour l'opacité (fondu enchaîné) */
+    transition: opacity 0.5s ease-in-out; /* Modifié pour un fondu plus doux */
 }
 
 /* Styles du Watermark SVG */
@@ -926,7 +929,7 @@ pour éviter tout conflit avec vos variables :root existantes.
     height: 7px;
     border-radius: 50%;
    /* box-shadow: 0 0 5px rgba(100, 149, 237, 0.7);*/
-    /*            0 4px 8px rgba(0, 0, 0, 0.6);*/
+    /* 0 4px 8px rgba(0, 0, 0, 0.6);*/
     background-color: var(--color-1, var(--color-a));
     -webkit-animation: billboard-before var(--dna-rotation-duration) linear infinite;
     animation: billboard-before var(--dna-rotation-duration) linear infinite;
