@@ -58,35 +58,35 @@ document.addEventListener("click", (event) => {
 // Utilisation des images existantes dans 'ressources' pour l'exemple
 const imageSources = [
     {
-        src: "ressources/tmp/pexels-mikhail-nilov-8851547.jpg",
+        src: "ressources/pexels-mikhail-nilov-8851547.jpg",
         alt: "Two scientists working in a laboratory, conducting experiments and analyzing samples."
     },
     {
-        src: "ressources/image.webp",
-        alt: "A close-up shot of two scientists collaborating closely on research in a modern lab."
-    },
-    {
-        src: "ressources/tmp/pexels-kampus-8829175.jpg",
+        src: "ressources/pexels-kampus-8829175.jpg",
         alt: "Scientist looking through a microscope in a research laboratory."
     },
     {
-        src: "ressources/tmp/pexels-shvetsa-3683102.jpg",
+        src: "ressources/pexels-shvetsa-3683102.jpg",
         alt: "Researchers in protective gear working with chemical substances in a scientific laboratory."
     },
     {
-        src: "ressources/tmp/pexels-thirdman-5922066.jpg",
+        src: "ressources/bechers.webp",
+        alt: "lab props."
+    },
+    {
+        src: "ressources/pexels-thirdman-5922066.jpg",
         alt: "Young scientist holding a test tube and documenting results at a workstation."
     },
     {
-        src: "ressources/tmp/pexels-cottonbro-7580248.jpg",
+        src: "ressources/pexels-cottonbro-7580248.jpg",
         alt: "Laboratory technician examining a biological sample under controlled lighting."
     },
     {
-        src: "ressources/tmp/pexels-artempodrez-6823561.jpg",
+        src: "ressources/pexels-artempodrez-6823561.jpg",
         alt: "Team of scientists discussing their findings in a laboratory filled with research equipment."
     },
     {
-        src: "ressources/tmp/pexels-thirdman-5961132.jpg",
+        src: "ressources/pexels-thirdman-5961132.jpg",
         alt: "Researchers conducting chemical analysis and recording data in a science lab."
     },
 ];
@@ -142,7 +142,7 @@ function updateImage(newIndex) {
             // Sinon, l'image est déjà en cache ou chargée instantanément
             applyNewImage(newIndex, newImage);
         }
-    }, 500); // Durée de la transition CSS en millisecondes (pour la phase de fondu en sortie)
+    }, 1500); // Durée de la transition CSS en millisecondes (pour la phase de fondu en sortie)
 }
 
 /**
@@ -202,7 +202,7 @@ if (nextButton) {
 // --- LOGIQUE POUR LE DIAPORAMA AUTOMATIQUE (SLIDER AUTO) ---
 
 // Définir la durée (en millisecondes) entre les changements d'image
-const SLIDE_INTERVAL = 16000; // Changer d'image toutes les 4 secondes (4000 ms)
+const SLIDE_INTERVAL = 24000; // Changer d'image toutes les 4 secondes (4000 ms)
 let autoSlideTimer;
 
 /**
