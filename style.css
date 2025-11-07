@@ -783,7 +783,7 @@ pour éviter tout conflit avec vos variables :root existantes.
     --base-rotation: 22.5deg;
     --base-height: 10px;
     --helix-radius: 15px;
-    --dna-rotation-duration: 16s;
+    --dna-rotation-duration: 24s;
 
     /* Couleurs des nucléotides */
     --color-a: #f6511d;
@@ -792,8 +792,8 @@ pour éviter tout conflit avec vos variables :root existantes.
     --color-c: #7fb800;
 
     /* Styles de positionnement (de dna.css) */
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
+    -webkit-perspective: 400px;
+    perspective: 400px;
     position: absolute;
     
     /* --- MODIFICATIONS DE POSITION --- */
@@ -830,8 +830,8 @@ pour éviter tout conflit avec vos variables :root existantes.
     border-radius: 50%;
     background: radial-gradient(circle at center,
                                 rgba(255, 255, 255, 0.8) 0%,
-                                rgba(204, 204, 204, 0.4) 50%,
-                                transparent 70%);
+                                rgba(255, 255, 255, 1) 60%,
+                                transparent 80%);
     filter: blur(30px);
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -925,8 +925,8 @@ pour éviter tout conflit avec vos variables :root existantes.
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(100, 149, 237, 0.7),
-                0 4px 8px rgba(0, 0, 0, 0.6);
+   /* box-shadow: 0 0 5px rgba(100, 149, 237, 0.7);*/
+    /*            0 4px 8px rgba(0, 0, 0, 0.6);*/
     background-color: var(--color-1, var(--color-a));
     -webkit-animation: billboard-before var(--dna-rotation-duration) linear infinite;
     animation: billboard-before var(--dna-rotation-duration) linear infinite;
@@ -940,8 +940,8 @@ pour éviter tout conflit avec vos variables :root existantes.
     width: 7px;
     height: 7px;
     border-radius: 50%;
-     box-shadow: 0 0 5px rgba(100, 149, 237, 0.7),
-                0 4px 8px rgba(0, 0, 0, 0.6);
+     /*box-shadow: 0 0 5px rgba(100, 149, 237, 0.7);*/
+               /* 0 4px 8px rgba(0, 0, 0, 0.6);*/
     background-color: var(--color-2, var(--color-t));
     -webkit-animation: billboard-after var(--dna-rotation-duration) linear infinite;
     animation: billboard-after var(--dna-rotation-duration) linear infinite;
@@ -952,14 +952,8 @@ pour éviter tout conflit avec vos variables :root existantes.
     top: 25%;
     left: 0;
     right: 0;
-    height: 2px;
-    background-color: rgba(255, 255, 255, 1);
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.4);
     -webkit-transform: translateY(-50%) translateZ(0) rotateY(45deg);
     transform: translateY(-50%) translateZ(0) rotateY(45deg);
 }
-
-
-
-
-
-
