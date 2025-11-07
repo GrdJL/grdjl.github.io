@@ -35,7 +35,7 @@ navLinks.forEach(link => {
 // --- Logique pour fermer le menu au clic externe (clic "à côté") ---
 // Ajoute un écouteur d'événement global sur l'ensemble du document
 document.addEventListener("click", (event) => {
-    // 1. Vérifie si le menu est actuellement ouvert
+    // 1. Vérifie si le menu est currently ouvert
     const isMenuOpen = document.body.classList.contains("show-mobile-menu");
 
     // Si le menu est bien ouvert...
@@ -95,7 +95,9 @@ const imageElement = document.querySelector(".image-to-cycle");
 const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
 const imageGalleryWrapper = document.querySelector(".image-gallery-wrapper");
-// SÉLECTIONNEZ LE WATERMARK AUSSI (déjà défini en haut)
+// SÉLECTION DES ÉLÉMENTS POUR LE FONDU
+const overlayElement = document.querySelector(".overlay");
+const sceneElement = document.querySelector(".scene");
 
 let currentImageIndex = 0;
 
@@ -123,15 +125,16 @@ function updateImage(newIndex) {
     // L'image à afficher
     const newImage = imageSources[newIndex];
 
-    // 1. Déclenche le fondu en sortie (l'image devient transparente)
+    // 1. Déclenche le fondu en sortie (les éléments deviennent transparents)
     imageElement.style.opacity = '0';
-    // Le watermark ne change pas d'opacité.
+    if (overlayElement) overlayElement.style.opacity = '0';
+    if (sceneElement) sceneElement.style.opacity = '0';
 
     // 2. Commence le préchargement de la nouvelle image en arrière-plan
     const preloader = new Image();
     preloader.src = newImage.src;
     
-    // 3. Attends que l'ancienne image ait fini de disparaître ET que la nouvelle image soit chargée
+    // 3. Attends que l'ancienne image ait fini de disparaître (selon la transition CSS)
     setTimeout(() => {
         // Si l'image n'est pas encore chargée, attend l'événement 'load'
         if (!preloader.complete) {
@@ -142,7 +145,7 @@ function updateImage(newIndex) {
             // Sinon, l'image est déjà en cache ou chargée instantanément
             applyNewImage(newIndex, newImage);
         }
-    }, 1500); // Durée de la transition CSS en millisecondes (pour la phase de fondu en sortie)
+    }, 500); // Durée de la transition CSS en millisecondes (0.5s)
 }
 
 /**
@@ -159,9 +162,10 @@ function applyNewImage(index, imageObject) {
     imageElement.src = imageObject.src;
     imageElement.alt = imageObject.alt;
     
-    // Déclenche le fondu en entrée pour l'image
+    // Déclenche le fondu en entrée pour l'image, l'overlay et la scène
     imageElement.style.opacity = '1';
-    // Le watermark ne change pas d'opacité.
+    if (overlayElement) overlayElement.style.opacity = '1';
+    if (sceneElement) sceneElement.style.opacity = '1';
 }
 
 /**
