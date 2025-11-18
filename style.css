@@ -28,7 +28,7 @@ html, body {
     --footer-color: rgb(205, 205, 205);
 
     /* Font size */
-    --font-size-xxs: 0.4rem;
+    --font-size-xxs: 0.35rem;
     --font-size-xs: 0.7rem;
     --font-size-s: 0.9rem;
     --font-size-n: 1rem;
@@ -960,5 +960,6 @@ pour éviter tout conflit avec vos variables :root existantes.
     -webkit-transform: translateY(-50%) translateZ(0) rotateY(45deg);
     transform: translateY(-50%) translateZ(0) rotateY(45deg);
 }
+
 
 
