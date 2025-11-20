@@ -360,6 +360,7 @@ header .navbar {
     display: flex;
     gap: 23px;
     padding: 0 20px 0;
+	justify-content: center;
 }
 
 .about-section .about-details .button {
@@ -961,6 +962,7 @@ pour éviter tout conflit avec vos variables :root existantes.
     -webkit-transform: translateY(-50%) translateZ(0) rotateY(45deg);
     transform: translateY(-50%) translateZ(0) rotateY(45deg);
 }
+
 
 
 
