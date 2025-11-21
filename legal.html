@@ -7,27 +7,52 @@
         <title>Legal Notice & Privacy Policy</title>
         <link rel="stylesheet" href="style.css"/>
         <style>
-            /* Simple style to hide/show languages */
-            .lang-content {
-                display: none; /* Hidden by default */
-            }
-            .lang-content.active {
-                display: block; /* Show when active */
-            }
-            /* Active link styling */
-            .lang-switch {
-                cursor: pointer;
-                font-size: 1.2rem;
-                text-decoration: none;
-                color: #1773b7;
-                /*margin-left: 10px;*/
-            }
-            .lang-switch.active-lang {
-                font-weight: bold;
-                text-decoration: underline;
-                color: #3b3737;
-                pointer-events: none; /* Disable click on active lang */
-            }
+            .lang-toggle-container {
+                    display: inline-flex;
+                    /* Couleur de fond du bouton 'up' */
+                    background: var(--button-section-color, #f1e8d0);
+                    /* Arrondi du bouton 'up' (30px) */
+                    border-radius: var(--border-radius-m, 30px);
+                    /* Ombre du bouton 'up' */
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                    overflow: hidden; /* Nécessaire pour que les enfants ne dépassent pas des bords arrondis */
+                    border: 2px solid transparent; /* Similaire au bouton up */
+                }
+            
+                /* Styles des liens individuels EN et FR à l'intérieur */
+                .lang-switch {
+                    cursor: pointer;
+                    font-size: 1rem; /* Taille ajustée pour le bouton */
+                    text-decoration: none;
+                    /* Couleur du texte du bouton 'up' */
+                    color: var(--emphasis-text-color, #d5a10a);
+                    font-weight: var(--font-weight-medium, 500);
+                    padding: 10px 18px; /* Espacement interne pour donner du corps aux demi-boutons */
+                    transition: 0.2s ease;
+                    display: inline-block;
+                }
+            
+                /* Petite ligne de séparation subtile entre les deux */
+                .lang-switch:first-child {
+                    border-right: 1px solid rgba(0,0,0,0.05);
+                }
+            
+                /* État au survol pour la langue INACTIVE */
+                .lang-switch:not(.active-lang):hover {
+                    /* Couleurs de survol du bouton 'up' */
+                    background: var(--footer-color, rgb(205, 205, 205));
+                    color: var(--text-color, #1b89aa);
+                }
+            
+                /* État ACTIF (Langue sélectionnée) */
+                .lang-switch.active-lang {
+                    /* On utilise le style de survol pour indiquer l'état actif permanent */
+                    background: var(--footer-color, rgb(205, 205, 205));
+                    color: var(--text-color, #1b89aa);
+                    font-weight: bold;
+                    pointer-events: none; /* Désactive le clic sur la langue déjà active */
+                    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); /* Léger effet "enfoncé" */
+                }
         </style>
     </head>
     <body>
@@ -35,9 +60,10 @@
     <section id="top" class="about-section" style="padding: 24px 24px 0 24px; text-transform: uppercase; font-size: 2rem;">
         <a href="index.html" class="section-title" style="vertical-align: baseline;color:#3b3737;text-decoration: none;"> &larr; <span id="back-text">Back</span></a>
         <span style="float: right;">
-            <a onclick="switchLang('en')" id="btn-en" class="lang-switch active-lang">EN</a>
-            <span style="font-size: 1.2rem;">/</span>
-            <a onclick="switchLang('fr')" id="btn-fr" class="lang-switch">FR</a>
+            <div class="lang-toggle-container" style="float: right;">
+                <a onclick="switchLang('en')" id="btn-en" class="lang-switch active-lang">EN</a>
+                <a onclick="switchLang('fr')" id="btn-fr" class="lang-switch">FR</a>
+            </div>
         </span>
     </section>
 
