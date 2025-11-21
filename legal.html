@@ -7,68 +7,72 @@
         <title>Legal Notice & Privacy Policy</title>
         <link rel="stylesheet" href="style.css"/>
         <style>
+            /* --- Styles de base pour l'affichage des langues --- */
+            .lang-content {
+                display: none; /* Caché par défaut */
+            }
+            .lang-content.active {
+                display: block; /* Affiché si actif */
+            }
+
+            /* --- Nouveau style du bouton à bascule (Pill shape) --- */
             .lang-toggle-container {
-                    display: inline-flex;
-                    /* Couleur de fond du bouton 'up' */
-                    background: var(--button-section-color, #f1e8d0);
-                    /* Arrondi du bouton 'up' (30px) */
-                    border-radius: var(--border-radius-m, 30px);
-                    /* Ombre du bouton 'up' */
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-                    overflow: hidden; /* Nécessaire pour que les enfants ne dépassent pas des bords arrondis */
-                    border: 2px solid transparent; /* Similaire au bouton up */
-                }
-            
-                /* Styles des liens individuels EN et FR à l'intérieur */
-                .lang-switch {
-                    cursor: pointer;
-                    font-size: 1rem; /* Taille ajustée pour le bouton */
-                    text-decoration: none;
-                    /* Couleur du texte du bouton 'up' */
-                    color: var(--emphasis-text-color, #d5a10a);
-                    font-weight: var(--font-weight-medium, 500);
-                    padding: 10px 18px; /* Espacement interne pour donner du corps aux demi-boutons */
-                    transition: 0.2s ease;
-                    display: inline-block;
-                }
-            
-                /* Petite ligne de séparation subtile entre les deux */
-                .lang-switch:first-child {
-                    border-right: 1px solid rgba(0,0,0,0.05);
-                }
-            
-                /* État au survol pour la langue INACTIVE */
-                .lang-switch:not(.active-lang):hover {
-                    /* Couleurs de survol du bouton 'up' */
-                    background: var(--footer-color, rgb(205, 205, 205));
-                    color: var(--text-color, #1b89aa);
-                }
-            
-                /* État ACTIF (Langue sélectionnée) */
-                .lang-switch.active-lang {
-                    /* On utilise le style de survol pour indiquer l'état actif permanent */
-                    background: var(--footer-color, rgb(205, 205, 205));
-                    color: var(--text-color, #1b89aa);
-                    font-weight: bold;
-                    pointer-events: none; /* Désactive le clic sur la langue déjà active */
-                    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); /* Léger effet "enfoncé" */
-                }
+                display: inline-flex;
+                background: var(--button-section-color, #f1e8d0); /* Couleur de fond par défaut */
+                border-radius: var(--border-radius-m, 30px);      /* Arrondi style "pilule" */
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);       /* Même ombre que le bouton scroll */
+                overflow: hidden;
+                border: 2px solid transparent;
+                vertical-align: middle;
+            }
+
+            .lang-switch {
+                cursor: pointer;
+                font-size: 1rem;
+                text-decoration: none;
+                color: var(--emphasis-text-color, #d5a10a); /* Couleur texte par défaut */
+                font-weight: var(--font-weight-medium, 500);
+                padding: 8px 16px; /* Espacement interne */
+                transition: all 0.2s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 40px;
+            }
+
+            /* Séparateur subtil entre les deux moitiés */
+            .lang-switch:first-child {
+                border-right: 1px solid rgba(0,0,0,0.05);
+            }
+
+            /* État survol (pour la langue inactive) */
+            .lang-switch:not(.active-lang):hover {
+                background: rgba(0,0,0,0.05);
+                color: var(--text-color, #1b89aa);
+            }
+
+            /* État ACTIF (La langue sélectionnée) */
+            .lang-switch.active-lang {
+                background: var(--footer-color, rgb(205, 205, 205)); /* Fond gris "enfoncé" */
+                color: var(--text-color, #1b89aa);                   /* Texte bleu foncé */
+                font-weight: bold;
+                pointer-events: none; /* Désactive le clic */
+                box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+            }
         </style>
     </head>
     <body>
     
     <section id="top" class="about-section" style="padding: 24px 24px 0 24px; text-transform: uppercase; font-size: 2rem;">
-        <a href="index.html" class="section-title" style="vertical-align: baseline;color:#3b3737;text-decoration: none;"> &larr; <span id="back-text">Back</span></a>
-        <span style="float: right;">
-            <div class="lang-toggle-container" style="float: right;">
-                <a onclick="switchLang('en')" id="btn-en" class="lang-switch active-lang">EN</a>
-                <a onclick="switchLang('fr')" id="btn-fr" class="lang-switch">FR</a>
-            </div>
-        </span>
+        <a href="index.html" class="section-title" style="vertical-align: middle; color:#3b3737; text-decoration: none; margin-right: 10px;"> &larr; <span id="back-text">Back</span></a>
+        
+        <div class="lang-toggle-container" style="float: right;">
+            <a onclick="switchLang('en')" id="btn-en" class="lang-switch active-lang">EN</a>
+            <a onclick="switchLang('fr')" id="btn-fr" class="lang-switch">FR</a>
+        </div>
     </section>
 
     <div id="content-en" class="lang-content active">
-        
         <section class="about-section">
             <div class="section-content">
                 <div class="about-details">
@@ -129,7 +133,6 @@
     </div>
 
     <div id="content-fr" class="lang-content">
-        
         <section class="about-section">
             <div class="section-content">
                 <div class="about-details">
@@ -154,6 +157,8 @@
                 </div>
             </div>
         </section>
+
+        <hr style="max-width: 1120px; margin: 50px auto; border: 1px solid #e3e3e3;">
 
         <section class="about-section">
             <div class="section-content">
@@ -197,40 +202,37 @@
     <a href="#top" class="button fixed-scroll-button" aria-label="Scroll to Top">&#8593;</a>
 
     <script>
-       function switchLang(lang) {
-        // 1. GESTION DU CONTENU (Textes de la page)
-        // On cache tous les blocs de contenu (.lang-content)
-        document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-        
-        // On affiche celui correspondant à la langue choisie
-        const contentToShow = document.getElementById('content-' + lang);
-        if (contentToShow) {
-            contentToShow.classList.add('active');
-        }
+        function switchLang(lang) {
+            // 1. GESTION DU CONTENU
+            // Cacher tout le contenu
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            
+            // Afficher le contenu de la langue choisie
+            const contentToShow = document.getElementById('content-' + lang);
+            if (contentToShow) {
+                contentToShow.classList.add('active');
+            }
 
-        // 2. GESTION DU BOUTON BASCULE (Le style visuel)
-        // On retire la classe 'active-lang' de tous les boutons du switch
-        document.querySelectorAll('.lang-switch').forEach(el => el.classList.remove('active-lang'));
+            // 2. GESTION DU BOUTON BASCULE
+            // Réinitialiser l'état "actif" des boutons
+            document.querySelectorAll('.lang-switch').forEach(el => el.classList.remove('active-lang'));
 
-        // On ajoute la classe 'active-lang' uniquement sur le bouton cliqué (pour le griser)
-        const btnToActivate = document.getElementById('btn-' + lang);
-        if (btnToActivate) {
-            btnToActivate.classList.add('active-lang');
-        }
+            // Activer le bouton cliqué
+            const btnToActivate = document.getElementById('btn-' + lang);
+            if (btnToActivate) {
+                btnToActivate.classList.add('active-lang');
+            }
 
-        // 3. GESTION DES TEXTES GLOBAUX (Bouton Retour & Meta langue)
-        const backText = document.getElementById('back-text');
-        
-        if(lang === 'fr') {
-            // Passage en Français
-            if(backText) backText.textContent = 'Retour';
-            document.documentElement.lang = "fr";
-        } else {
-            // Passage en Anglais
-            if(backText) backText.textContent = 'Back';
-            document.documentElement.lang = "en";
+            // 3. GESTION DU TEXTE "RETOUR" ET SEO
+            const backText = document.getElementById('back-text');
+            if(lang === 'fr') {
+                if(backText) backText.textContent = 'Retour';
+                document.documentElement.lang = "fr";
+            } else {
+                if(backText) backText.textContent = 'Back';
+                document.documentElement.lang = "en";
+            }
         }
-    }
     </script>
     </body>
 </html>
