@@ -18,9 +18,9 @@
             /* --- Nouveau style du bouton à bascule (Pill shape) --- */
             .lang-toggle-container {
                 display: inline-flex;
-                background: var(--button-section-color, #f1e8d0); /* Couleur de fond par défaut */
-                border-radius: var(--border-radius-m, 30px);      /* Arrondi style "pilule" */
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);       /* Même ombre que le bouton scroll */
+                background: var(--button-section-color, #f1e8d0);
+                border-radius: var(--border-radius-m, 30px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
                 overflow: hidden;
                 border: 2px solid transparent;
                 vertical-align: middle;
@@ -30,9 +30,9 @@
                 cursor: pointer;
                 font-size: 1rem;
                 text-decoration: none;
-                color: var(--emphasis-text-color, #d5a10a); /* Couleur texte par défaut */
+                color: var(--emphasis-text-color, #d5a10a);
                 font-weight: var(--font-weight-medium, 500);
-                padding: 8px 16px; /* Espacement interne */
+                padding: 8px 16px;
                 transition: all 0.2s ease;
                 display: flex;
                 align-items: center;
@@ -40,40 +40,64 @@
                 min-width: 40px;
             }
 
-            /* Séparateur subtil entre les deux moitiés */
             .lang-switch:first-child {
                 border-right: 1px solid rgba(0,0,0,0.05);
             }
 
-            /* État survol (pour la langue inactive) */
             .lang-switch:not(.active-lang):hover {
                 background: rgba(0,0,0,0.05);
                 color: var(--text-color, #1b89aa);
             }
 
-            /* État ACTIF (La langue sélectionnée) */
             .lang-switch.active-lang {
-                background: var(--footer-color, rgb(205, 205, 205)); /* Fond gris "enfoncé" */
-                color: var(--text-color, #1b89aa);                   /* Texte bleu foncé */
+                background: var(--footer-color, rgb(205, 205, 205));
+                color: var(--text-color, #1b89aa);
                 font-weight: bold;
-                pointer-events: none; /* Désactive le clic */
+                pointer-events: none;
                 box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+            }
+
+            /* --- Style spécifique pour la barre de navigation du haut --- */
+            .top-nav-bar {
+                max-width: 1120px;
+                margin: 0 auto;
+                padding: 30px 20px 10px 20px; /* Espace confortable */
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .back-link {
+                text-decoration: none;
+                color: var(--text-color, #1b89aa);
+                font-size: 1.1rem;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: color 0.2s ease;
+            }
+
+            .back-link:hover {
+                color: var(--emphasis-text-color, #d5a10a);
             }
         </style>
     </head>
-    <body>
+    <body id="top">
     
-    <section id="top" class="about-section" style="padding: 24px 24px 0 24px; text-transform: uppercase; font-size: 2rem;">
-        <a href="index.html" class="section-title" style="vertical-align: middle; color:#3b3737; text-decoration: none; margin-right: 10px;"> &larr; <span id="back-text">Back</span></a>
+    <nav class="top-nav-bar">
+        <a href="index.html" class="back-link">
+            <span>&larr;</span> <span id="back-text">Back</span>
+        </a>
         
-        <div class="lang-toggle-container" style="float: right;">
+        <div class="lang-toggle-container">
             <a onclick="switchLang('en')" id="btn-en" class="lang-switch active-lang">EN</a>
             <a onclick="switchLang('fr')" id="btn-fr" class="lang-switch">FR</a>
         </div>
-    </section>
+    </nav>
 
     <div id="content-en" class="lang-content active">
-        <section class="about-section">
+        <section class="about-section" style="padding-top: 40px;">
             <div class="section-content">
                 <div class="about-details">
                     <h2 class="section-title">Company Information</h2>
@@ -133,7 +157,7 @@
     </div>
 
     <div id="content-fr" class="lang-content">
-        <section class="about-section">
+        <section class="about-section" style="padding-top: 40px;">
             <div class="section-content">
                 <div class="about-details">
                     <h2 class="section-title">Informations sur la société</h2>
@@ -196,26 +220,21 @@
         </section>
     </div>
 
-    <section class="about-section"></section>
     <a href="#top" class="button fixed-scroll-button" aria-label="Scroll to Top">&#8593;</a>
 
     <script>
         function switchLang(lang) {
             // 1. GESTION DU CONTENU
-            // Cacher tout le contenu
             document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
             
-            // Afficher le contenu de la langue choisie
             const contentToShow = document.getElementById('content-' + lang);
             if (contentToShow) {
                 contentToShow.classList.add('active');
             }
 
             // 2. GESTION DU BOUTON BASCULE
-            // Réinitialiser l'état "actif" des boutons
             document.querySelectorAll('.lang-switch').forEach(el => el.classList.remove('active-lang'));
 
-            // Activer le bouton cliqué
             const btnToActivate = document.getElementById('btn-' + lang);
             if (btnToActivate) {
                 btnToActivate.classList.add('active-lang');
