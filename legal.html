@@ -197,25 +197,40 @@
     <a href="#top" class="button fixed-scroll-button" aria-label="Scroll to Top">&#8593;</a>
 
     <script>
-        function switchLang(lang) {
-            // Hide all content
-            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.lang-switch').forEach(el => el.classList.remove('active-lang'));
-
-            // Show selected content
-            document.getElementById('content-' + lang).classList.add('active');
-            document.getElementById('btn-' + lang).classList.add('active-lang');
-
-            // Update "Back" button text
-            const backText = document.getElementById('back-text');
-            if(lang === 'fr') {
-                backText.textContent = 'Retour';
-                document.documentElement.lang = "fr";
-            } else {
-                backText.textContent = 'Back';
-                document.documentElement.lang = "en";
-            }
+       function switchLang(lang) {
+        // 1. GESTION DU CONTENU (Textes de la page)
+        // On cache tous les blocs de contenu (.lang-content)
+        document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+        
+        // On affiche celui correspondant à la langue choisie
+        const contentToShow = document.getElementById('content-' + lang);
+        if (contentToShow) {
+            contentToShow.classList.add('active');
         }
+
+        // 2. GESTION DU BOUTON BASCULE (Le style visuel)
+        // On retire la classe 'active-lang' de tous les boutons du switch
+        document.querySelectorAll('.lang-switch').forEach(el => el.classList.remove('active-lang'));
+
+        // On ajoute la classe 'active-lang' uniquement sur le bouton cliqué (pour le griser)
+        const btnToActivate = document.getElementById('btn-' + lang);
+        if (btnToActivate) {
+            btnToActivate.classList.add('active-lang');
+        }
+
+        // 3. GESTION DES TEXTES GLOBAUX (Bouton Retour & Meta langue)
+        const backText = document.getElementById('back-text');
+        
+        if(lang === 'fr') {
+            // Passage en Français
+            if(backText) backText.textContent = 'Retour';
+            document.documentElement.lang = "fr";
+        } else {
+            // Passage en Anglais
+            if(backText) backText.textContent = 'Back';
+            document.documentElement.lang = "en";
+        }
+    }
     </script>
     </body>
 </html>
