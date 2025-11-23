@@ -610,11 +610,11 @@ div[popover], div[popover]::backdrop {
     }
 
     .about-section .about-details .text {
-        margin: 12px 0 32px 0;
+        margin: 12px 0 12px 0;
     }
 
     .service-heading {
-        padding: 12px 0 0 10px;
+        padding: 6px 0 0 6px;
     }
 
     /* --- Styles pour la liste des services --- */
