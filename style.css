@@ -600,10 +600,10 @@ div[popover], div[popover]::backdrop {
     :root {
 
         --font-size-xxs: 0.35rem;
-        --font-size-xs: 0.6rem;
-        --font-size-s: 0.75rem;
-        --font-size-n: 0.8rem;
-        --font-size-m: 0.9rem;
+        --font-size-xs: 0.5rem;
+        --font-size-s: 0.6rem;
+        --font-size-n: 0.7rem;
+        --font-size-m: 0.8rem;
         --font-size-1: 1rem;
         --font-size-xl: 1.3rem;
         --font-size-xxl: 1.5rem;
