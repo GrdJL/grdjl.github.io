@@ -598,10 +598,15 @@ div[popover], div[popover]::backdrop {
 /* Responsive media query code for max width 920px */
 @media screen and (max-width: 920px) {
     :root {
-        --font-size-m: 1rem;
-        --font-size-1: 1.3rem;
-        --font-size-xl: 1.5rem;
-        --font-size-xxl: 1.8rem;
+
+        --font-size-xxs: 0.35rem;
+        --font-size-xs: 0.6rem;
+        --font-size-s: 0.75rem;
+        --font-size-n: 0.8rem;
+        --font-size-m: 0.9rem;
+        --font-size-1: 1rem;
+        --font-size-xl: 1.3rem;
+        --font-size-xxl: 1.5rem;
     }
 
     #glassTime {
