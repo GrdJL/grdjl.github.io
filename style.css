@@ -610,7 +610,7 @@ div[popover], div[popover]::backdrop {
     }
 
     .about-section .about-details .text {
-        margin: 14px 0 6px;
+        margin: 12px 0 32px 0;
     }
 
     .service-heading {
