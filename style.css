@@ -33,10 +33,13 @@ html, body {
     --font-size-xs: 0.7rem;
     --font-size-s: 0.9rem;
     --font-size-n: 1rem;
-    --font-size-m: 1.12rem;
+    --font-size-m: 1.2rem;
     --font-size-l: 1.5rem;
     --font-size-xl: 2rem;
     --font-size-xxl: 2.3rem;
+
+    /* text padding */
+    --padding: 0 0 24px;
 
     /* Font weight */
     --font-weight-normal: 400;
@@ -90,7 +93,7 @@ img {
 
 .section-title {
     text-align: center;
-    padding: 0 0 24px;
+    padding: var(--padding);
     text-transform: uppercase;
     font-size: var(--font-size-xl);
 }
@@ -380,7 +383,7 @@ header .navbar {
 
 /* Styles for Service Subtitles */
 .service-heading {
-    font-size: 1.2rem;
+    font-size: var(--font-size-m);
     color: var(--button-menu-color);
     /* Les h3 sont en gras par défaut, ceci réinitialise à un poids normal */
     font-weight: var(--font-weight-normal);
@@ -607,6 +610,23 @@ div[popover], div[popover]::backdrop {
         --font-size-1: 1rem;
         --font-size-xl: 1.3rem;
         --font-size-xxl: 1.5rem;
+    }
+
+    .about-section .about-details .text {
+        margin: 14px 0 6px;
+    }
+
+    .service-heading {
+        padding: 12px 0 0 10px;
+    }
+
+    /* --- Styles pour la liste des services --- */
+    .service-list {
+        margin-bottom: 0.5rem;
+    }
+
+    .service-item {
+        padding: 0 0 0 10px;
     }
 
     #glassTime {
