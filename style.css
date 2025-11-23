@@ -38,9 +38,6 @@ html, body {
     --font-size-xl: 2rem;
     --font-size-xxl: 2.3rem;
 
-    /* text padding */
-    --padding: 0 0 24px;
-
     /* Font weight */
     --font-weight-normal: 400;
     --font-weight-medium: 500;
@@ -333,7 +330,7 @@ header .navbar {
 }
 
 .about-section .about-details .text {
-    margin: 17px 0 30px;
+    margin: 16px 0 30px;
     text-align: center;
     font-size: var(--font-size-m);
     line-height: 26px;
@@ -361,8 +358,8 @@ header .navbar {
 
 .about-section .about-details .buttons {
     display: flex;
-    gap: 23px;
-    padding: 0 20px 0;
+    gap: 24px;
+    padding: 12px 0 0;
 	justify-content: center;
 }
 
