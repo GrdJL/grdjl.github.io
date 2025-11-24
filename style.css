@@ -602,7 +602,7 @@ div[popover], div[popover]::backdrop {
         --font-size-xxs: 0.35rem;
         --font-size-xs: 0.5rem;
         --font-size-s: 0.7rem;
-        --font-size-n: 0.8rem;
+        --font-size-n: 0.75rem;
         --font-size-m: 1rem;
         --font-size-1: 1.2rem;
         --font-size-xl: 1.3rem;
@@ -984,6 +984,7 @@ pour éviter tout conflit avec vos variables :root existantes.
     -webkit-transform: translateY(-50%) translateZ(0) rotateY(45deg);
     transform: translateY(-50%) translateZ(0) rotateY(45deg);
 }
+
 
 
 
