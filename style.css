@@ -13,6 +13,9 @@ html, body {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth !important;
+    /*background: linear-gradient(to right, rgba(255,0,0,0.1), rgba(0,0,255,0.1));*/
+	/*outline: 1px solid red;*/
+	/*filter: grayscale(1)*/
 }
 
 :root {
@@ -462,6 +465,7 @@ header .navbar {
     color: #333;
     transition: border-color 0.2s;
     resize: vertical;
+	line-height: 1.5; /* Espace confortable entre les lignes */
 }
 
 .styled-form input[type="text"]:focus,
@@ -609,6 +613,11 @@ div[popover], div[popover]::backdrop {
         --font-size-xxl: 1.5rem;
     }
 
+	.styled-form textarea {
+		height: 6em; /* 1.5 (line-height) x 3 (lignes) = 4.5em */
+		min-height: 6em; /* Empêche le textarea d'être trop petit */
+	}
+	
     .about-section .about-details .text {
         margin: 12px 0 12px 0;
     }
@@ -984,11 +993,3 @@ pour éviter tout conflit avec vos variables :root existantes.
     -webkit-transform: translateY(-50%) translateZ(0) rotateY(45deg);
     transform: translateY(-50%) translateZ(0) rotateY(45deg);
 }
-
-
-
-
-
-
-
-
