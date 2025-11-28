@@ -42,6 +42,20 @@ Social networks posts
 [CSS-url]: }
 
 
+## 📊 Stats & Badges
+
+<div align="center">
+
+![GitHub stars](https://img.shields.io/github/stars/GrdJL/grdjl.github.io?style=social)
+![GitHub forks](https://img.shields.io/github/forks/GrdJL/grdjl.github.io?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/GrdJL/grdjl.github.io?style=social)
+![GitHub issues](https://img.shields.io/github/issues/GrdJL/grdjl.github.io)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/GrdJL/grdjl.github.io)
+![GitHub last commit](https://img.shields.io/github/last-commit/GrdJL/grdjl.github.io)
+![GitHub repo size](https://img.shields.io/github/repo-size/GrdJL/grdjl.github.io)
+
+</div>
+
 
 ## About the Author
 
