@@ -2,9 +2,9 @@
 <!-- TABLE_CONTENT_PLACEHOLDER -->
 
 ## About the Project
-Github placeholder for the Longfort Consulting website which aims to introduce my wife's portolio & her contact information.
+Github placeholder for Longfort Consulting website which aims to introduce my wife's portolio & information.
 
-## 📊 Stats & Badges
+## Stats & Badges 📊
 <div align="center">
 
 ![GitHub stars](https://img.shields.io/github/stars/GrdJL/grdjl.github.io?style=social)
@@ -20,7 +20,6 @@ Github placeholder for the Longfort Consulting website which aims to introduce m
 
 ## About the Author
 
-**GrdJL**
 This project was created by GrdJL.
 <p align="right"><a href="#readme-top">(Back to top)</a></p>
 
