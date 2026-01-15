@@ -95,7 +95,7 @@ img {
     text-align: center;
     padding: var(--padding);
     text-transform: uppercase;
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-m);
 }
 
 .section-title::after {
@@ -125,7 +125,7 @@ header .navbar {
 
 .navbar .nav-logo .logo-text {
     color: var(--button-menu-color);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xxl);
     font-weight: var(--font-weight-normal);
 }
 
@@ -185,7 +185,7 @@ header .navbar {
     margin: 8px 0 40px;
     max-width: 70%;
     font-size: var(--font-size-m);
-    font-weight: var(--font-size-m);
+    font-weight: var(--font-weight-normal);
 }
 
 .hero-section .hero-details .description {
@@ -335,7 +335,7 @@ header .navbar {
 .about-section .about-details .text {
     margin: 16px 0 30px;
     text-align: center;
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-s);
     line-height: 26px;
 }
 
@@ -449,7 +449,7 @@ header .navbar {
 }
 
 .styled-form label {
-    font-size: var(--font-size-n);
+    font-size: var(--font-size-s);
     color: var(--text-color);
     font-weight: var(--font-weight-medium);
 }
@@ -460,7 +460,7 @@ header .navbar {
     border: 1px solid #e3e3e3;
     border-radius: 8px;
     padding: 0.8rem 1rem;
-    font-size: var(--font-size-n);
+    font-size: var(--font-size-s);
     background: #faf9f6;
     color: #333;
     transition: border-color 0.2s;
