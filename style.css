@@ -299,7 +299,7 @@ header .navbar {
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-s);
     z-index: 2; /* Au-dessus de l'image (1) et de l'overlay (1), mais sous l'ADN (10) */
     border-radius: var(--border-radius-circle);
     width: 50px;
@@ -364,6 +364,7 @@ header .navbar {
     gap: 24px;
     padding: 12px 0 0;
 	justify-content: center;
+    font-size: var(--font-size-s);
 }
 
 .about-section .about-details .button {
