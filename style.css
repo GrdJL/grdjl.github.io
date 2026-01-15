@@ -335,8 +335,9 @@ header .navbar {
 .about-section .about-details .text {
     margin: 16px 0 30px;
     text-align: center;
-    font-size: var(--font-size-m);
-    line-height: 18px;
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-normal);
+    line-height: 20px;
 }
 
 .about-section .social-link-list {
