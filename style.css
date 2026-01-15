@@ -604,7 +604,7 @@ div[popover], div[popover]::backdrop {
 @media screen and (max-width: 920px) {
     :root {
 
-        --font-size-xxs: 0.35rem;
+        --font-size-xxs: 0.3rem;
         --font-size-xs: 0.5rem;
         --font-size-s: 0.7rem;
         --font-size-n: 0.8rem;
