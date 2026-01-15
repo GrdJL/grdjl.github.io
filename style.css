@@ -336,13 +336,13 @@ header .navbar {
     margin: 16px 0 30px;
     text-align: center;
     font-size: var(--font-size-s);
-    line-height: 8px;
+    line-height: 18px;
 }
 
 .about-section .social-link-list {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 40px;
     justify-content: center;
     align-items: center;
 }
