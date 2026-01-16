@@ -53,7 +53,7 @@ html, body {
     --border-radius-circle: 50%;
 
     /* Site max width */
-    --site-max-width: 1120px;
+    --site-max-width: 1100px;
 }
 
 b {
@@ -234,7 +234,7 @@ header .navbar {
 
 .about-section .section-content {
     display: flex;
-    gap: 99px;
+    gap: 100px;
     align-items: center;
     justify-content: center;
 }
@@ -600,7 +600,7 @@ div[popover], div[popover]::backdrop {
 }
 
 /* Responsive media query code for max width 920px */
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 980px) {
     :root {
 
         --font-size-xxs: 0.3rem;
