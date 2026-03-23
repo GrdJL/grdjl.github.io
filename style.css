@@ -338,6 +338,7 @@ header .navbar {
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-normal);
     line-height: 20px;
+	text-wrap: balance;
 }
 
 .about-section .social-link-list {
@@ -407,6 +408,7 @@ header .navbar {
 .service-item .text {
     margin: 0;
     text-align: left;
+	text-wrap: balance;
 }
 
 /* Ajoute la puce "□" (&#9634;) via CSS */
