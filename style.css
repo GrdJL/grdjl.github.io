@@ -607,9 +607,9 @@ div[popover], div[popover]::backdrop {
 
         --font-size-xxs: 0.3rem;
         --font-size-xs: 0.5rem;
-        --font-size-s: 0.7rem;
-        --font-size-n: 0.8rem;
-        --font-size-m: 0.85rem;
+        --font-size-s: 1rem;
+        --font-size-n: 1rem;
+        --font-size-m: 1.1rem;
         --font-size-1: 1.2rem;
         --font-size-xl: 1.3rem;
         --font-size-xxl: 1.5rem;
