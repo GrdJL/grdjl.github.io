@@ -210,7 +210,7 @@ header .navbar {
     transition: 0.2s ease;
 }
 
-.hero-section .hero-details .button:hover {
+.hero-section .hero-details .button:active {
     background: var(--footer-color);
     color: var(--text-color);
 }
@@ -377,7 +377,7 @@ header .navbar {
     transition: 0.2s ease;
 }
 
-.about-section .about-details .button:hover {
+.about-section .about-details .button:active {
     background: var(--footer-color);
     color: var(--text-color);
 }
