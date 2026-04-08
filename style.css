@@ -148,7 +148,6 @@ header .navbar {
     transition: 0.3s ease;
 }
 
-/* Hover uniquement sur PC pour la navigation */
 @media (hover: hover) {
     .navbar .nav-menu .nav-link:hover {
         color: var(--button-menu-hover);
@@ -206,7 +205,7 @@ header .navbar {
     border-radius: var(--border-radius-m);
     background: var(--button-section-color);
     font-weight: var(--font-weight-medium);
-    transition: all 0.4s ease-out; /* Transition prolongée pour mobile */
+    transition: all 0.4s ease-out;
 }
 
 @media (hover: hover) {
@@ -361,7 +360,7 @@ header .navbar {
     border-radius: var(--border-radius-m);
     background: var(--button-section-color);
     font-weight: var(--font-weight-medium);
-    transition: all 0.4s ease-out; /* Transition prolongée pour feedback mobile */
+    transition: all 0.4s ease-out;
 }
 
 @media (hover: hover) {
@@ -371,7 +370,6 @@ header .navbar {
     }
 }
 
-/* État tactile marqué pour mobile et clic PC */
 .about-section .about-details .button:active {
     background-color: var(--darker-color);
     color: #ffffff;
@@ -403,6 +401,7 @@ header .navbar {
     align-items: center;
 }
 
+/* Formulaire Contact - RESTAURATION DU FORMATTAGE D'ORIGINE */
 .styled-form {
     background: #fff;
     border-radius: var(--border-radius-s) var(--border-radius-s) var(--border-radius-m) var(--border-radius-m);
@@ -415,6 +414,40 @@ header .navbar {
     gap: 1.2rem;
 }
 
+.styled-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.styled-form label {
+    font-size: var(--font-size-s);
+    color: var(--text-color);
+    font-weight: var(--font-weight-medium);
+}
+
+.styled-form input[type="text"],
+.styled-form input[type="email"],
+.styled-form textarea {
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    font-size: var(--font-size-s);
+    background: #faf9f6;
+    color: #333;
+    transition: border-color 0.2s;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.styled-form input[type="text"]:focus,
+.styled-form input[type="email"]:focus,
+.styled-form textarea:focus {
+    border-color: var(--text-color);
+    outline: none;
+}
+
+/* Boutons de formulaire avec correctif active/hover */
 .styled-form .button,
 .styled-form button[type="submit"] {
     background: #6e8adf;
@@ -425,6 +458,7 @@ header .navbar {
     font-size: var(--font-size-n);
     font-weight: var(--font-weight-semibold);
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(110, 138, 223, 0.08);
     transition: all 0.4s ease-out;
 }
 
