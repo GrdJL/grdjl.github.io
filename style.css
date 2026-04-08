@@ -579,7 +579,7 @@ div[popover], div[popover]::backdrop {
     display: inline-block;
 }
 
-.fixed-scroll-button:hover {
+.fixed-scroll-button:active {
     background: var(--footer-color);
     color: var(--text-color);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
@@ -597,7 +597,7 @@ div[popover], div[popover]::backdrop {
     display: inline;
 }
 
-.pdf-link:hover {
+.pdf-link:active {
     color: var(--emphasis-text-color);
 }
 
@@ -763,7 +763,7 @@ div[popover], div[popover]::backdrop {
             color 0.3s ease;
     }
 
-    .navbar :where(#menu-close-button, #menu-open-button):hover {
+    .navbar :where(#menu-close-button, #menu-open-button):active {
         background-color: var(--text-color);
         color: var(--button-menu-hover) !important;
     }
