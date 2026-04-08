@@ -13,9 +13,6 @@ html, body {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth !important;
-    /*background: linear-gradient(to right, rgba(255,0,0,0.1), rgba(0,0,255,0.1));*/
-	/*outline: 1px solid red;*/
-	/*filter: grayscale(1)*/
 }
 
 :root {
@@ -111,7 +108,7 @@ img {
 /* Navbar Styling*/
 header {
     position: fixed;
-    z-index: 11; /* Modifié (doit être > 10) */
+    z-index: 11;
     background: var(--background-color);
     width: 100%;
 }
@@ -148,12 +145,15 @@ header .navbar {
     color: var(--button-menu-color);
     font-size: var(--font-size-m);
     border-radius: var(--border-radius-s);
-    transition: 0.2s ease;
+    transition: 0.3s ease;
 }
 
-.navbar .nav-menu .nav-link:hover {
-    color: var(--button-menu-hover);
-    background: var(--text-color);
+/* Hover uniquement sur PC pour la navigation */
+@media (hover: hover) {
+    .navbar .nav-menu .nav-link:hover {
+        color: var(--button-menu-hover);
+        background: var(--text-color);
+    }
 }
 
 .navbar :where(#menu-close-button, #menu-open-button) {
@@ -161,7 +161,6 @@ header .navbar {
 }
 
 /* Hero Section styling */
-
 .hero-section {
     min-height: 100vh;
     background: var(--background-color);
@@ -207,12 +206,21 @@ header .navbar {
     border-radius: var(--border-radius-m);
     background: var(--button-section-color);
     font-weight: var(--font-weight-medium);
-    transition: 0.2s ease;
+    transition: all 0.4s ease-out; /* Transition prolongée pour mobile */
+}
+
+@media (hover: hover) {
+    .hero-section .hero-details .button:hover {
+        background: var(--footer-color);
+        color: var(--text-color);
+    }
 }
 
 .hero-section .hero-details .button:active {
-    background: var(--footer-color);
-    color: var(--text-color);
+    background-color: var(--darker-color);
+    color: #ffffff;
+    transform: scale(0.96);
+    transition: 0s;
 }
 
 .hero-section .hero-image-wrapper {
@@ -227,7 +235,6 @@ header .navbar {
     background: var(--background-color);
 }
 
-/* Center the content of the contact section */
 #contact .section-content {
     justify-content: center;
 }
@@ -239,7 +246,6 @@ header .navbar {
     justify-content: center;
 }
 
-/* Conteneur pour cibler l'image et les boutons */
 .image-gallery-wrapper {
     position: relative;
     display: flex;
@@ -247,9 +253,8 @@ header .navbar {
     align-items: center;
 }
 
-/* Conteneur de l'image pour la transition de fondu */
 .image-slider {
-    position: relative; /* IMPORTANT: Permet de positionner le watermark par-dessus */
+    position: relative;
     overflow: hidden;
     border-radius: var(--border-radius-circle);
     width: 440px;
@@ -257,7 +262,6 @@ header .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Ajout du fond blanc pour l'effet de fondu au blanc */
     background-color: var(--background-color); 
 }
 
@@ -266,30 +270,22 @@ header .navbar {
     height: 440px;
     object-fit: cover;
     border-radius: var(--border-radius-circle);
-    /* Transition pour l'opacité seulement */
     transition: opacity 0.5s ease-out; 
 }
 
-/* Styles du Watermark SVG */
 .overlay {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* La transformation est maintenant gérée par JS pour ajouter l'effet de parallaxe. */
-    transform: translate(-50%, -50%); /* Reste pour le centrage initial */
+    transform: translate(-50%, -50%);
     width: 100%; 
     height: 100%; 
     opacity: 1; 
     z-index: 1; 
     pointer-events: none; 
-    
-    /* Assure que le watermark disparaît et réapparaît avec l'image */
-    /* Ajout d'une transition pour le mouvement de parallaxe (pour adoucir le mouvement) */
     transition: opacity 0.5s ease-out, transform 0.1s linear; 
 }
 
-
-/* Style des boutons de navigation d'image */
 .image-nav-button {
     position: absolute;
     top: 50%;
@@ -300,7 +296,7 @@ header .navbar {
     padding: 10px;
     cursor: pointer;
     font-size: var(--font-size-s);
-    z-index: 2; /* Au-dessus de l'image (1) et de l'overlay (1), mais sous l'ADN (10) */
+    z-index: 2;
     border-radius: var(--border-radius-circle);
     width: 50px;
     height: 50px;
@@ -311,26 +307,15 @@ header .navbar {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-.image-nav-button:hover {
-    background: var(--text-color);
-    color: var(--button-menu-hover);
+@media (hover: hover) {
+    .image-nav-button:hover {
+        background: var(--text-color);
+        color: var(--button-menu-hover);
+    }
 }
 
-.prev-button {
-    left: 0;
-}
-
-.next-button {
-    right: 0;
-}
-
-.about-section .about-details .section-title {
-    padding: 4px;
-}
-
-.about-section .about-details {
-    text-decoration: none;
-}
+.prev-button { left: 0; }
+.next-button { right: 0; }
 
 .about-section .about-details .text {
     margin: 16px 0 30px;
@@ -355,8 +340,10 @@ header .navbar {
     transition: 0.2s ease;
 }
 
-.about-section .social-link-list .social-link:hover {
-    color: var(--emphasis-text-color);
+@media (hover: hover) {
+    .about-section .social-link-list .social-link:hover {
+        color: var(--emphasis-text-color);
+    }
 }
 
 .about-section .about-details .buttons {
@@ -374,56 +361,41 @@ header .navbar {
     border-radius: var(--border-radius-m);
     background: var(--button-section-color);
     font-weight: var(--font-weight-medium);
-    transition: 0.2s ease;
+    transition: all 0.4s ease-out; /* Transition prolongée pour feedback mobile */
 }
 
+@media (hover: hover) {
+    .about-section .about-details .button:hover {
+        background: var(--footer-color);
+        color: var(--text-color);
+    }
+}
+
+/* État tactile marqué pour mobile et clic PC */
 .about-section .about-details .button:active {
-    background: var(--footer-color);
-    color: var(--text-color);
+    background-color: var(--darker-color);
+    color: #ffffff;
+    transform: scale(0.96);
+    transition: 0s;
 }
 
-/* Styles for Service Subtitles */
 .service-heading {
     font-size: var(--font-size-m);
     color: var(--button-menu-color);
-    /* Les h3 sont en gras par défaut, ceci réinitialise à un poids normal */
     font-weight: var(--font-weight-normal);
-    /* Réinitialise la marge par défaut des h3 */
     margin: 0;
-    /* Styles fusionnés depuis .service-heading-wrapper */
     padding: 28px 0 8px 10px;
 }
 
-/* --- Styles pour la liste des services --- */
-.service-list {
-    margin-bottom: 0.5rem; 
-}
+.service-list { margin-bottom: 0.5rem; }
+.service-item { padding: 0 0 0 10px; }
+.service-item .text { margin: 0; text-align: left; text-wrap: balance; }
+.service-item .text::before { content: '\2937'; margin-right: 8px; }
 
-.service-item {
-    padding: 0 0 0 10px;
-}
-
-/* Annule les marges et l'alignement des paragraphes
-   pour les liens de service qui réutilisent la classe ".text" */
-.service-item .text {
-    margin: 0;
-    text-align: left;
-	text-wrap: balance;
-}
-
-/* Ajoute la puce "□" (&#9634;) via CSS */
-.service-item .text::before {
-    content: '\2937'; /* '\2726'; */
-    margin-right: 8px; /* Espace entre la puce et le texte */
-}
-
-
-/* Footer section styling */
 .footer-section .footer {
     background: var(--footer-color);
     color: var(--darker-color);
     font-size: var(--font-size-xs);
-    text-decoration: none;
     padding: 6px 0 14px 0;
     display: flex;
     gap: 10px;
@@ -431,7 +403,6 @@ header .navbar {
     align-items: center;
 }
 
-/* Formulaire stylisé */
 .styled-form {
     background: #fff;
     border-radius: var(--border-radius-s) var(--border-radius-s) var(--border-radius-m) var(--border-radius-m);
@@ -444,39 +415,6 @@ header .navbar {
     gap: 1.2rem;
 }
 
-.styled-form .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.styled-form label {
-    font-size: var(--font-size-s);
-    color: var(--text-color);
-    font-weight: var(--font-weight-medium);
-}
-
-.styled-form input[type="text"],
-.styled-form input[type="email"],
-.styled-form textarea {
-    border: 1px solid #e3e3e3;
-    border-radius: 8px;
-    padding: 0.8rem 1rem;
-    font-size: var(--font-size-s);
-    background: #faf9f6;
-    color: #333;
-    transition: border-color 0.2s;
-    resize: vertical;
-	line-height: 1.5; /* Espace confortable entre les lignes */
-}
-
-.styled-form input[type="text"]:focus,
-.styled-form input[type="email"]:focus,
-.styled-form textarea:focus {
-    border-color: var(--text-color);
-    outline: none;
-}
-
 .styled-form .button,
 .styled-form button[type="submit"] {
     background: #6e8adf;
@@ -487,37 +425,32 @@ header .navbar {
     font-size: var(--font-size-n);
     font-weight: var(--font-weight-semibold);
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(110, 138, 223, 0.08);
-    transition: background 0.2s;
+    transition: all 0.4s ease-out;
 }
 
-.styled-form .button:hover,
-.styled-form button[type="submit"]:hover {
-    background: #3b3737;
+@media (hover: hover) {
+    .styled-form .button:hover,
+    .styled-form button[type="submit"]:hover {
+        background: #3b3737;
+    }
 }
 
-/* --- Fly Over / Hover Pop-up Styles --- */
-
-/* Conteneur pour cibler le hover sur l'ensemble texte + icône */
-.flyover-container {
-    position: relative;
-    display: inline-block;
+.styled-form .button:active,
+.styled-form button[type="submit"]:active {
+    transform: scale(0.98);
+    background-color: #3b3737;
+    transition: 0s;
 }
 
-/* Style de base pour le fly-over content */
+.flyover-container { position: relative; display: inline-block; }
 .flyover-content {
-    /* Cache l'élément par défaut et le positionne */
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    
-    /* Positionnement */
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    
-    /* Style du bloc */
     max-width: 332px;
     max-height: 456px;
     width: 332px;
@@ -528,8 +461,6 @@ header .navbar {
     border-radius: var(--border-radius-s);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 10;
-    
-    /* Texte et police (héritage des anciens styles popover) */
     font-family: "Poppins", sans-serif;
     color: var(--text-color);
     font-size: var(--font-size-n);
@@ -538,25 +469,11 @@ header .navbar {
     text-align: center;
 }
 
-/* Rendre le contenu visible au survol du conteneur */
 .flyover-container:hover .flyover-content {
     visibility: visible;
     opacity: 1;
 }
 
-.flyover-content embed {
-    border: none;
-    width: 100%;
-    height: 100%;
-}
-
-/* Suppression des styles d'anciens popover natif */
-div[popover], div[popover]::backdrop {
-    display: none;
-}
-
-
-/* Styling for the fixed 'Scroll to Top' link (HTML/CSS only) */
 .fixed-scroll-button {
     padding: 10px 20px;
     border: 2px solid transparent;
@@ -564,47 +481,48 @@ div[popover], div[popover]::backdrop {
     border-radius: var(--border-radius-m);
     background: var(--button-section-color);
     font-weight: var(--font-weight-medium);
-    transition: 0.2s ease;
-
+    transition: all 0.4s ease-out;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-
     position: fixed;
     bottom: 45px;
     right: 15px;
     z-index: 4;
-    
     opacity: 1; 
     visibility: visible;
     text-align: center;
-    display: inline-block;
+}
+
+@media (hover: hover) {
+    .fixed-scroll-button:hover {
+        background: var(--footer-color);
+        color: var(--text-color);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
 }
 
 .fixed-scroll-button:active {
-    background: var(--footer-color);
-    color: var(--text-color);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    transition: 0s;
 }
 
-/* Style du lien PDF (dans la section des services) */
 .pdf-link {
     color: var(--text-color);
     font-size: var(--font-size-s);
     margin-left: 5px;
     transition: color 0.2s ease;
-    
     text-decoration: none; 
-    
     display: inline;
 }
 
-.pdf-link:active {
-    color: var(--emphasis-text-color);
+@media (hover: hover) {
+    .pdf-link:hover {
+        color: var(--emphasis-text-color);
+    }
 }
 
-/* Responsive media query code for max width 920px */
+/* Responsive media query max width 980px */
 @media screen and (max-width: 980px) {
     :root {
-
         --font-size-xxs: 0.3rem;
         --font-size-xs: 0.5rem;
         --font-size-s: 1rem;
@@ -615,53 +533,17 @@ div[popover], div[popover]::backdrop {
         --font-size-xxl: 1.5rem;
     }
 
-	.styled-form textarea {
-		height: 7.5em; /* 1.5 (line-height) x 3 (lignes) = 4.5em */
-		min-height: 7.5em; /* Empêche le textarea d'être trop petit */
-	}
-	
-    .about-section .about-details .text {
-        margin: 12px 0 12px 0;
-    }
-
-    .service-heading {
-        padding: 6px 0 0 6px;
-    }
-
-    /* --- Styles pour la liste des services --- */
-    .service-list {
-        margin-bottom: 0.5rem;
-    }
-
-    .service-item {
-        padding: 0 0 0 10px;
-    }
-
-    #glassTime {
-        display: none;
-    }
-
-    #blank {
-        display: none;
-    }
+	.styled-form textarea { height: 7.5em; min-height: 7.5em; }
+    .about-section .about-details .text { margin: 12px 0 12px 0; }
+    .service-heading { padding: 6px 0 0 6px; }
+    #glassTime, #blank { display: none; }
     
-    .image-slider {
-        width: 360px; /* Doit correspondre à .about-image */
-        height: 360px; /* Doit correspondre à .about-image */
-    }
-
-    .about-section .about-image-wrapper .about-image {
+    .image-slider, .about-section .about-image-wrapper .about-image {
         width: 360px;
         height: 360px;
     }
 
-    /* MISE À JOUR DU WATERMARK POUR LE MOBILE */
-    .overlay {
-        width: 100%; /* Couvre le conteneur */
-        height: 100%; /* Couvre le conteneur */
-		transform: translate(-50%, -50%);
-        /* La transformation de parallaxe est réinitialisée par JS sur ces tailles d'écran */
-    }
+    .overlay { transform: translate(-50%, -50%); }
 
     body.show-mobile-menu header::before {
         content: "";
@@ -674,26 +556,12 @@ div[popover], div[popover]::backdrop {
         background: rgba(0, 0, 0, 0.2);
     }
 
-
     .navbar :where(#menu-close-button, #menu-open-button) {
         display: block;
         font-size: var(--font-size-l);
-    }
-
-    .navbar #menu-close-button {
-        position: absolute;
-        right: 20px;
-        top: 15px;
+        color: var(--button-menu-color);
+        padding: 8px;
         border-radius: var(--border-radius-circle);
-        color: var(--button-icon-color);
-        transition:
-            background-color 0.3s ease,
-            color 0.3s ease,
-            border-color 0.3s ease;
-    }
-
-    .navbar #menu-open-button {
-        color: var(--text-color);
     }
 
     .navbar .nav-menu {
@@ -710,14 +578,11 @@ div[popover], div[popover]::backdrop {
         transition: left 0.2s ease;
     }
 
-    body.show-mobile-menu .navbar .nav-menu {
-        left: 0;
-    }
+    body.show-mobile-menu .navbar .nav-menu { left: 0; }
 
     .navbar .nav-menu .nav-link {
         color: var(--button-icon-color);
         display: block;
-        margin-top: 0;
         font-size: var(--font-size-1);
     }
 
@@ -726,124 +591,39 @@ div[popover], div[popover]::backdrop {
         text-align: center;
         padding: 30px 20px 20px;
         flex-direction: column-reverse;
-        justify-content: center;
     }
 
-    .hero-section .hero-details :is(.subtitle, .description) {
-        max-width: 100%;
-    }
+    .about-section .section-content { flex-direction: column-reverse; }
+    .logo { width: 28px; height: 28px; }
 
-    .hero-section .hero-image-wrapper {
-        max-width: 270px;
-        margin-right: 0;
-    }
-
-    .about-section .section-content {
-        flex-direction: column-reverse;
-    }
-
-    .about-section .about-details .buttons {
-        justify-content: center;
-    }
-
-    .logo {
-        margin-bottom: -6px;
-        width: 28px;
-        height: 28px;
-    }
-
-    .navbar :where(#menu-close-button, #menu-open-button) {
-        color: var(--button-menu-color);
-        display: block;
-        font-size: var(--font-size-l);
-        padding: 8px;
-        border-radius: var(--border-radius-circle);
-        transition:
-            background-color 0.3s ease,
-            color 0.3s ease;
-    }
-
-    .navbar :where(#menu-close-button, #menu-open-button):active {
-        background-color: var(--text-color);
-        color: var(--button-menu-hover) !important;
-    }
-
-    .styled-form {
-        padding: 1rem;
-        max-width: 380px;
-    }
-
-    .service-item .text::before {
-        position: relative;
-        top: -2px;
-    }
-    .footer-section .footer {
-        font-size: var(--font-size-xxs);
-        padding: 6px 0 6px 0;
-        gap: 5px;
-    }
+    .styled-form { padding: 1rem; max-width: 380px; }
+    .footer-section .footer { font-size: var(--font-size-xxs); padding: 6px 0 6px 0; }
     
-    /* Fly-over adjustment for mobile */
-    .flyover-content {
-        max-width: 90vw;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    /* Ajustement des boutons de navigation pour mobile */
-    .image-nav-button {
-        width: 40px;
-        height: 40px;
-        font-size: var(--font-size-m);
-    }
-
-    .prev-button {
-        left: 20px;
-    }
-
-    .next-button {
-        right: 20px;
-    }
+    .flyover-content { max-width: 90vw; }
+    .image-nav-button { width: 40px; height: 40px; }
+    .prev-button { left: 20px; }
+    .next-button { right: 20px; }
 }
 
-
-/* --- STYLES POUR L'ANIMATION ADN --- */
-
-/* J'ai déplacé les variables de 'dna.css' dans la classe .scene 
-pour éviter tout conflit avec vos variables :root existantes.
-*/
+/* --- ANIMATION ADN --- */
 .scene {
-    /* Paramètres de la géométrie */
     --total-bases: 14;
     --base-rotation: 22.5deg;
     --base-height: 10px;
     --helix-radius: 15px;
     --dna-rotation-duration: 24s;
-
-    /* Couleurs des nucléotides */
     --color-a: #f6511d;
     --color-t: #ffb400;
     --color-g: #00a6ed;
     --color-c: #7fb800;
 
-    /* Styles de positionnement (de dna.css) */
-    -webkit-perspective: 400px;
     perspective: 400px;
     position: absolute;
-    
-    /* --- MODIFICATIONS DE POSITION --- */
-    top: 72%;  /* Modifié : 50% (centre) + 25% (vers le bas) */
-    left: 54%; /* Modifié : 50% (centre) + 25% (vers la droite) */
-    /* --- FIN DES MODIFICATIONS --- */
-
-    z-index: 10; /* Placé au-dessus des images (z-index: 1) et de l'overlay */
-    pointer-events: none; /* Permet aux clics de passer au travers */
-    
-    /* La transformation 'translate' reste à -50% pour centrer l'animation sur son propre axe */
-    -webkit-transform: translate(-50%, -50%) rotateX(-30deg) rotateY(15deg) rotateZ(15deg) scale(1);
+    top: 72%;
+    left: 54%;
+    z-index: 10;
+    pointer-events: none;
     transform: translate(-50%, -50%) rotateX(-30deg) rotateY(15deg) rotateZ(15deg) scale(1);
-    
-    /* AJOUT POUR LE FONDU */
     transition: opacity 0.5s ease-out;
 }
 
@@ -851,9 +631,7 @@ pour éviter tout conflit avec vos variables :root existantes.
     position: relative;
     width: 50px;
     height: calc(var(--total-bases) * var(--base-height));
-    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-animation: rotateDNA var(--dna-rotation-duration) linear infinite;
     animation: rotateDNA var(--dna-rotation-duration) linear infinite;
 }
 
@@ -863,96 +641,36 @@ pour éviter tout conflit avec vos variables :root existantes.
     height: calc(var(--total-bases) * var(--base-height) + 100px);
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%) translateZ(-50px);
     transform: translate(-50%, -50%) translateZ(-50px);
     border-radius: 50%;
-    background: radial-gradient(circle at center,
-                                rgba(255, 255, 255, 0.8) 0%,
-                                rgba(255, 255, 255, 1) 60%,
-                                transparent 80%);
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 60%, transparent 80%);
     filter: blur(30px);
-    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
 
-@keyframes rotateDNA {
-    to {
-        -webkit-transform: rotateY(360deg);
-        transform: rotateY(360deg);
-    }
-}
-@-webkit-keyframes rotateDNA {
-    to {
-        -webkit-transform: rotateY(360deg);
-        transform: rotateY(360deg);
-    }
-}
+@keyframes rotateDNA { to { transform: rotateY(360deg); } }
 
-/* Animations "Billboard" (pour que les bases fassent face à la caméra) */
 @keyframes billboard-before {
-    from {
-        -webkit-transform: translateZ(var(--helix-radius)) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(0deg);
-        transform: translateZ(var(--helix-radius)) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(0deg);
-    }
-    to {
-        -webkit-transform: translateZ(var(--helix-radius)) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(-360deg);
-        transform: translateZ(var(--helix-radius)) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(-360deg);
-    }
-}
-@-webkit-keyframes billboard-before {
-    from {
-        -webkit-transform: translateZ(var(--helix-radius)) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(0deg);
-        transform: translateZ(var(--helix-radius)) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(0deg);
-    }
-    to {
-        -webkit-transform: translateZ(var(--helix-radius)) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(-360deg);
-        transform: translateZ(var(--helix-radius)) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(-360deg);
-    }
+    from { transform: translateZ(var(--helix-radius)) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(0deg); }
+    to { transform: translateZ(var(--helix-radius)) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(-360deg); }
 }
 
 @keyframes billboard-after {
-    from {
-        -webkit-transform: translateZ(calc(0px - var(--helix-radius))) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(0deg);
-        transform: translateZ(calc(0px - var(--helix-radius))) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(0deg);
-    }
-    to {
-        -webkit-transform: translateZ(calc(0px - var(--helix-radius))) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(-360deg);
-        transform: translateZ(calc(0px - var(--helix-radius))) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(-360deg);
-    }
-}
-@-webkit-keyframes billboard-after {
-    from {
-        -webkit-transform: translateZ(calc(0px - var(--helix-radius))) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(0deg);
-        transform: translateZ(calc(0px - var(--helix-radius))) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(0deg);
-    }
-    to {
-        -webkit-transform: translateZ(calc(0px - var(--helix-radius))) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(-360deg);
-        transform: translateZ(calc(0px - var(--helix-radius))) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(-360deg);
-    }
+    from { transform: translateZ(calc(0px - var(--helix-radius))) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(0deg); }
+    to { transform: translateZ(calc(0px - var(--helix-radius))) rotateY(calc(var(--i) * var(--base-rotation) * -1)) rotateY(-360deg); }
 }
 
-/* Styles pour les paires de bases */
 .base {
     position: absolute;
     width: 30px;
     height: var(--base-height);
     left: 50%;
     margin-left: -15px;
-    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-backface-visibility: visible;
-    backface-visibility: visible;
 }
 
 .base[style*="--i"] {
-    -webkit-transform:
-        rotateX(0deg)
-        rotateY(calc(var(--i) * var(--base-rotation)))
-        translateY(calc(var(--i) * var(--base-height)));
-    transform:
-        rotateX(0deg)
-        rotateY(calc(var(--i) * var(--base-rotation)))
-        translateY(calc(var(--i) * var(--base-height)));
+    transform: rotateY(calc(var(--i) * var(--base-rotation))) translateY(calc(var(--i) * var(--base-height)));
 }
 
 .base::before {
@@ -963,10 +681,7 @@ pour éviter tout conflit avec vos variables :root existantes.
     width: 7px;
     height: 7px;
     border-radius: 50%;
-   /* box-shadow: 0 0 5px rgba(100, 149, 237, 0.7);*/
-    /* 0 4px 8px rgba(0, 0, 0, 0.6);*/
     background-color: var(--color-1, var(--color-a));
-    -webkit-animation: billboard-before var(--dna-rotation-duration) linear infinite;
     animation: billboard-before var(--dna-rotation-duration) linear infinite;
 }
 
@@ -978,10 +693,7 @@ pour éviter tout conflit avec vos variables :root existantes.
     width: 7px;
     height: 7px;
     border-radius: 50%;
-     /*box-shadow: 0 0 5px rgba(100, 149, 237, 0.7);*/
-               /* 0 4px 8px rgba(0, 0, 0, 0.6);*/
     background-color: var(--color-2, var(--color-t));
-    -webkit-animation: billboard-after var(--dna-rotation-duration) linear infinite;
     animation: billboard-after var(--dna-rotation-duration) linear infinite;
 }
 
@@ -992,7 +704,5 @@ pour éviter tout conflit avec vos variables :root existantes.
     right: 0;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.4);
-    -webkit-transform: translateY(-50%) translateZ(0) rotateY(45deg);
     transform: translateY(-50%) translateZ(0) rotateY(45deg);
 }
-
