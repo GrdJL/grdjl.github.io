@@ -1,100 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="color-scheme" content="only light">
-        <title>Legal Notice & Privacy Policy</title>
+        <title>Mentions Légales & Protection des Données | Longfort Consulting</title>
         <link rel="stylesheet" href="style.css"/>
-        <style>
-            /* --- Styles de base pour l'affichage des langues --- */
-            .lang-content {
-                display: none; /* Caché par défaut */
-            }
-            .lang-content.active {
-                display: block; /* Affiché si actif */
-            }
-
-            /* --- Nouveau style du bouton à bascule (Pill shape) --- */
-            .lang-toggle-container {
-                display: inline-flex;
-                background: var(--button-section-color, #f1e8d0);
-                border-radius: var(--border-radius-m, 30px);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-                overflow: hidden;
-                border: 2px solid transparent;
-                vertical-align: middle;
-            }
-
-            .lang-switch {
-                cursor: pointer;
-                font-size: 1rem;
-                text-decoration: none;
-                color: var(--emphasis-text-color, #d5a10a);
-                font-weight: var(--font-weight-medium, 500);
-                padding: 8px 16px;
-                transition: all 0.2s ease;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-width: 40px;
-            }
-
-            .lang-switch:first-child {
-                border-right: 1px solid rgba(0,0,0,0.05);
-            }
-
-            .lang-switch:not(.active-lang):hover {
-                background: rgba(0,0,0,0.05);
-                color: var(--text-color, #1b89aa);
-            }
-
-            .lang-switch.active-lang {
-                background: var(--footer-color, rgb(205, 205, 205));
-                color: var(--text-color, #1b89aa);
-                font-weight: bold;
-                pointer-events: none;
-                box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-            }
-
-            /* --- Style spécifique pour la barre de navigation du haut --- */
-            .top-nav-bar {
-                max-width: 1120px;
-                margin: 0 auto;
-                padding: 30px 20px 10px 20px; /* Espace confortable */
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .back-link {
-                text-decoration: none;
-                color: var(--text-color, #1b89aa);
-                font-size: 1.1rem;
-                font-weight: 500;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                transition: color 0.2s ease;
-            }
-
-            .back-link:hover {
-                color: var(--emphasis-text-color, #d5a10a);
-            }
-        </style>
     </head>
     <body id="top">
-    <nav class="top-nav-bar">
-        <a href="index.html" class="back-link">
-            <span>&larr;</span> <span id="back-text">Back</span>
-        </a>
-        
-        <div class="lang-toggle-container">
-            <a onclick="switchLang('en')" id="btn-en" class="lang-switch active-lang">EN</a>
-            <a onclick="switchLang('fr')" id="btn-fr" class="lang-switch">FR</a>
+    <nav>
+        <div style="position:absolute;top:20px;left:30px;">
+        <span><a href="index-fr.html" style="text-decoration: none; cursor: pointer;">&larr; Back</a></span>
         </div>
-    </nav>
-    <div id="content-en" class="lang-content active">
+        <div style="position:absolute;top:20px;right:30px;">
+        <span style="opacity: 0.5; cursor: default;">
+            <a style="filter: grayscale(100%); filter: contrast(1); filter: opacity(1);">&#127482;&#127480;</a>
+            <a>&nbsp;</a>
+            <a href="legal-fr.html" title="Version Française" style="text-decoration: none; cursor: pointer;">&#127467;&#127479;</a>
+        </span>
+        </div>
+    </nav>   
+     <main>
         <section class="about-section" style="padding-top: 40px;">
             <div class="section-content">
                 <div class="about-details">
@@ -107,10 +33,10 @@
                     <p>VAT Number: FR16988276515</p>
                     <p>Address: 2 place Octave Sage, 31100 Toulouse, France</p>
                     <p>Contact: sabrina.guittard@longfort-consulting.com</p>
-                    <p>Phone Number: +33 6 52 50 24 98</p>
-                </div>
+                    <p>Phone Number: +33 6 52 50 24 98</p>                </div>
             </div>
         </section>
+
         <section class="about-section">
             <div class="section-content">
                 <div class="about-details">
@@ -124,13 +50,11 @@
             <div class="section-content">
                 <div class="about-details">
                     <h2 class="section-title">Terms of use</h2>
-                    <p><br>Longfort Consulting declines all responsibility for any direct or indirect damage - whatever its causes,
-                        origins, nature, or consequences - caused by anyone accessing the site or the impossibility of accessing it,
-                        as well as the use of the site and/or the reliance placed on any information coming directly or indirectly
-                        from the latter.</p>
+                    <p><br>Longfort Consulting declines all responsibility for any direct or indirect damage caused by anyone accessing the site or the impossibility of accessing it, as well as the use of the site and/or the reliance placed on any information coming directly or indirectly from the latter.</p>
                 </div>
             </div>
         </section>
+
         <section class="about-section" style="padding-top: 40px;">
             <div class="section-content">
                 <div class="about-details">
@@ -138,109 +62,15 @@
                     <br>
                     <h3>Contact Form Data</h3>
                     <p>Information collected via the contact form (name, email, message) is transmitted solely by email to respond to your inquiries. It is not stored in a database on this website and is never shared with third parties for commercial purposes.</p>
-                    
                     <br>
-                    
                     <h3>Your Rights</h3>
-                    <p>In accordance with the "Informatique et Libertés" French law of January 6, 1978, as amended, and the
-                        General Data Protection Regulation (GDPR) of May 25, 2018, you have the right to access, modify, correct,
-                        delete, and object to the processing of your personal data and its use for marketing purposes. You can
-                        exercise these rights at any time by contacting sabrina.guittard@longfort-consulting.com by email.</p>
+                    <p>In accordance with the General Data Protection Regulation (GDPR), you have the right to access, modify, and delete your personal data. You can exercise these rights at any time by contacting sabrina.guittard@longfort-consulting.com.</p>
                     <br>
                 </div>
             </div>
         </section>
-    </div>
-    <div id="content-fr" class="lang-content">
-        <section class="about-section" style="padding-top: 40px;">
-            <div class="section-content">
-                <div class="about-details">
-                    <h2 class="section-title">Informations sur la société</h2>
-                    <p><br>Dénomination sociale: Longfort consulting</p>
-                    <p>Activité: Conseil en recherche clinique</p>
-                    <p>Statut juridique: SAS au capital de 1 000€</p>
-                    <p>SIRET: 98827651500018</p>
-                    <p>Greffe: RCS Toulouse</p>
-                    <p>Numéro de TVA: FR16988276515</p>
-                    <p>Siège social: 2 place Octave Sage, 31100 Toulouse, France</p>
-                    <p>Contact: sabrina.guittard@longfort-consulting.com</p>
-                    <p>n° de téléphone: 06 52 50 24 98</p>
-                </div>
-            </div>
-        </section>
+    </main>
 
-        <section class="about-section">
-            <div class="section-content">
-                <div class="about-details">
-                    <h2 class="section-title">Hébergement du site</h2>
-                    <p><br>GitHub, Inc.<br>88 Colin P Kelly Jr St<br>San Francisco, CA 94107, USA</p>
-                </div>
-            </div>
-        </section>
-        <section class="about-section">
-            <div class="section-content">
-                <div class="about-details">
-                    <h2 class="section-title">Responsabilité</h2>
-                    <p><br>Longfort Consulting décline toute responsabilité pour tous dommages directs
-                        ou indirects - quelles qu'en soient les causes, origines, natures ou conséquences -
-                        provoqués à raison de l'accès de quiconque au site ou de l'impossibilité d'y accéder,
-                        de même que l'utilisation du site et/ou du crédit accordé à une quelconque
-                        information provenant directement ou indirectement de ce dernier.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="about-section" style="padding-top: 40px;">
-            <div class="section-content">
-                <div class="about-details">
-                    <h2 class="section-title">Protection des données</h2>
-                    <br>
-                    <h3>Formulaire de Contact</h3>
-                    <p>Les informations recueillies via le formulaire de contact (nom, email, message) sont transmises uniquement par email afin de répondre à vos demandes. Elles ne sont pas conservées dans une base de données sur ce site web et ne sont jamais transmises à des tiers à des fins commerciales.</p>
-                    
-                    <br>
-                    
-                    <h3>Vos Droits (Informatique et Libertés)</h3>
-                    <p>Conformément à la loi "Informatique et Libertés" du 6 janvier 1978 modifiée et
-                        au Règlement Général sur la Protection des Données (RGPD) du 25 mai 2018,
-                        vous disposez d'un droit d'accès, de modification, de rectification,
-                        de suppression et d'opposition au traitement de vos données personnelles
-                        et à leur utilisation à des fins de prospection. Vous pouvez exercer ces droits à
-                        tout moment en contactant sabrina.guittard@longfort-consulting.com par mail ou par courrier.</p>
-                    <br>
-                </div>
-            </div>
-        </section>
-    </div>
-    <a href="#top" class="button fixed-scroll-button" aria-label="Scroll to Top">&#8593;</a>
-    <script>
-        function switchLang(lang) {
-            // 1. GESTION DU CONTENU
-            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-            
-            const contentToShow = document.getElementById('content-' + lang);
-            if (contentToShow) {
-                contentToShow.classList.add('active');
-            }
-
-            // 2. GESTION DU BOUTON BASCULE
-            document.querySelectorAll('.lang-switch').forEach(el => el.classList.remove('active-lang'));
-
-            const btnToActivate = document.getElementById('btn-' + lang);
-            if (btnToActivate) {
-                btnToActivate.classList.add('active-lang');
-            }
-
-            // 3. GESTION DU TEXTE "RETOUR" ET SEO
-            const backText = document.getElementById('back-text');
-            if(lang === 'fr') {
-                if(backText) backText.textContent = 'Retour';
-                document.documentElement.lang = "fr";
-            } else {
-                if(backText) backText.textContent = 'Back';
-                document.documentElement.lang = "en";
-            }
-        }
-    </script>
+    <a href="#top" class="button fixed-scroll-button" aria-label="Retour en haut">&#8593;</a>
     </body>
 </html>
