@@ -101,13 +101,13 @@ const sceneElement = document.querySelector(".scene");
 
 let currentImageIndex = 0;
 
-// Initialiser l'index avec l'image actuellement visible dans l'HTML
-if (imageElement) {
-    const initialSrc = imageElement.getAttribute('src');
-    const index = imageSources.findIndex(img => img.src === initialSrc);
-    if (index !== -1) {
-        currentImageIndex = index;
-    }
+if (imageElement && imageSources.length > 0) {
+    // 1. Génère un index aléatoire entre 0 et le nombre total d'images - 1
+    currentImageIndex = Math.floor(Math.random() * imageSources.length);
+    
+    // 2. Force l'affichage de cette image aléatoire dès le chargement du script
+    imageElement.src = imageSources[currentImageIndex].src;
+    imageElement.alt = imageSources[currentImageIndex].alt;
 }
 
 
