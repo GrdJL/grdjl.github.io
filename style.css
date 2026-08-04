@@ -334,7 +334,7 @@ header .navbar {
 }
 
 .about-section .social-link-list .social-link {
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-s);
     color: var(--text-color);
     transition: 0.2s ease;
 }
@@ -559,7 +559,7 @@ header .navbar {
     :root {
         --font-size-xxs: 0.3rem;
         --font-size-xs: 0.5rem;
-        --font-size-s: 1rem;
+        --font-size-s: 0.8rem;
         --font-size-n: 1rem;
         --font-size-m: 1.1rem;
         --font-size-l: 1.2rem;
