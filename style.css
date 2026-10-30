@@ -386,7 +386,7 @@ header .navbar {
 }
 
 .service-list { margin-bottom: 0.5rem; }
-.service-item { padding: 0 0 0 10px; }
+.service-item { padding: 0 30px 0 10px; }
 .service-item .text { margin: 0; text-align: left; text-wrap: balance; }
 .service-item .text::before { content: '\2937'; margin-right: 8px; }
 
