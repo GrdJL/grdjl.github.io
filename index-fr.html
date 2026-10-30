@@ -27,192 +27,233 @@
         		"ClientId": null
         	});
         </script>
-    <script src="https://github.com/ninefortyonestudio/uxnote/releases/download/v1.0.0/uxnote.min-v1.0.0.js"></script>
-</head>
+    <script src="https://github.com/ninefortyonestudio/uxnote/releases/download/v1.0.0/uxnote.min-v1.0.0.js" isToolVisibleAtFirstLaunch="false"></script>
+    </head>
 
-<body>
-    <header>
-        <nav class="navbar section-content">
-            <a href="#" class="nav-logo">
-                <h1 class="logo-text">
-                    <img class="logo" src="ressources/logo.png" alt="LC" /> Longfort
-                    Consulting
-                </h1>
-            </a>
-            <ul class="nav-menu">
-                <button id="menu-close-button" class="fas fa-times"></button>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Acceuil</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#blog" class="nav-link">Blog</a>
-                </li>
-                <span style="opacity: 0.5; cursor: default;">
-                    <a href="index.html" title="English Version" style="text-decoration: none; cursor: pointer;" >&#127482;&#127480;</a>
-                    <a>&nbsp;</a>
-                    <a style="filter: grayscale(100%);">&#127467;&#127479;</a>
-                </span>
-            </ul>
-            <button id="menu-open-button" class="fas fa-bars"></button>
-        </nav>
-    </header>
-    <main class="main">
-        <p>&nbsp;</p>
-        <section id="about" class="about-section">
-            <div class="section-content">
-                <div class="about-image-wrapper image-gallery-wrapper">
+    <body>
+        <header>
+            <nav class="navbar section-content">
+                <a href="#" class="nav-logo">
+                    <h1 class="logo-text">
+                        <img class="logo" src="ressources/logo.png" alt="LC" /> Longfort Consulting
+                    </h1>
+                </a>
+                <ul class="nav-menu">
+                    <button id="menu-close-button" class="fas fa-times"></button>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Get in touch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link">Blog</a>
+                    </li>
+                    <span style="opacity: 0.5; cursor: default">
+                        <a style="filter: grayscale(100%);">&#127482;&#127480;</a>
+                        <a>&nbsp;</a>
+                        <a href="index-fr.html" title="Version Française" style="text-decoration: none; cursor: pointer">&#127467;&#127479;</a>
+                    </span>
+                </ul>
+                <button id="menu-open-button" class="fas fa-bars"></button>
+            </nav>
+        </header>
+        <main class="main">
+            <p>&nbsp;</p>
+            <section id="about" class="about-section">
+                <div class="section-content">
+                    <div class="about-image-wrapper image-gallery-wrapper">
+                        <!--<button class="image-nav-button prev-button fas fa-chevron-left" aria-label="Previous image"></button>-->
 
-                    <!--<button class="image-nav-button prev-button fas fa-chevron-left" aria-label="Previous image"></button>-->
+                        <div class="image-slider">
+                            <img
+                                id="SciImg"
+                                src="ressources/pexels-mikhail-nilov-8851547.jpg"
+                                alt="Two scientists in a lab coat reviewing documents, with 'Clinical Trial' and related icons overlaid."
+                                class="about-image image-to-cycle" />
+                            <img class="overlay" src="ressources/overlay.png" alt="Clinical Trials title" />
+                        </div>
 
-                    <div class="image-slider">
-                        <img id="SciImg" src="ressources/pexels-mikhail-nilov-8851547.jpg"
-                            alt="Deux scientifiques en blouse blanche examinant des documents, avec la mention « Clinical Trial » et des icônes associées en surimpression."
-                            class="about-image image-to-cycle" />
-                        <img class="overlay" src="ressources/overlay.png" alt="Clinical Trials" /> </div>
+                        <!--<button class="image-nav-button next-button fas fa-chevron-right" aria-label="Next image"></button>-->
 
-                    <!--<button class="image-nav-button next-button fas fa-chevron-right" aria-label="Next image"></button>-->
-
-                    <div class="scene">
-                        <div class="dna-halo"></div>
-                        <div class="dna-helix">
-                            <div class="base" style="--i: 0; --color-1: var(--color-a); --color-2: var(--color-t);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 1; --color-1: var(--color-c); --color-2: var(--color-g);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 2; --color-1: var(--color-g); --color-2: var(--color-c);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 3; --color-1: var(--color-t); --color-2: var(--color-a);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 4; --color-1: var(--color-a); --color-2: var(--color-t);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 5; --color-1: var(--color-c); --color-2: var(--color-g);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 6; --color-1: var(--color-c); --color-2: var(--color-g);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 7; --color-1: var(--color-g); --color-2: var(--color-c);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 8; --color-1: var(--color-a); --color-2: var(--color-t);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 9; --color-1: var(--color-a); --color-2: var(--color-t);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 10; --color-1: var(--color-t); --color-2: var(--color-a);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 11; --color-1: var(--color-g); --color-2: var(--color-c);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 12; --color-1: var(--color-c); --color-2: var(--color-g);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
-                            </div>
-                            <div class="base" style="--i: 13; --color-1: var(--color-t); --color-2: var(--color-a);">
-                                <div class="molecule strand-1"></div><div class="molecule strand-2"></div><div class="barre"></div>
+                        <div class="scene">
+                            <div class="dna-halo"></div>
+                            <div class="dna-helix">
+                                <div class="base" style="--i: 0; --color-1: var(--color-a); --color-2: var(--color-t)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 1; --color-1: var(--color-c); --color-2: var(--color-g)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 2; --color-1: var(--color-g); --color-2: var(--color-c)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 3; --color-1: var(--color-t); --color-2: var(--color-a)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 4; --color-1: var(--color-a); --color-2: var(--color-t)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 5; --color-1: var(--color-c); --color-2: var(--color-g)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 6; --color-1: var(--color-c); --color-2: var(--color-g)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 7; --color-1: var(--color-g); --color-2: var(--color-c)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 8; --color-1: var(--color-a); --color-2: var(--color-t)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 9; --color-1: var(--color-a); --color-2: var(--color-t)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 10; --color-1: var(--color-t); --color-2: var(--color-a)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 11; --color-1: var(--color-g); --color-2: var(--color-c)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 12; --color-1: var(--color-c); --color-2: var(--color-g)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
+                                <div class="base" style="--i: 13; --color-1: var(--color-t); --color-2: var(--color-a)">
+                                    <div class="molecule strand-1"></div>
+                                    <div class="molecule strand-2"></div>
+                                    <div class="barre"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="about-details">
-                    <h2 class="section-title">Qui sommes-nous ?</h2>
-                    <p class="text">
-                        Longfort Consulting vous apporte son expertise afin d'obtenir
-                        l'approbation de vos essais cliniques, dans le respect de vos délais et
-                        de vos standards de qualité.
-                    </p>
-                    <p class="text">
-                        Bénéficiez de notre accompagnement en oncologie, immunothérapie,
-                        maladies rares, pédiatrie et thérapie génique pour garantir le succès de vos essais.
-                    </p>
-                    <p class="text">
-                        Menez de solides essais grâce à des protocoles rigoureux et à un dossier
-                        documentaire conçu sur mesure, et obtenez l'<b>approbation</b> des autorités
-                        réglementaires <b>dès la première soumission</b>.
-                    </p>
-                    <span class="buttons">
-                        <a href="#services" class="button">En savoir plus</a>
-                    </span>
-                </div>
-            </div>
-        </section>
-        <section id="services" class="about-section">
-            <div class="section-content">
-                <div class="about-details">
-                    <h2 class="section-title">Nos services</h2>
-                    <div>
+                    <div class="about-details">
+                        <h2 class="section-title">About Us</h2>
                         <p class="text">
-                            Une expertise taillée sur mesure pour les Biotechs, les MedTechs et le secteur académique.
+                            Longfort Consulting offre une expertise réglementaire pour aider les Biotechs, les MedTechs et les institutions académiques à obtenir l'<b>approbation</b> de leurs essais cliniques de manière efficace et fiable.
                         </p>
-                        <h3 class="service-heading">Stratégie Réglementaire</h3>
-                        <ul class="service-list">
-                            <li class="service-item">
-                                <a class="text">Planification des phases initiales</a>
-                            </li>
-                            <li class="service-item">
-                                <a class="text">Stratégie pour les essais complexes</a>
-                            </li>
-                            <li class="service-item">
-                                <a class="text">Préparation de la soumission</a>
-                                <span class="flyover-container">
-                                    <a href="ressources/RegulatoryFlashAudit.pdf" target="_blank" class="pdf-link">
-                                        <i class="fa-solid fa-link"></i>
-                                    </a>
-                                    <div class="flyover-content">
-                                        <embed title="thumbnail" src="ressources/RegulatoryFlashAudit.pdf#toolbar=0" type="application/pdf" width="100%" height="100%" style="border: none;">
-                                    </div>
-                                </span>
-                            </li>
-                        </ul>
+                        <p class="text">
+                            Spécialisés dans les plus domaines complexes (oncologie, immunothérapie, maladies rares, pédiatrie et thérapie génique), nous transformons les obstacles réglementaires en parcours simplifiés.
+                        </p>
+                        <p class="text">
+                            En associant des protocoles rigoureux à des dossiers documentaires conçus sur mesure, nous optimisons vos essais cliniques afin de garantir leur approbation par les autorités réglementaires <b>dès la première soumission</b>.
+                        </p>
+                        <span class="buttons">
+                            <a href="#services" class="button">Learn more</a>
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <section id="services" class="about-section">
+                <div class="section-content">
+                    <div class="about-details">
+                        <h2 class="section-title">Services</h2>
+                        <div>
+                            <p class="text">
+                                Concevez vos essais clinique en toute confiance dans des environnements réglementaires complexes.
+                                Nous définissons des feuilles de route claires depuis les phases précoces,
+                                élaborons des stratégies sur mesure pour les essais hautement complexes
+                                et menons des évaluations du niveau préparation avant soumission afin d'atténuer les risques lors du dépôt de votre dossier.
+                            </p>
+                            <h3 class="service-heading">Strategie Réglementaire</h3>
+                            <ul class="service-list">
+                                <li class="service-item">
+                                    <a class="text">Planification des phases initiales</a>
+                                </li>
+                                <li class="service-item">
+                                    <a class="text">Strategie pour les essais complexes</a>
+                                </li>
+                                <li class="service-item">
+                                    <a class="text">Préparation de la soumission</a>
+                                    <span class="flyover-container">
+                                        <a href="ressources/RegulatoryFlashAudit.pdf" target="_blank" class="pdf-link">
+                                            <i class="fa-solid fa-link"></i>
+                                        </a>
+                                        <div class="flyover-content">
+                                            <embed
+                                                title="thumbnail"
+                                                src="ressources/RegulatoryFlashAudit.pdf#toolbar=0"
+                                                type="application/pdf"
+                                                width="100%"
+                                                height="100%"
+                                                style="border: none" />
+                                        </div>
+                                    </span>
+                                </li>
+                            </ul>
 
-                        <h3 class="service-heading">Expertise Soumission & CTIS</h3>
-                        <ul class="service-list">
-                            <li class="service-item">
-                                <a class="text">Support à l'utilisation du système d'information</a>
-                            </li>
-                            <li class="service-item">
-                                <a class="text">Adaptation des formulaires de consentement</a>
-                            </li>
-                            <li class="service-item">
-                                <a class="text">Soumissions aux Autorités Règlementaire et aux Comités d'Éthique</a>
-                            </li>
-                            <li class="service-item">
-                                <a class="text">Gestion du projet</a>
-                            </li>
-                        </ul>
-
-                        <h3 class="service-heading">Support</h3>
-                        <ul class="service-list">
-                            <li class="service-item">
-                                <a class="text">Support opérationnel</a>
-                                <span class="flyover-container">
-                                    <a href="ressources/StudyStartUpBoosterPortrait.pdf" target="_blank" class="pdf-link">
-                                        <i class="fa-solid fa-link"></i>
-                                    </a>
-                                    <div class="flyover-content">
-                                        <embed title="thumbnail" src="ressources/StudyStartUpBoosterPortrait.pdf#toolbar=0" type="application/pdf" width="100%" height="100%" style="border: none;">
-                                    </div>
-                                </span>
-                            </li>
-                            <li class="service-item">
-                                <a class="text">Optimisation des processus</a>
-                            </li>
-                            <li class="service-item">
-                                <a class="text">Coordination et formation des équipes</a>
-                            </li>
-                        </ul>
+                            <h3 class="service-heading">Expertise Soumission & CTIS</h3>
+                            <ul class="service-list">
+                                <li class="service-item">
+                                    <a class="text">Support à l'utilisation du système d'information</a>
+                                </li>
+                                <li class="service-item">
+                                    <a class="text">Adaptation des formulaires de consentement</a>
+                                </li>
+                                <li class="service-item">
+                                    <a class="text">Submission aux Autorités Réglementaire et aux Commités d'Éthique</a>
+                                </li>
+                                <li class="service-item">
+                                    <a class="text">Gestion de projet</a>
+                                </li>
+                            </ul>
+                            <h3 class="service-heading">Support</h3>
+                            <ul class="service-list">
+                                <li class="service-item">
+                                    <a class="text">Support Opérationnel</a>
+                                    <span class="flyover-container">
+                                        <a
+                                            href="ressources/StudyStartUpBoosterPortrait.pdf"
+                                            target="_blank"
+                                            class="pdf-link">
+                                            <i class="fa-solid fa-link"></i>
+                                        </a>
+                                        <div class="flyover-content">
+                                            <embed
+                                                title="thumbnail"
+                                                src="ressources/StudyStartUpBoosterPortrait.pdf#toolbar=0"
+                                                type="application/pdf"
+                                                width="100%"
+                                                height="100%"
+                                                style="border: none" />
+                                        </div>
+                                    </span>
+                                </li>
+                                <li class="service-item">
+                                    <a class="text">Optimization des processus</a>
+                                </li>
+                                <li class="service-item">
+                                    <a class="text">Coordination et formation des équipes</a>
+                                </li>
+                            </ul>
                         <span class="buttons">
                             <a href="#contact" class="button">Nous contacter</a>
                         </span>
